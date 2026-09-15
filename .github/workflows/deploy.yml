@@ -41,10 +41,9 @@ jobs:
           NEXT_PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
         run: pnpm build
 
-      # Pages가 아직 꺼져 있으면 여기서 자동으로 켠다(설정에서 직접 켜도 된다)
+      # Pages 활성화는 저장소 소유자만 할 수 있어 워크플로 토큰으로는 켤 수 없다.
+      # Settings → Pages → Source를 "GitHub Actions"로 한 번 바꿔 두면 이후로는 자동이다.
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out
