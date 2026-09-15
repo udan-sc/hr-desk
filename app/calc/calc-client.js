@@ -28,12 +28,25 @@ function Num({ label, hint, value, onChange, step = 1, max }) {
   );
 }
 
+/* 날짜 입력의 연도 칸은 최대 연도가 275760년이라, 4자리를 쳐도 브라우저가
+   "더 이어질 수 있다"고 보고 월로 넘어가지 않는다. 최대를 4자리로 묶으면
+   2026까지만 치면 바로 월 칸으로 넘어간다. */
+const DATE_MIN = '1950-01-01';
+const DATE_MAX = '2099-12-31';
+
 function DateF({ label, hint, value, onChange }) {
   const id = label.replace(/\s/g, '');
   return (
     <div className="field">
       <label htmlFor={id}>{label} {hint && <span className="hint">{hint}</span>}</label>
-      <input id={id} type="date" value={value} onChange={(e) => onChange(e.target.value)} />
+      <input
+        id={id}
+        type="date"
+        min={DATE_MIN}
+        max={DATE_MAX}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+      />
     </div>
   );
 }

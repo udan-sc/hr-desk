@@ -41,16 +41,28 @@ export const metadata = {
 
 export const viewport = { width: 'device-width', initialScale: 1 };
 
+const CSP = [
+  "default-src 'self'",
+  process.env.NODE_ENV === 'development'
+    ? "script-src 'self' 'unsafe-inline' 'unsafe-eval'"
+    : "script-src 'self' 'unsafe-inline'",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data:",
+  "font-src 'self'",
+  "connect-src 'self'",
+  "base-uri 'self'",
+  "form-action 'self'",
+].join('; ');
+
 export default function RootLayout({ children }) {
   return (
     <html lang="ko" className={`${sans.variable} ${serif.variable}`}>
       <head>
         {/* 정적 호스팅이라 응답 헤더를 줄 수 없어 meta로 대신한다.
-            frame-ancestors·X-Content-Type-Options는 meta로 적용되지 않으므로 호스팅 설정에 맡긴다. */}
-        <meta
-          httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'"
-        />
+            frame-ancestors·X-Content-Type-Options는 meta로 적용되지 않으므로 호스팅 설정에 맡긴다.
+            dev 서버의 HMR은 eval을 쓰므로 개발 중에만 unsafe-eval을 허용한다 —
+            빼면 하이드레이션이 조용히 깨져서 useEffect가 아예 돌지 않는다. */}
+        <meta httpEquiv="Content-Security-Policy" content={CSP} />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
       </head>
       <body>
