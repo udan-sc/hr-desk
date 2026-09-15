@@ -8,10 +8,10 @@ export default function Interpretations({ items, law, article }) {
 
   return (
     <section className="interp">
-      <h2>고용노동부 행정해석</h2>
+      <h2>행정해석</h2>
       <p className="lead">
-        조문만으로 판단이 서지 않을 때 고용노동부가 낸 질의회시입니다. 회시번호와 원문 주소를 함께 실었으니 그대로
-        인용할 수 있습니다.
+        조문만으로 판단이 서지 않을 때 정부가 낸 질의회시입니다. 회시번호와 원문 주소를 함께 실었으니 그대로 인용할
+        수 있습니다. 회시번호가 실재하고 내용까지 맞는 것만 실었습니다.
       </p>
 
       {items?.length > 0 ? (
@@ -19,7 +19,10 @@ export default function Interpretations({ items, law, article }) {
           {items.map((it) => (
             <article key={it.docNumber + it.date} className="interp-item">
               <div className="ih">
-                <span className="num">{it.docNumber}</span>
+                <span className="num">
+                  {it.agency !== '고용노동부' && <span className="ag">{it.agency}</span>}
+                  {it.hasNumber === false ? `${it.agency} 회신` : it.docNumber}
+                </span>
                 {it.date && <span className="when">{it.date.replace(/-/g, '. ')}.</span>}
               </div>
               <dl>

@@ -423,3 +423,7 @@ body.hide-out-of-scope .doc:has(.badge.scope.off){display:none}
 .interp-item .src a:hover{color:var(--accent-ink)}
 .interp-none{font-size:13px;color:var(--ink2);background:var(--surface2);border-radius:10px;padding:13px 16px;line-height:1.65}
 .interp-none a{color:var(--accent-ink)}
+.interp-item .num .ag{
+  display:inline-block;margin-right:5px;padding-right:5px;
+  border-right:1px solid var(--accent-line);font-weight:500;opacity:.85;
+}
