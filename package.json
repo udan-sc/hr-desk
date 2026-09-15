@@ -1,0 +1,23 @@
+{
+  "name": "nomubeopjeon",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -H 127.0.0.1 --port 3200",
+    "build": "next build",
+    "lint": "next lint",
+    "check": "node scripts/calc.test.mjs && node scripts/check-citations.mjs",
+    "prebuild": "node scripts/build-search-index.mjs",
+    "predev": "node scripts/build-search-index.mjs",
+    "preview": "npx --yes serve out -l 3201"
+  },
+  "dependencies": {
+    "next": "15.5.24",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "eslint-config-next": "15.5.24"
+  }
+}

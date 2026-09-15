@@ -1,0 +1,3 @@
+# 줄바꿈은 저장소에 LF로 통일한다. 윈도우·맥 팀원이 섞여도 diff가 깨지지 않는다.
+* text=auto eol=lf
+*.cmd text eol=crlf

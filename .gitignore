@@ -1,0 +1,15 @@
+node_modules/
+.next/
+out/
+.env*.local
+*.log
+.DS_Store
+
+# 빌드 때 data/provisions.json에서 자동 생성된다 (scripts/build-search-index.mjs)
+public/search-index.json
+
+# 이 PC의 절대경로가 들어 있는 로컬 실행 설정
+.claude/
+
+# 작업 중 남은 임시 파일
+_tt_measure.html

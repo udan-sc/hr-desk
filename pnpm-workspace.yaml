@@ -1,0 +1,11 @@
+# pnpm 10+ 부터 설정이 package.json에서 이 파일로 옮겨졌다.
+# Next 툴체인이 쓰는 네이티브 패키지(sharp: 이미지 최적화, unrs-resolver: eslint 경로 해석)의
+# 설치 스크립트를 허용한다. 허용하지 않으면 pnpm이 install/build 단계에서 멈춘다.
+allowBuilds:
+  sharp: true
+  unrs-resolver: true
+
+# next가 내부에서 쓰는 전이 의존성의 알려진 취약점 패치 강제 (pnpm audit --prod 기준)
+overrides:
+  postcss: '>=8.5.23'
+  sharp: '>=0.35.4'
