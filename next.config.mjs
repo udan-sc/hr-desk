@@ -7,7 +7,9 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  /* 정적 내보내기는 빌드할 때만 켠다. dev에서 켜 두면 /law/[law]/[article] 처럼
+     세그먼트가 둘인 한글 동적 경로가 파라미터 검증에 걸려 500이 난다(배포본은 멀쩡하다). */
+  output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
   basePath,
   trailingSlash: true,
   reactStrictMode: true,

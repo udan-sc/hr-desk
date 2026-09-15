@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import ScopeBadges from '../../../scope-badges';
+import Interpretations from '../../../interpretations';
+import { interpretationsFor } from '../../../../lib/platform';
 import {
   provisions,
   findProvision,
@@ -51,6 +53,7 @@ export default async function ProvisionPage({ params }) {
   const p = await resolve(params);
   if (!p) notFound();
   const related = relatedProvisions(p);
+  const interpretations = interpretationsFor(p.law, p.article);
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -122,6 +125,8 @@ export default async function ProvisionPage({ params }) {
               </>
             )}
           </dl>
+
+          <Interpretations items={interpretations} law={p.law} article={p.article} />
 
           {related.length > 0 && (
             <section className="related">

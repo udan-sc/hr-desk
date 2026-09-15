@@ -398,3 +398,28 @@ aside.side{position:sticky;top:20px;max-height:calc(100vh - 40px);overflow-y:aut
 body.hide-out-of-scope .prov:has(.badge.scope.off),
 body.hide-out-of-scope .ob:has(.badge.scope.off),
 body.hide-out-of-scope .doc:has(.badge.scope.off){display:none}
+
+/* ── 행정해석 ───────────────────────────────── */
+.interp{margin-top:36px}
+.interp h2{font-family:var(--serif);font-size:17px;font-weight:700;margin:0 0 4px}
+.interp .lead{font-size:12.5px;color:var(--ink2);margin:0 0 12px;line-height:1.6}
+.interp-list{display:flex;flex-direction:column;gap:10px}
+.interp-item{
+  background:var(--surface);border:1px solid var(--border);border-radius:11px;
+  padding:15px 18px 13px;box-shadow:var(--shadow);
+}
+.interp-item .ih{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+.interp-item .num{
+  font-size:12px;font-weight:700;color:var(--accent-ink);background:var(--accent-soft);
+  border-radius:6px;padding:2px 8px;white-space:nowrap;font-variant-numeric:tabular-nums;
+}
+.interp-item .when{font-size:12px;color:var(--ink3);font-variant-numeric:tabular-nums}
+.interp-item dl{margin:9px 0 0;display:grid;grid-template-columns:52px minmax(0,1fr);gap:6px 12px;font-size:13.5px}
+.interp-item dt{color:var(--ink3);font-weight:700;font-size:12.5px}
+.interp-item dd{margin:0;line-height:1.72}
+.interp-item dd.ans{color:var(--ink)}
+.interp-item .src{margin-top:10px;font-size:12px}
+.interp-item .src a{color:var(--ink3);text-decoration:none}
+.interp-item .src a:hover{color:var(--accent-ink)}
+.interp-none{font-size:13px;color:var(--ink2);background:var(--surface2);border-radius:10px;padding:13px 16px;line-height:1.65}
+.interp-none a{color:var(--accent-ink)}
