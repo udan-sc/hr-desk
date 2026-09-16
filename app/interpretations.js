@@ -1,4 +1,17 @@
 import { LAW_GO_KR_INTERPRETATION_SEARCH } from '../lib/platform';
+import CopyButton from './copy-button';
+
+/* 회시 하나를 메일·보고서에 붙일 인용문으로 만든다 */
+function interpCitation(it, law, article) {
+  const head = it.hasNumber === false ? `${it.agency} 회신(회시번호 미부여)` : `${it.agency} ${it.docNumber}`;
+  const when = it.date ? `, ${it.date.replace(/-/g, '. ')}.` : '';
+  return [
+    `[행정해석] ${head}${when} — ${law} ${article} 관련`,
+    `질의: ${it.question}`,
+    `회답: ${it.answer}`,
+    it.url ? `원문: ${it.url}` : null,
+  ].filter(Boolean).join('\n');
+}
 
 /* 조문에 딸린 고용노동부 행정해석(질의회시).
    싣는 것은 회시번호 실재와 내용 일치가 모두 확인된 것뿐이고,
@@ -31,13 +44,14 @@ export default function Interpretations({ items, law, article }) {
                 <dt>회답</dt>
                 <dd className="ans">{it.answer}</dd>
               </dl>
-              {it.url && (
-                <p className="src">
+              <p className="src">
+                {it.url && (
                   <a href={it.url} target="_blank" rel="noopener noreferrer">
                     원문 확인<span className="vh"> (새 창)</span> <span aria-hidden="true">↗</span>
                   </a>
-                </p>
-              )}
+                )}
+                <CopyButton text={interpCitation(it, law, article)} label="회시 인용 복사" className="sm" />
+              </p>
             </article>
           ))}
         </div>

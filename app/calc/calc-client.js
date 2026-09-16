@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { annualLeave, severancePay, overtimePay, dismissalNotice, minimumWage, MIN_WAGE_2026 } from '../../lib/calc';
+import CopyButton from '../copy-button';
 
 const won = (n) => (typeof n === 'number' ? Math.round(n).toLocaleString('ko-KR') : n);
 const todayStr = () => {
@@ -80,8 +81,57 @@ function Warnings({ list }) {
   );
 }
 
+/* ── 공유 링크 ──
+   입력값을 주소 물음표 뒤에 실어 두면, 링크를 받은 사람이 열었을 때 같은 계산이 그대로 재현된다.
+   주소만 읽고 페이지는 정적으로 두기 위해 마운트 후 useEffect에서 한 번 반영한다. */
+function useQueryHydrate(apply) {
+  useEffect(() => {
+    const qs = new URLSearchParams(window.location.search);
+    if ([...qs.keys()].length === 0) return;
+    const get = (k) => qs.get(k);
+    get.date = (k) => (/^\d{4}-\d{2}-\d{2}$/.test(qs.get(k) || '') ? qs.get(k) : null);
+    get.num = (k) => {
+      const v = qs.get(k);
+      return v !== null && v !== '' && !Number.isNaN(Number(v)) ? Number(v) : null;
+    };
+    get.bool = (k) => {
+      const v = qs.get(k);
+      return v === null ? null : v === '1';
+    };
+    apply(get);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+}
+
+function buildQuery(params) {
+  const qs = new URLSearchParams();
+  for (const [k, v] of Object.entries(params)) {
+    if (v === '' || v === null || v === undefined) continue;
+    qs.set(k, v === true ? '1' : v === false ? '0' : String(v));
+  }
+  return qs.toString();
+}
+
+function ShareRow({ params, resultText }) {
+  const url = () => {
+    const q = buildQuery(params);
+    const href = `${window.location.origin}${window.location.pathname}${q ? '?' + q : ''}`;
+    window.history.replaceState(null, '', href);
+    return href;
+  };
+  return (
+    <div className="share-row">
+      <CopyButton getText={url} label="공유 링크 복사" copiedLabel="링크 복사됨" className="sm" />
+      {resultText && (
+        <CopyButton getText={() => `${resultText}\n${url()}`} label="결과 복사" copiedLabel="결과 복사됨" className="sm" />
+      )}
+      <span className="share-hint">링크를 열면 지금 입력값 그대로 다시 계산됩니다</span>
+    </div>
+  );
+}
+
 /* ── 1. 연차 ── */
-function AnnualLeave() {
+function AnnualLeave({ basis }) {
   const [hireDate, setHire] = useState('');
   const [baseDate, setBase] = useState('');
   const [method, setMethod] = useState('anniversary');
@@ -90,9 +140,27 @@ function AnnualLeave() {
   const [firstYearPerfectMonths, setPM] = useState(11);
   const [lowMonths, setLM] = useState(0);
   useEffect(() => setBase(todayStr()), []);
+  useQueryHydrate((get) => {
+    if (get.date('hire')) setHire(get.date('hire'));
+    if (get.date('base')) setBase(get.date('base'));
+    if (get('method') === 'fiscal' || get('method') === 'anniversary') setMethod(get('method'));
+    if (get.bool('a80') !== null) setA80(get.bool('a80'));
+    if (get.bool('mp') !== null) setMP(get.bool('mp'));
+    if (get.num('pm') !== null) setPM(get.num('pm'));
+    if (get.num('low') !== null) setLM(get.num('low'));
+  });
 
   const r = hireDate && baseDate
     ? annualLeave({ hireDate, baseDate, method, attendance80, monthlyPerfect, firstYearPerfectMonths, lowAttendanceMonths: lowMonths || 0 })
+    : null;
+
+  const shareParams = { hire: hireDate, base: baseDate, method, a80: attendance80, mp: monthlyPerfect, pm: firstYearPerfectMonths, low: lowMonths };
+  const resultText = r && !r.error
+    ? [
+        `[연차 계산] 입사일 ${hireDate} · 기준일 ${baseDate} · ${method === 'fiscal' ? '회계연도(1/1) 기준' : '입사일 기준'}`,
+        `현재 연차연도 부여분 ${r.currentGrant}일 · 1년 미만 월 단위 ${r.monthlyLeave}일 · 누적 발생 ${r.totalAccrued}일 (만 근속 ${r.serviceYears}년 ${r.serviceMonths}개월)`,
+        basis ? `근거: ${basis}` : null,
+      ].filter(Boolean).join('\n')
     : null;
 
   return (
@@ -142,13 +210,14 @@ function AnnualLeave() {
             </p>
           </>
         )}
+        <ShareRow params={shareParams} resultText={resultText} />
       </div>
     </div>
   );
 }
 
 /* ── 2. 퇴직금 ── */
-function Severance() {
+function Severance({ basis }) {
   const [hireDate, setHire] = useState('');
   const [leaveDate, setLeave] = useState('');
   const [pay3m, setPay] = useState('');
@@ -157,8 +226,29 @@ function Severance() {
   const [dailyOrdinary, setDO] = useState(0);
   const [under15h, setU15] = useState(false);
 
+  useQueryHydrate((get) => {
+    if (get.date('hire')) setHire(get.date('hire'));
+    if (get.date('leave')) setLeave(get.date('leave'));
+    if (get.num('p3') !== null) setPay(get.num('p3'));
+    if (get.num('bn') !== null) setBonus(get.num('bn'));
+    if (get.num('alp') !== null) setALP(get.num('alp'));
+    if (get.num('dor') !== null) setDO(get.num('dor'));
+    if (get.bool('u15') !== null) setU15(get.bool('u15'));
+  });
+
   const r = hireDate && leaveDate && pay3m !== ''
     ? severancePay({ hireDate, leaveDate, pay3m: pay3m || 0, annualBonus: annualBonus || 0, annualLeavePay: annualLeavePay || 0, dailyOrdinary: dailyOrdinary || 0, under15h })
+    : null;
+
+  const shareParams = { hire: hireDate, leave: leaveDate, p3: pay3m, bn: annualBonus, alp: annualLeavePay, dor: dailyOrdinary, u15: under15h };
+  const resultText = r && !r.error
+    ? (r.eligible
+        ? [
+            `[퇴직금 계산] 입사 ${hireDate} ~ 퇴직 ${leaveDate} (재직 ${won(r.days)}일)`,
+            `퇴직금 ${won(r.amount)}원 (세전) · 1일 평균임금 ${won(r.avgDaily)}원 · 적용 임금 ${won(r.appliedDaily)}원${r.usedOrdinary ? ' (통상임금 적용)' : ''}`,
+            basis ? `근거: ${basis}` : null,
+          ].filter(Boolean).join('\n')
+        : `[퇴직금 계산] 입사 ${hireDate} ~ 퇴직 ${leaveDate} — 지급 대상 아님: ${r.reason}`)
     : null;
 
   return (
@@ -198,13 +288,14 @@ function Severance() {
             </p>
           </>
         )}
+        <ShareRow params={shareParams} resultText={resultText} />
       </div>
     </div>
   );
 }
 
 /* ── 3. 가산수당 ── */
-function Overtime() {
+function Overtime({ basis }) {
   const [monthlyOrdinary, setMO] = useState('');
   const [monthlyHours, setMH] = useState(209);
   const [otHours, setOT] = useState(0);
@@ -213,8 +304,27 @@ function Overtime() {
   const [holidayOverHours, setHO] = useState(0);
   const [under5, setU5] = useState(false);
 
+  useQueryHydrate((get) => {
+    if (get.num('mo') !== null) setMO(get.num('mo'));
+    if (get.num('mh') !== null) setMH(get.num('mh'));
+    if (get.num('ot') !== null) setOT(get.num('ot'));
+    if (get.num('nh') !== null) setNH(get.num('nh'));
+    if (get.num('hh') !== null) setHH(get.num('hh'));
+    if (get.num('ho') !== null) setHO(get.num('ho'));
+    if (get.bool('u5') !== null) setU5(get.bool('u5'));
+  });
+
   const r = monthlyOrdinary !== '' && monthlyHours
     ? overtimePay({ monthlyOrdinary: monthlyOrdinary || 0, monthlyHours: monthlyHours || 209, otHours: otHours || 0, nightHours: nightHours || 0, holidayHours: holidayHours || 0, holidayOverHours: holidayOverHours || 0, under5 })
+    : null;
+
+  const shareParams = { mo: monthlyOrdinary, mh: monthlyHours, ot: otHours, nh: nightHours, hh: holidayHours, ho: holidayOverHours, u5: under5 };
+  const resultText = r && !r.error
+    ? [
+        `[가산수당 계산] 월 통상임금 ${won(monthlyOrdinary || 0)}원 · 월 소정 ${monthlyHours}시간 (통상시급 ${won(r.R)}원)${under5 ? ' · 5인 미만(가산 없음)' : ''}`,
+        `연장 ${otHours || 0}h · 야간 ${nightHours || 0}h · 휴일 ${holidayHours || 0}h+${holidayOverHours || 0}h → 합계 ${won(r.total)}원`,
+        basis ? `근거: ${basis}` : null,
+      ].filter(Boolean).join('\n')
     : null;
 
   return (
@@ -253,13 +363,14 @@ function Overtime() {
             </p>
           </>
         )}
+        <ShareRow params={shareParams} resultText={resultText} />
       </div>
     </div>
   );
 }
 
 /* ── 4. 해고예고 ── */
-function Dismissal() {
+function Dismissal({ basis }) {
   const [noticeDate, setND] = useState('');
   const [dismissalDate, setDD] = useState('');
   const [monthlyOrdinary, setMO] = useState('');
@@ -267,10 +378,31 @@ function Dismissal() {
   const [exDisaster, setE2] = useState(false);
   const [exMisconduct, setE3] = useState(false);
   useEffect(() => setND(todayStr()), []);
+  useQueryHydrate((get) => {
+    if (get.date('nd')) setND(get.date('nd'));
+    if (get.date('dd')) setDD(get.date('dd'));
+    if (get.num('mo') !== null) setMO(get.num('mo'));
+    if (get.bool('e1') !== null) setE1(get.bool('e1'));
+    if (get.bool('e2') !== null) setE2(get.bool('e2'));
+    if (get.bool('e3') !== null) setE3(get.bool('e3'));
+  });
 
   const anyEx = exUnder3m || exDisaster || exMisconduct;
   const r = anyEx || (noticeDate && dismissalDate && monthlyOrdinary !== '')
     ? dismissalNotice({ noticeDate, dismissalDate, monthlyOrdinary: monthlyOrdinary || 0, exUnder3m, exDisaster, exMisconduct })
+    : null;
+
+  const shareParams = { nd: noticeDate, dd: dismissalDate, mo: monthlyOrdinary, e1: exUnder3m, e2: exDisaster, e3: exMisconduct };
+  const resultText = r && !r.error
+    ? [
+        `[해고예고 판정] 통보일 ${noticeDate || '-'} · 해고 예정일 ${dismissalDate || '-'}`,
+        !r.duty
+          ? `예고 의무 없음 — ${r.note}`
+          : r.satisfied
+            ? `예고기간 ${r.N}일 — 30일 전 예고 충족 (1일 통상임금 ${won(r.dailyOrdinary)}원)`
+            : `예고기간 ${r.N}일 — 30일 미달, 해고예고수당 ${won(r.allowance)}원 (1일 통상임금 ${won(r.dailyOrdinary)}원 × 30일)`,
+        basis ? `근거: ${basis}` : null,
+      ].filter(Boolean).join('\n')
     : null;
 
   return (
@@ -315,13 +447,14 @@ function Dismissal() {
             </p>
           </>
         )}
+        <ShareRow params={shareParams} resultText={resultText} />
       </div>
     </div>
   );
 }
 
 /* ── 5. 최저임금 ── */
-function MinWage() {
+function MinWage({ basis }) {
   const [basePay, setBP] = useState('');
   const [fixedAllowance, setFA] = useState(0);
   const [monthlyBonus, setMB] = useState(0);
@@ -331,8 +464,30 @@ function MinWage() {
   const [contractUnder1y, setC1] = useState(false);
   const [simpleLabor, setSL] = useState(false);
 
+  useQueryHydrate((get) => {
+    if (get.num('bp') !== null) setBP(get.num('bp'));
+    if (get.num('fa') !== null) setFA(get.num('fa'));
+    if (get.num('mb') !== null) setMB(get.num('mb'));
+    if (get.num('wc') !== null) setWC(get.num('wc'));
+    if (get.num('wh') !== null) setWH(get.num('wh'));
+    if (get.bool('pr') !== null) setPR(get.bool('pr'));
+    if (get.bool('c1') !== null) setC1(get.bool('c1'));
+    if (get.bool('sl') !== null) setSL(get.bool('sl'));
+  });
+
   const r = basePay !== '' && weeklyHours
     ? minimumWage({ basePay: basePay || 0, fixedAllowance: fixedAllowance || 0, monthlyBonus: monthlyBonus || 0, welfareCash: welfareCash || 0, weeklyHours: weeklyHours || 40, probation, contractUnder1y, simpleLabor })
+    : null;
+
+  const shareParams = { bp: basePay, fa: fixedAllowance, mb: monthlyBonus, wc: welfareCash, wh: weeklyHours, pr: probation, c1: contractUnder1y, sl: simpleLabor };
+  const resultText = r && !r.error
+    ? [
+        `[최저임금 점검] 산입 임금 월 ${won(r.M)}원 · 주 ${weeklyHours}시간 (월 환산 ${r.H}시간)`,
+        r.pass
+          ? `적합 — 환산 시급 ${won(r.hourly)}원 ≥ 기준 ${won(r.standard)}원${r.canReduce ? ' (수습 90% 감액 적용)' : ''}`
+          : `미달 — 환산 시급 ${won(r.hourly)}원 < 기준 ${won(r.standard)}원, 월 부족액 ${won(r.shortfall)}원`,
+        basis ? `근거: ${basis}` : null,
+      ].filter(Boolean).join('\n')
     : null;
 
   return (
@@ -375,6 +530,7 @@ function MinWage() {
             </p>
           </>
         )}
+        <ShareRow params={shareParams} resultText={resultText} />
       </div>
     </div>
   );
@@ -388,8 +544,8 @@ const CALCS = {
   'minimum-wage': MinWage,
 };
 
-export default function CalcClient({ calcKey }) {
+export default function CalcClient({ calcKey, basis }) {
   const C = CALCS[calcKey];
   if (!C) return null;
-  return <C />;
+  return <C basis={basis} />;
 }

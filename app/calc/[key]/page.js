@@ -24,6 +24,7 @@ export default async function CalcPage({ params }) {
   const c = calculatorByKey(key);
   if (!c) notFound();
   const cites = resolveCitations(c.citations).filter((x) => x.href);
+  const basis = cites.map((x) => `${x.law} ${x.article}${x.title ? `(${x.title})` : ''}`).join(', ');
 
   return (
     <main>
@@ -40,7 +41,7 @@ export default async function CalcPage({ params }) {
           <p>{c.purpose}</p>
         </header>
 
-        <CalcClient calcKey={c.key} />
+        <CalcClient calcKey={c.key} basis={basis} />
 
         <section className="watchouts" style={{ marginTop: 26, maxWidth: 900 }}>
           <h2>이 계산기가 답하지 못하는 것</h2>

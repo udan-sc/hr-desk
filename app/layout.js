@@ -5,6 +5,7 @@ import { stats, BASE_DATE } from '../lib/data';
 import { MODULES, SITE_NAME, SITE_TAGLINE } from '../lib/modules';
 import { SITE_URL } from '../lib/site';
 import NavLinks from './nav-links';
+import CommandPalette from './command-palette';
 import { HeadcountProvider } from './headcount-context';
 
 /* 셀프호스팅 폰트. 한글 글리프는 unicode-range 조각으로 필요한 만큼만 내려받으므로
@@ -78,6 +79,7 @@ export default function RootLayout({ children }) {
             </Link>
             <nav className="site-nav" aria-label="주요 메뉴">
               <NavLinks modules={MODULES} />
+              <CommandPalette />
               <span className="meta">{BASE_DATE} 기준</span>
             </nav>
           </div>
