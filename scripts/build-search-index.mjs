@@ -16,6 +16,7 @@ const calculators = readJson('data/platform/calculators.json');
 const processes = readJson('data/platform/processes.json');
 const calendar = readJson('data/platform/calendar.json');
 const documents = readJson('data/platform/documents.json');
+const glossary = readJson('data/platform/glossary.json');
 
 /* ── 1. 조문 전문 색인 ── */
 const rows = raw.flatMap((area) => area.provisions.map((p) => [`${p.law}|${p.article}`, p.text]));
@@ -29,6 +30,14 @@ const cut = (s, n = 64) => {
 
 const palette = [
   ...MODULES.map((m) => ({ g: '메뉴', t: m.name, d: cut(m.blurb), k: m.short, h: m.href })),
+  { g: '메뉴', t: '용어 사전', d: '조문마다 등장하지만 서로 헷갈리는 노동법 개념 정리', k: '용어 사전 개념', h: '/terms' },
+  ...glossary.map((g) => ({
+    g: '용어',
+    t: g.term,
+    d: cut(g.definition, 56),
+    k: `용어 ${(g.related || []).join(' ')}`,
+    h: `/terms#${g.id}`,
+  })),
   ...raw.flatMap((area) =>
     area.provisions.map((p) => ({
       g: '조문',

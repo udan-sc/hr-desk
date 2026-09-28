@@ -1,4 +1,5 @@
 import BrowseClient from '../browse-client';
+import RecentProvisions from '../recent-provisions';
 import { browseProvisions, categories, laws, cards, stats, BASE_DATE } from '../../lib/data';
 
 export const metadata = {
@@ -12,6 +13,7 @@ export default function LawPage() {
     <main>
       <div className="wrap">
         <h1 className="vh">노무법전 — 노동법 핵심 조문 찾기</h1>
+        <RecentProvisions />
         <BrowseClient
           provisions={browseProvisions}
           categories={categories}

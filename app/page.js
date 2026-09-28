@@ -4,6 +4,7 @@ import { MODULES, SITE_NAME } from '../lib/modules';
 import { obligations } from '../lib/platform';
 import HomeMonth from './home-month';
 import HeadcountBar from './headcount-bar';
+import RecentProvisions from './recent-provisions';
 import { asset } from '../lib/site';
 
 export const metadata = {
@@ -35,6 +36,8 @@ export default function HomePage() {
         </form>
 
         <HeadcountBar hint="한 번 넣어 두면 노무법전·캘린더·규정서식이 모두 우리 회사 기준으로 표시됩니다." />
+
+        <RecentProvisions />
 
         <h2 className="vh">{SITE_NAME} 모듈</h2>
         <div className="mods">

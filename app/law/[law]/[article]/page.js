@@ -2,7 +2,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import ScopeBadges from '../../../scope-badges';
 import Interpretations from '../../../interpretations';
-import CopyButton from '../../../copy-button';
+import CopyButton, { PrintButton } from '../../../copy-button';
+import { RecentTracker } from '../../../recent-provisions';
 import { interpretationsFor } from '../../../../lib/platform';
 import { SITE_URL } from '../../../../lib/site';
 import { lawGoKrDisplayUrl } from '../../../../lib/lawlinks';
@@ -99,8 +100,10 @@ export default async function ProvisionPage({ params }) {
 
           <div className="cite-row">
             <CopyButton text={citationText} label="근거 복사" copiedLabel="복사됨 — 붙여넣기 하세요" />
-            <span className="cite-hint">조문명·요지·적용 범위·원문 주소가 인용문으로 복사됩니다</span>
+            <PrintButton />
+            <span className="cite-hint">복사하면 조문명·요지·적용 범위·원문 주소가 인용문으로 담깁니다</span>
           </div>
+          <RecentTracker law={p.law} article={p.article} title={p.title} />
 
           <div className="text">
             {splitProvisionText(p.text).map((b, i) => (

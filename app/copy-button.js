@@ -39,3 +39,14 @@ export default function CopyButton({ text, getText, label = '복사', copiedLabe
     </button>
   );
 }
+
+/* 브라우저 인쇄 대화상자를 연다. @media print 스타일이 메뉴·버튼을 걷어내므로
+   조문과 행정해석만 종이(또는 PDF)에 담긴다. */
+export function PrintButton({ label = '인쇄 · PDF 저장' }) {
+  return (
+    <button type="button" className="copybtn" onClick={() => window.print()}>
+      <span aria-hidden="true" className="ci">⎙</span>
+      <span>{label}</span>
+    </button>
+  );
+}

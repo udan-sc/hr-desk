@@ -501,3 +501,60 @@ body.hide-out-of-scope .doc:has(.badge.scope.off){display:none}
 }
 .pal-foot span{display:inline-flex;align-items:center;gap:4px}
 @media (max-width:640px){ .pal-veil{padding:6vh 10px 10px} .pal-in input{font-size:16px} .pal-foot{display:none} }
+
+/* ── 최근 본 조문 ── */
+.recent-row{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:16px 0 6px}
+.rr-label{font-size:12px;font-weight:700;color:var(--ink3);flex:none;letter-spacing:.02em}
+.rr-chip{
+  display:inline-flex;align-items:baseline;gap:6px;max-width:100%;
+  font-size:12.5px;font-weight:600;color:var(--ink2);text-decoration:none;
+  background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:4px 12px;
+  transition:border-color .15s,color .15s;
+}
+.rr-chip:hover{border-color:var(--accent-line);color:var(--accent-ink)}
+.rr-chip small{font-weight:400;color:var(--ink3);font-size:11.5px;max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media (max-width:640px){ .rr-chip small{display:none} }
+
+/* ── 용어 사전 ── */
+.gloss-toc{display:flex;gap:7px;flex-wrap:wrap;margin:4px 0 26px}
+.gloss-group{margin:30px 0 0}
+.gloss-group>h2{font-family:var(--font-serif),serif;font-size:19px;margin:0 0 12px;padding-bottom:8px;border-bottom:2px solid var(--border2)}
+.gloss-list{display:flex;flex-direction:column;gap:14px}
+.gloss-item{
+  background:var(--surface);border:1px solid var(--border);border-radius:12px;
+  padding:18px 20px;box-shadow:var(--shadow);scroll-margin-top:20px;
+}
+.gloss-item h3{margin:0 0 8px;font-size:16.5px}
+.gloss-item .def{margin:0;font-size:14px;line-height:1.8;color:var(--ink)}
+.gloss-item .pit{
+  margin:12px 0 0;font-size:13px;line-height:1.75;color:var(--ink2);
+  background:var(--accent-soft);border-left:3px solid var(--accent-line);
+  border-radius:0 8px 8px 0;padding:10px 14px;
+}
+.gloss-item .pit b{color:var(--accent-ink);font-size:12px;letter-spacing:.03em;display:block;margin-bottom:3px}
+.gloss-item .g-foot{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:12px}
+.gloss-item .g-rel{font-size:12px;color:var(--ink3)}
+.gloss-item .g-rel a{color:var(--accent-ink);text-decoration:none}
+
+/* ── 인쇄용: 메뉴·버튼·검색을 걷어내고 내용만 종이에 담는다 ── */
+@media print {
+  :root{
+    --bg:#fff; --surface:#fff; --surface2:#f4f4f4; --border:#c9c9c9; --border2:#a9a9a9;
+    --ctrl:#8a8a8a; --ink:#000; --ink2:#1c1c1c; --ink3:#4c4c4c;
+    --accent:#8a1a14; --accent-ink:#8a1a14; --accent-soft:#f4ecea; --accent-line:#c9a09b;
+    --shadow:none;
+  }
+  body{background:#fff}
+  .site-head,.site-foot,.hc-bar,.crumb,.backlink,.cite-row,.share-row,.copybtn,
+  .pal-trigger,.pal-veil,.recent-row,.related,.home-search,.searchbar,.gloss-toc{display:none !important}
+  main{padding:0}
+  .wrap{max-width:none;padding:0}
+  a{color:inherit;text-decoration:none}
+  .detail h1{font-size:20pt}
+  .detail .text p,.interp-item,.gloss-item,.card,.panel{break-inside:avoid}
+  .interp-item,.gloss-item,.panel{box-shadow:none}
+  /* 종이에서는 눌러 볼 수 없으니 원문 주소를 같이 인쇄한다 */
+  .kv dd a[href^="http"]::after,.interp-item .src a[href^="http"]::after{
+    content:" (" attr(href) ")";font-size:8.5pt;color:#444;word-break:break-all;
+  }
+}

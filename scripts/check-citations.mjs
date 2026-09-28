@@ -10,7 +10,7 @@ const known = new Set(read('data/provisions.json').flatMap((a) => a.provisions.m
 let total = 0;
 const dead = [];
 
-for (const file of ['calculators', 'processes', 'calendar', 'documents']) {
+for (const file of ['calculators', 'processes', 'calendar', 'documents', 'glossary']) {
   const walk = (node) => {
     if (Array.isArray(node)) return node.forEach(walk);
     if (node && typeof node === 'object') {
