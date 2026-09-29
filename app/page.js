@@ -51,6 +51,15 @@ export default function HomePage() {
           ))}
         </div>
 
+        <div className="ref-links">
+          <Link href="/changes">
+            <b>달라지는 노동법</b> 2026년부터 연도별 개정 타임라인 →
+          </Link>
+          <Link href="/terms">
+            <b>용어 사전</b> 통상임금 vs 평균임금처럼 헷갈리는 개념 26가지 →
+          </Link>
+        </div>
+
         <HomeMonth byMonth={byMonth} />
 
         <section className="home-sec">

@@ -8,7 +8,7 @@ export const dynamic = 'force-static';
 export default function sitemap() {
   return [
     { url: `${SITE_URL}/`, changeFrequency: 'monthly', priority: 1 },
-    ...['law', 'calc', 'process', 'calendar', 'docs', 'topic', 'terms'].map((p) => ({
+    ...['law', 'calc', 'process', 'calendar', 'docs', 'topic', 'terms', 'changes'].map((p) => ({
       url: `${SITE_URL}/${p}`,
       changeFrequency: 'monthly',
       priority: 0.8,

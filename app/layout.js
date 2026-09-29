@@ -101,6 +101,7 @@ export default function RootLayout({ children }) {
                 </Link>
               ))}
               <Link href="/terms">용어 사전</Link>
+              <Link href="/changes">달라지는 노동법</Link>
               <a href="https://www.law.go.kr" target="_blank" rel="noopener noreferrer">
                 국가법령정보센터<span className="vh"> (새 창)</span> <span aria-hidden="true">↗</span>
               </a>

@@ -558,3 +558,49 @@ body.hide-out-of-scope .doc:has(.badge.scope.off){display:none}
     content:" (" attr(href) ")";font-size:8.5pt;color:#444;word-break:break-all;
   }
 }
+
+/* ── 홈 참고 자료 줄 ── */
+.ref-links{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 0}
+.ref-links a{
+  flex:1 1 260px;display:block;font-size:13px;color:var(--ink2);text-decoration:none;
+  background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:11px 15px;
+  box-shadow:var(--shadow);transition:border-color .15s;
+}
+.ref-links a:hover{border-color:var(--accent-line)}
+.ref-links b{color:var(--ink);margin-right:7px}
+
+/* ── 달라지는 노동법 타임라인 ── */
+.tl-year{margin:32px 0 0}
+.tl-year>h2{font-family:var(--font-serif),serif;font-size:20px;margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid var(--border2)}
+.timeline{position:relative;display:flex;flex-direction:column;gap:14px}
+.timeline::before{content:'';position:absolute;left:103px;top:14px;bottom:14px;width:2px;background:var(--border)}
+.tl-item{position:relative;display:grid;grid-template-columns:88px minmax(0,1fr);gap:26px;scroll-margin-top:20px}
+.tl-item::before{
+  content:'';position:absolute;left:98.5px;top:20px;width:11px;height:11px;border-radius:50%;
+  background:var(--surface);border:2.5px solid var(--accent);z-index:1;
+}
+.tl-when{display:flex;flex-direction:column;align-items:flex-end;gap:5px;padding-top:15px}
+.tl-date{font-weight:700;font-size:14px;color:var(--ink);font-variant-numeric:tabular-nums}
+.tl-state{font-size:10.5px;font-weight:700;border-radius:5px;padding:2px 7px;border:1px solid var(--border);color:var(--ink3);background:var(--surface2)}
+.tl-state.todo{color:var(--accent-ink);border-color:var(--accent-line);background:var(--accent-soft)}
+.tl-body{
+  background:var(--surface);border:1px solid var(--border);border-radius:12px;
+  padding:15px 18px;box-shadow:var(--shadow);
+}
+.tl-head{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+.tl-law{font-size:11.5px;font-weight:700;color:var(--accent-ink);background:var(--accent-soft);border-radius:5px;padding:2px 8px;white-space:nowrap}
+.tl-head h3{margin:0;font-size:15.5px}
+.tl-scope{font-size:11.5px;color:var(--ink3);border:1px solid var(--border);border-radius:5px;padding:1px 7px;white-space:nowrap}
+.tl-change{margin:9px 0 0;font-size:13.5px;line-height:1.75;color:var(--ink)}
+.tl-practice{margin:9px 0 0;font-size:13px;line-height:1.7;color:var(--ink2)}
+.tl-practice b{color:var(--accent-ink);font-size:12px;margin-right:7px}
+.tl-foot{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:11px}
+.tl-src{font-size:11.5px;color:var(--ink3)}
+.tl-src a{color:var(--ink3)}
+.tl-src a:hover{color:var(--accent-ink)}
+@media (max-width:640px){
+  .timeline::before{display:none}
+  .tl-item{display:block}
+  .tl-item::before{display:none}
+  .tl-when{flex-direction:row;align-items:baseline;justify-content:flex-start;padding:0 0 6px}
+}
