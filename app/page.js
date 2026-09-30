@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { cards, stats, BASE_DATE } from '../lib/data';
 import { MODULES, SITE_NAME } from '../lib/modules';
-import { obligations } from '../lib/platform';
+import { obligations, changes } from '../lib/platform';
+import UpcomingChanges from './upcoming-changes';
 import HomeMonth from './home-month';
 import HeadcountBar from './headcount-bar';
 import RecentProvisions from './recent-provisions';
@@ -51,10 +52,9 @@ export default function HomePage() {
           ))}
         </div>
 
+        <UpcomingChanges items={changes.map(({ id, effectiveDate, law, title }) => ({ id, effectiveDate, law, title }))} />
+
         <div className="ref-links">
-          <Link href="/changes">
-            <b>달라지는 노동법</b> 2026년부터 연도별 개정 타임라인 →
-          </Link>
           <Link href="/terms">
             <b>용어 사전</b> 통상임금 vs 평균임금처럼 헷갈리는 개념 26가지 →
           </Link>
