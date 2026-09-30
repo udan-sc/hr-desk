@@ -152,15 +152,35 @@ export default function BrowseClient({ provisions, categories, laws, cards, base
     return list;
   }, [qRows, cat, law, onlyFav, favsForFilter, sort, hideOutOfScope, headcount]);
 
+  /* 인원수가 설정되면 사이드바 숫자는 그 규모에서 실제로 적용되는 조문만 센다 —
+     숨기기 토글과 무관하게. 다만 버튼 비활성화는 검색어 기준(qBy*)으로 판단해서,
+     적용 조문이 0건인 분야·법령도 눌러서 미적용(회색) 조문을 훑어볼 수는 있게 한다. */
+  const scopedRows = useMemo(
+    () => (headcount ? qRows.filter((r) => applies(headcount, r.p.threshold)) : qRows),
+    [qRows, headcount]
+  );
+
   const counts = useMemo(() => {
     const byCat = {};
     const byLaw = {};
-    qRows.forEach(({ p }) => {
+    const qByCat = {};
+    const qByLaw = {};
+    scopedRows.forEach(({ p }) => {
       byCat[p.category] = (byCat[p.category] || 0) + 1;
       byLaw[p.law] = (byLaw[p.law] || 0) + 1;
     });
-    return { byCat, byLaw };
-  }, [qRows]);
+    qRows.forEach(({ p }) => {
+      qByCat[p.category] = (qByCat[p.category] || 0) + 1;
+      qByLaw[p.law] = (qByLaw[p.law] || 0) + 1;
+    });
+    return { byCat, byLaw, qByCat, qByLaw };
+  }, [qRows, scopedRows]);
+
+  /* 목록 상단 안내용 — 숨기기를 끈 채 인원만 설정한 경우, 나열된 것 중 몇 건이 적용인지 */
+  const appliedInRows = useMemo(
+    () => (headcount ? rows.reduce((n, r) => n + (applies(headcount, r.p.threshold) ? 1 : 0), 0) : rows.length),
+    [rows, headcount]
+  );
 
   const visibleLaws = showAllLaws || law ? laws : laws.slice(0, LAWS_SHOWN);
 
@@ -241,7 +261,7 @@ export default function BrowseClient({ provisions, categories, laws, cards, base
             </button>
             <p className="tgl-note">
               {headcount
-                ? `상시 ${headcount}명 기준입니다. 켜면 적용되지 않는 조문을 목록에서 뺍니다.`
+                ? `상시 ${headcount}명 기준 — 아래 분야·법령 숫자는 적용되는 조문만 셉니다. 켜면 적용되지 않는 조문을 목록에서도 뺍니다.`
                 : '위에서 상시 근로자 수를 넣으면 적용 여부를 표시합니다.'}
             </p>
           </section>
@@ -251,7 +271,7 @@ export default function BrowseClient({ provisions, categories, laws, cards, base
             <div className="nav">
               <button type="button" className={cat ? '' : 'on'} aria-current={cat ? undefined : 'true'} onClick={() => setCat(null)}>
                 <span>전체 분야</span>
-                <span className="n">{qRows.length}</span>
+                <span className="n">{scopedRows.length}</span>
               </button>
               {categories.map((c) => {
                 const n = counts.byCat[c.name] || 0;
@@ -261,7 +281,7 @@ export default function BrowseClient({ provisions, categories, laws, cards, base
                     type="button"
                     className={cat === c.name ? 'on' : ''}
                     aria-current={cat === c.name ? 'true' : undefined}
-                    disabled={n === 0 && cat !== c.name}
+                    disabled={(counts.qByCat[c.name] || 0) === 0 && cat !== c.name}
                     onClick={() => setCat((cur) => (cur === c.name ? null : c.name))}
                   >
                     <span>{c.name}</span>
@@ -283,7 +303,7 @@ export default function BrowseClient({ provisions, categories, laws, cards, base
                     type="button"
                     className={law === l.name ? 'on' : ''}
                     aria-pressed={law === l.name}
-                    disabled={n === 0 && law !== l.name}
+                    disabled={(counts.qByLaw[l.name] || 0) === 0 && law !== l.name}
                     onClick={() => setLaw((cur) => (cur === l.name ? null : l.name))}
                   >
                     <span>{l.name}</span>
@@ -334,9 +354,11 @@ export default function BrowseClient({ provisions, categories, laws, cards, base
           <div className="list-head">
             <span className="cnt" role="status" aria-live="polite" aria-atomic="true">
               수록 조문 <b>{rows.length}</b>건
-              {rows.length !== provisions.length && (
+              {headcount && !hideOutOfScope && appliedInRows !== rows.length ? (
+                <span style={{ color: 'var(--ink3)', fontWeight: 400, fontSize: '12.5px' }}> · 상시 {headcount}명에 적용 {appliedInRows}건</span>
+              ) : rows.length !== provisions.length ? (
                 <span style={{ color: 'var(--ink3)', fontWeight: 400, fontSize: '12.5px' }}> / 전체 {provisions.length}건</span>
-              )}
+              ) : null}
             </span>
             <span className="right">
               <label htmlFor="sort" style={{ fontSize: '12.5px', color: 'var(--ink2)' }}>정렬</label>
