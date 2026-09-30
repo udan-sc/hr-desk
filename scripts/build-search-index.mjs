@@ -42,7 +42,7 @@ const palette = [
   ...glossary.map((g) => ({
     g: '용어',
     t: g.term,
-    d: cut(g.definition, 56),
+    d: cut(g.plain || g.definition, 56),
     k: `용어 ${(g.related || []).join(' ')}`,
     h: `/terms#${g.id}`,
   })),

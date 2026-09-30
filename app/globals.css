@@ -621,3 +621,81 @@ body.hide-out-of-scope .doc:has(.badge.scope.off){display:none}
 .up-what{min-width:0;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
 .up-law{font-size:11px;font-weight:700;color:var(--ink3);border:1px solid var(--border);border-radius:5px;padding:1px 6px;white-space:nowrap}
 @media (max-width:640px){ .up-item{flex-direction:column;gap:4px} .up-when{width:auto} }
+
+/* ── 용어 사전 · 초보자용 카드 요소 ── */
+.g-top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.g-conf{font-size:11px;font-weight:700;letter-spacing:.02em;border-radius:5px;padding:2px 8px}
+.g-conf span{letter-spacing:2px;font-size:9px;vertical-align:1px}
+.g-conf.c2{color:var(--ink2);background:var(--surface2);border:1px solid var(--border)}
+.g-conf.c3{color:var(--accent-ink);background:var(--accent-soft);border:1px solid var(--accent-line)}
+.g-plain{
+  margin:6px 0 0;font-size:15.5px;font-weight:700;line-height:1.6;color:var(--ink);
+  font-family:var(--font-serif),serif;
+}
+.g-ex{margin:12px 0 0;font-size:13px;line-height:1.75;color:var(--ink2)}
+.g-ex b{color:var(--ink3);font-size:12px;letter-spacing:.03em;display:block;margin-bottom:2px}
+.g-more{margin-top:12px;border-top:1px dashed var(--border);padding-top:10px}
+.g-more summary{
+  cursor:pointer;font-size:12.5px;font-weight:700;color:var(--accent-ink);
+  list-style-position:inside;
+}
+.g-more summary:hover{text-decoration:underline}
+.g-more .def{margin:10px 0 0;font-size:13px}
+.g-more .g-foot{margin-top:10px}
+
+/* 도해 공통 */
+.gv{margin:12px 0 0}
+.gv-note{margin-top:7px;font-size:11.5px;color:var(--ink3);text-align:center}
+
+/* 비교 그림 */
+.gv-compare{display:grid;gap:10px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.gv-compare[data-n="3"]{grid-template-columns:repeat(3,minmax(0,1fr))}
+.gvc{border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--surface)}
+.gvc-t{
+  font-size:12.5px;font-weight:700;text-align:center;padding:7px 8px;
+  background:var(--surface2);color:var(--ink);border-bottom:1px solid var(--border);
+}
+.gvc.first .gvc-t{background:var(--accent-soft);color:var(--accent-ink);border-bottom-color:var(--accent-line)}
+.gvc-r{font-size:12px;line-height:1.55;padding:7px 10px;color:var(--ink2)}
+.gvc-r+.gvc-r{border-top:1px dashed var(--border)}
+@media (max-width:640px){ .gv-compare[data-n="3"]{grid-template-columns:minmax(0,1fr)} }
+
+/* 계산식 그림 */
+.gv-formula{
+  display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;
+  padding:14px 10px;border:1px solid var(--border);border-radius:10px;background:var(--surface2);
+}
+.gvf-seg{display:inline-flex;align-items:center;gap:8px}
+.gvf-op{font-size:16px;font-weight:700;color:var(--ink3)}
+.gvf-box{
+  font-size:12.5px;font-weight:700;color:var(--ink);background:var(--surface);
+  border:1.5px solid var(--border2);border-radius:8px;padding:7px 12px;text-align:center;
+}
+.gvf-box.res{color:var(--accent-ink);border-color:var(--accent-line);background:var(--accent-soft)}
+
+/* 단계 그림 */
+.gv-steps{position:relative;display:flex;flex-direction:column;gap:8px;padding-left:4px}
+.gvs{display:flex;align-items:baseline;gap:10px;position:relative}
+.gvs-n{
+  flex:none;width:20px;height:20px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;color:var(--on-accent,#fff);background:var(--accent);align-self:flex-start;margin-top:1px;
+}
+.gvs-b{font-size:12.5px;line-height:1.6;color:var(--ink2);min-width:0}
+.gvs-b b{color:var(--ink);margin-right:7px}
+.gvs:not(:last-child)::before{
+  content:'';position:absolute;left:9.5px;top:22px;bottom:-9px;width:1.5px;background:var(--border2);
+}
+
+/* 인원 눈금 그림 */
+.gv-scale{
+  position:relative;display:flex;gap:8px;justify-content:space-between;
+  padding:12px 8px 8px;border:1px solid var(--border);border-radius:10px;background:var(--surface2);
+}
+.gv-scale::before{content:'';position:absolute;left:16px;right:16px;top:22px;height:2px;background:var(--border2)}
+.gvp{position:relative;flex:1;min-width:0;text-align:center}
+.gvp::before{
+  content:'';display:block;width:10px;height:10px;border-radius:50%;margin:0 auto 6px;
+  background:var(--surface);border:2.5px solid var(--accent);position:relative;z-index:1;
+}
+.gvp-n{display:block;font-size:12.5px;font-weight:800;color:var(--ink)}
+.gvp-w{display:block;font-size:11px;line-height:1.5;color:var(--ink2);margin-top:2px}
