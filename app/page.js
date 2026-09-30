@@ -54,12 +54,6 @@ export default function HomePage() {
 
         <UpcomingChanges items={changes.map(({ id, effectiveDate, law, title }) => ({ id, effectiveDate, law, title }))} />
 
-        <div className="ref-links">
-          <Link href="/terms">
-            <b>용어 사전</b> 통상임금 vs 평균임금처럼 헷갈리는 개념 26가지 →
-          </Link>
-        </div>
-
         <HomeMonth byMonth={byMonth} />
 
         <section className="home-sec">

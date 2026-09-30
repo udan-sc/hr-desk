@@ -31,7 +31,6 @@ const cut = (s, n = 64) => {
 
 const palette = [
   ...MODULES.map((m) => ({ g: '메뉴', t: m.name, d: cut(m.blurb), k: m.short, h: m.href })),
-  { g: '메뉴', t: '용어 사전', d: '조문마다 등장하지만 서로 헷갈리는 노동법 개념 정리', k: '용어 사전 개념', h: '/terms' },
   ...changes.map((c) => ({
     g: '개정',
     t: `${c.effectiveDate.replace(/-/g, '. ')}. ${c.title}`,
