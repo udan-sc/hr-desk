@@ -9,6 +9,7 @@ out/
 public/search-index.json
 public/palette-index.json
 public/prec/
+public/auto-status.json
 
 # 이 PC의 절대경로가 들어 있는 로컬 실행 설정
 .claude/

@@ -7,6 +7,7 @@ import { SITE_URL } from '../lib/site';
 import NavLinks from './nav-links';
 import CommandPalette from './command-palette';
 import { HeadcountProvider } from './headcount-context';
+import { watchStatus } from '../lib/platform';
 
 /* 셀프호스팅 폰트. 한글 글리프는 unicode-range 조각으로 필요한 만큼만 내려받으므로
    subsets에는 프리로드할 latin만 지정한다. */
@@ -94,6 +95,11 @@ export default function RootLayout({ children }) {
               개별 사안의 판단은 원문 조문과 행정해석·판례 확인이 필요합니다. 조문 원문은 각 항목의 국가법령정보센터
               링크에서 볼 수 있습니다.
             </p>
+            {watchStatus.checkedAt && (
+              <p className="watch-foot">
+                법령 원문 자동 확인: {watchStatus.checkedAt.replace(/-0?/g, '. ')}. · 매주 월요일 국가법령정보센터 기준으로 개정 여부를 확인합니다.
+              </p>
+            )}
             <div className="fl">
               {MODULES.map((m) => (
                 <Link key={m.slug} href={m.href}>

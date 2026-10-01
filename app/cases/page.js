@@ -26,6 +26,7 @@ export default function CasesPage() {
     category: p.category,
     issues: p.issues,
     hasSummary: Boolean(p.summary),
+    auto: Boolean(p.auto),
     provisions: (p.provisions || [])
       .map((x) => {
         const f = findProvision(x.law, x.article);

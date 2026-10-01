@@ -8,6 +8,7 @@ import TermLinks from '../../../term-links';
 import TipDismiss from '../../../tip-dismiss';
 import ChangeNotice from '../../../change-notice';
 import Precedents from '../../../precedents';
+import LawWatchNotice from '../../../law-watch-notice';
 import { interpretationsFor, changesForProvision, precedentsFor } from '../../../../lib/platform';
 import { SITE_URL } from '../../../../lib/site';
 import { lawGoKrDisplayUrl } from '../../../../lib/lawlinks';
@@ -104,6 +105,7 @@ export default async function ProvisionPage({ params }) {
           <ScopeBadges threshold={p.threshold} note={p.thresholdNote} penalty={p.penalty} />
 
           <ChangeNotice items={relatedChanges} />
+          <LawWatchNotice provision={{ law: p.law, article: p.article }} curatedDates={relatedChanges.map((c) => c.effectiveDate)} />
 
           <div className="cite-row">
             <CopyButton text={citationText} label="근거 복사" copiedLabel="복사됨 — 붙여넣기 하세요" />

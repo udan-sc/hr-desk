@@ -18,7 +18,19 @@ const calendar = readJson('data/platform/calendar.json');
 const documents = readJson('data/platform/documents.json');
 const glossary = readJson('data/platform/glossary.json');
 const changes = readJson('data/platform/changes.json');
-const precedents = readJson('data/platform/precedents.json');
+const curatedPrec = readJson('data/platform/precedents.json');
+/* 매주 자동 추가된 새 판례(인증키가 있을 때)도 판결요지 파일·통합 검색에 함께 넣는다 */
+const autoPrec = fs.existsSync(path.join(root, 'data/auto/precedents-auto.json'))
+  ? (readJson('data/auto/precedents-auto.json').items || []).filter((p) => !curatedPrec.some((q) => q.caseNo === p.caseNo))
+  : [];
+const precedents = [...curatedPrec, ...autoPrec];
+const lawWatch = fs.existsSync(path.join(root, 'data/auto/law-watch.json')) ? readJson('data/auto/law-watch.json') : { laws: {} };
+const curatedChangeKeys = new Set(changes.map((c) => `${c.law}|${c.effectiveDate}`));
+const autoChanges = Object.entries(lawWatch.laws || {}).flatMap(([law, l]) =>
+  (l.upcoming || [])
+    .filter((u) => u.notable && !curatedChangeKeys.has(`${law}|${u.efYd}`) && !curatedChangeKeys.has(`${l.official}|${u.efYd}`))
+    .map((u) => ({ law, ...u }))
+);
 
 /* ── 1. 조문 전문 색인 ── */
 const rows = raw.flatMap((area) => area.provisions.map((p) => [`${p.law}|${p.article}`, p.text]));
@@ -40,6 +52,13 @@ const palette = [
     d: cut(p.point || p.issues, 56),
     k: `판례 ${p.court} ${p.category || ''} ${(p.provisions || []).map((x) => x.law + ' ' + x.article).join(' ')}`,
     h: `/cases?q=${encodeURIComponent(p.caseNo)}`,
+  })),
+  ...autoChanges.map((u) => ({
+    g: '개정',
+    t: `${u.efYd.replace(/-/g, '. ')}. ${u.law} ${u.kind} (자동 감지)`,
+    d: cut(u.reason || `법률 제${u.lawNo}호`, 56),
+    k: `개정 시행 자동 ${u.law} ${(u.changedArticles || []).join(' ')}`,
+    h: `/changes#auto-${u.law}-${u.efYd}-${u.lawNo}`,
   })),
   ...changes.map((c) => ({
     g: '개정',
@@ -97,6 +116,24 @@ fs.rmSync(precDir, { recursive: true, force: true });
 fs.mkdirSync(precDir, { recursive: true });
 for (const p of precedents) fs.writeFileSync(path.join(precDir, `${p.precSeq}.json`), JSON.stringify([p.summary || '', p.refs || '']));
 fs.rmSync(path.join(outDir, 'precedents-full.json'), { force: true });
+/* 매주 자동 확인 상태 — 배포된 사이트에서 /auto-status.json으로 확인할 수 있다 */
+const precWatch = fs.existsSync(path.join(root, 'data/auto/precedents-auto.json')) ? readJson('data/auto/precedents-auto.json') : {};
+fs.writeFileSync(
+  path.join(outDir, 'auto-status.json'),
+  JSON.stringify({
+    law: {
+      checkedAt: lawWatch.checkedAt || null,
+      runAt: lawWatch.runAt || null,
+      runner: lawWatch.runner || null,
+      ok: lawWatch.ok ?? null,
+      errors: lawWatch.errors || [],
+      changedProvisions: Object.values(lawWatch.provisions || {}).filter((p) => p.changedSinceBase).length,
+      upcoming: Object.values(lawWatch.laws || {}).reduce((n, l) => n + (l.upcoming || []).length, 0),
+      autoChanges: autoChanges.length,
+    },
+    precedents: { enabled: Boolean(precWatch.enabled), checkedAt: precWatch.checkedAt || null, added: autoPrec.length },
+  }, null, 1)
+);
 console.log(
   `search-index.json: ${rows.length}건, ${Math.round(fs.statSync(outFile).size / 1024)}KB · ` +
   `palette-index.json: ${palette.length}건, ${Math.round(fs.statSync(palFile).size / 1024)}KB`

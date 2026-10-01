@@ -32,6 +32,7 @@ export default function Precedents({ items: all, law, article }) {
                 <span className="when">{precedentDate(p.date)} 선고</span>
                 {p.kind.startsWith('전원합의체') && <span className="prec-en">전원합의체</span>}
                 <span className="prec-name">{p.caseName}</span>
+                {p.auto && <span className="tl-auto">자동 추가</span>}
               </div>
               {p.point && <p className="prec-point">{p.point}</p>}
               <details className="prec-more">

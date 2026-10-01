@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # 매주 월요일 오전 6시(한국 시간)에 국가법령정보센터 원문을 다시 확인해 사이트를 새로 굽는다.
+  schedule:
+    - cron: '0 21 * * 0'
 
 permissions:
   contents: read
@@ -18,6 +21,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # 법제처 Open API 인증키 — Settings → Secrets and variables → Actions에 LAW_OC로 넣으면 새 판례 자동 수집이 켜진다.
+      LAW_OC: ${{ secrets.LAW_OC }}
     steps:
       - uses: actions/checkout@v4
 
@@ -30,6 +36,20 @@ jobs:
           cache: pnpm
 
       - run: pnpm install --frozen-lockfile
+
+      # 우리 조문 187개의 원문이 기준일 뒤 바뀌었는지, 새로 공포된 시행 예정 개정이 있는지 확인한다.
+      # 국가법령정보센터에 접속하지 못해도 지난 결과로 배포는 계속한다.
+      - name: 법령 원문 자동 확인
+        continue-on-error: true
+        timeout-minutes: 20
+        run: node scripts/law-watch.mjs
+
+      # 인증키가 있을 때만: 기준일 뒤 선고된 대법원 판례 중 우리 조문을 참조조문으로 든 것을 원문 그대로 더한다.
+      - name: 새 판례 자동 확인
+        if: ${{ env.LAW_OC != '' }}
+        continue-on-error: true
+        timeout-minutes: 20
+        run: node scripts/precedent-watch.mjs
 
       # 계산기 검산 36건과 근거 조문 인용 연결을 먼저 확인한다. 틀리면 배포하지 않는다.
       - name: 데이터·산식 검사

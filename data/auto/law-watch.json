@@ -1,0 +1,1662 @@
+{
+ "checkedAt": "2026-10-01",
+ "runner": "local",
+ "runAt": "2026-10-01T04:03:57.076Z",
+ "baseDate": "2026-09-11",
+ "ok": true,
+ "errors": [],
+ "laws": {
+  "근로기준법": {
+   "official": "근로기준법",
+   "lsId": "001872",
+   "current": {
+    "lsiSeq": "283457",
+    "efYd": "2026-08-20",
+    "ancYd": "2026-02-19",
+    "lawNo": "21373",
+    "kind": "타법개정"
+   },
+   "upcoming": [
+    {
+     "lsiSeq": "290781",
+     "ancYd": "2026-08-04",
+     "lawNo": "21857",
+     "efYd": "2026-10-02",
+     "kind": "타법개정",
+     "changedArticles": [],
+     "notable": false,
+     "reason": ""
+    },
+    {
+     "lsiSeq": "285279",
+     "ancYd": "2026-04-07",
+     "lawNo": "21533",
+     "efYd": "2026-10-08",
+     "kind": "일부개정",
+     "changedArticles": [],
+     "notable": true,
+     "reason": "노동감독관의 직무ㆍ권한, 업무 절차를 규정하는 등 노동 감독 행정의 법적 근거를 마련하는 내용으로 「노동감독관 직무집행법」이 제정됨에 따라, 근로감독관 관련 조항을 정비하는 한편, 임금체불 관련 법정형을 현행 3년 이하의 징역 또는 3천만원 이하의 벌금에서 5년 이하의 징역 또는 5천만원 이하의 벌금으로 상향하고, 국가ㆍ지방자치단체ㆍ공공기관 등에 해당하는 도급인이 일정한 업종, 금액 규모 및 기간의 사업을 도급하는 경우 그 도급금액 중 수급인이 자신의 근로자에게 지급하여야 하는 임금에 해당하는 비용을 구분하여 매월 지급하도록 하려는 것임.\n<법체저 제공>\n【제정·개정문】\n국회에서 의결된 근로기준법 일부개정법률을 이에 공포한다.\n대통령        이재명 (인)\n2026년 4월 7일\n국무총리        김민석\n국무위원 고용노동부 장관        김영훈\n⊙법률 제21533호\n근로기준법 일부개정법률\n근로기준법 일부를 다음과 같이 개정한다.\n제13조 중 \"근로감독관\"을 \"「노동감독관 직무집행법」에 따른 노동감독관\"으로 한다.\n제44조의4를 다음과 같이 신설한다.\n제44조의4(도급 사업에서 임금비용의 구분지급) ① 다음 각 호의 어느 하나에 해당하는 도급인은 대통령령으로 정하는 업종, 금액 규모 및 기간에 해당하는 사업을 도급하는 경우 그 도급금액 중 수급인이 자신의 근로자에게 지급하여야 할 임금에 해당하는 비용(이하 \"임금비용\"이라 한다)을 구분하여 매월 지급하여야 한다.\n1. 국가\n2. 지방자치단체\n3. 「공공기관의 운영에 관한 법률」 제5조에 따른 공공기관\n4. 「지방공기업법」 제49조에 따른 지방공사 및 같은 법 제76조에 따른 지방공단\n5. 「지방자치단체 출자ㆍ출연 기관의 운영에 관한 법률」 제2조에 따른 출자기관 또는 출연기관\n6. 그 밖에 제1호부터 제5호까지에 해당하지 않는 도급인\n② 제1항에 따른 사업이 한 차례 이상의 도급에 따라 행하여지는 경우 직상 수급인과 하수급인을 각각 도급인과 수급인으로 본다.\n③ 제1항에 따라 임금비용을 구분하여 지급하여야 하는 도급인이 고용노동부장관이 지정하는 금융기관에 임금비용을 예치하는 때에는 해당 임금비용을 수급인에게 지급한 것으로 본다.\n④ 도급인이 제1항에 따라 임금비용을 구분하여 지급하는 때에는 수급인이 전월(前月)[임금비용을 최초로 지급한 월(月)의 전월은 제외한다]에 자신의 근로자에게 임금을 지급하였는지를 확인하여야 한다. 이 경우 수급인은 도급인에게 전월 임금 지급내역 등 고용노동부령으로 정하는 자료를 도급인이 정하는 방법에 따라 제출하여야 한다.\n⑤ 도급인이 제4항에 따라 임금 지급 여부를 확인한 결과 수급인이 자신의 근로자에게 임금을 지급하지 아니한 경우에는 그 사실을 고용노동부장관에게 통보하여야 한다.\n⑥ 수급인은 제1항에 따라 지급받은 임"
+    },
+    {
+     "lsiSeq": "285279",
+     "ancYd": "2026-04-07",
+     "lawNo": "21533",
+     "efYd": "2026-12-08",
+     "kind": "일부개정",
+     "changedArticles": [],
+     "notable": true,
+     "reason": "노동감독관의 직무ㆍ권한, 업무 절차를 규정하는 등 노동 감독 행정의 법적 근거를 마련하는 내용으로 「노동감독관 직무집행법」이 제정됨에 따라, 근로감독관 관련 조항을 정비하는 한편, 임금체불 관련 법정형을 현행 3년 이하의 징역 또는 3천만원 이하의 벌금에서 5년 이하의 징역 또는 5천만원 이하의 벌금으로 상향하고, 국가ㆍ지방자치단체ㆍ공공기관 등에 해당하는 도급인이 일정한 업종, 금액 규모 및 기간의 사업을 도급하는 경우 그 도급금액 중 수급인이 자신의 근로자에게 지급하여야 하는 임금에 해당하는 비용을 구분하여 매월 지급하도록 하려는 것임.\n<법체저 제공>\n【제정·개정문】\n국회에서 의결된 근로기준법 일부개정법률을 이에 공포한다.\n대통령        이재명 (인)\n2026년 4월 7일\n국무총리        김민석\n국무위원 고용노동부 장관        김영훈\n⊙법률 제21533호\n근로기준법 일부개정법률\n근로기준법 일부를 다음과 같이 개정한다.\n제13조 중 \"근로감독관\"을 \"「노동감독관 직무집행법」에 따른 노동감독관\"으로 한다.\n제44조의4를 다음과 같이 신설한다.\n제44조의4(도급 사업에서 임금비용의 구분지급) ① 다음 각 호의 어느 하나에 해당하는 도급인은 대통령령으로 정하는 업종, 금액 규모 및 기간에 해당하는 사업을 도급하는 경우 그 도급금액 중 수급인이 자신의 근로자에게 지급하여야 할 임금에 해당하는 비용(이하 \"임금비용\"이라 한다)을 구분하여 매월 지급하여야 한다.\n1. 국가\n2. 지방자치단체\n3. 「공공기관의 운영에 관한 법률」 제5조에 따른 공공기관\n4. 「지방공기업법」 제49조에 따른 지방공사 및 같은 법 제76조에 따른 지방공단\n5. 「지방자치단체 출자ㆍ출연 기관의 운영에 관한 법률」 제2조에 따른 출자기관 또는 출연기관\n6. 그 밖에 제1호부터 제5호까지에 해당하지 않는 도급인\n② 제1항에 따른 사업이 한 차례 이상의 도급에 따라 행하여지는 경우 직상 수급인과 하수급인을 각각 도급인과 수급인으로 본다.\n③ 제1항에 따라 임금비용을 구분하여 지급하여야 하는 도급인이 고용노동부장관이 지정하는 금융기관에 임금비용을 예치하는 때에는 해당 임금비용을 수급인에게 지급한 것으로 본다.\n④ 도급인이 제1항에 따라 임금비용을 구분하여 지급하는 때에는 수급인이 전월(前月)[임금비용을 최초로 지급한 월(月)의 전월은 제외한다]에 자신의 근로자에게 임금을 지급하였는지를 확인하여야 한다. 이 경우 수급인은 도급인에게 전월 임금 지급내역 등 고용노동부령으로 정하는 자료를 도급인이 정하는 방법에 따라 제출하여야 한다.\n⑤ 도급인이 제4항에 따라 임금 지급 여부를 확인한 결과 수급인이 자신의 근로자에게 임금을 지급하지 아니한 경우에는 그 사실을 고용노동부장관에게 통보하여야 한다.\n⑥ 수급인은 제1항에 따라 지급받은 임"
+    },
+    {
+     "lsiSeq": "286771",
+     "ancYd": "2026-06-09",
+     "lawNo": "21784",
+     "efYd": "2026-12-10",
+     "kind": "일부개정",
+     "changedArticles": [
+      "제54조"
+     ],
+     "notable": true,
+     "reason": "근로시간이 4시간인 경우로서 근로자가 휴게시간을 이용하지 아니할 것을 명시적으로 요청한 때에는 휴게시간을 부여하지 아니하도록 하여 근로자의 휴게시간 선택권을 확대하고 근로시간 운영의 유연성을 높이며, 근로자가 일정한 시간단위 및 일수의 범위에서 연차 유급휴가를 분할하여 청구한 때에는 그에 따라 부여하도록 하고, 위반 시 2년 이하의 징역 또는 2천만원 이하의 벌금에 처하도록 함으로써 근로자의 휴식권을 보다 실질적으로 보장하며, 사용자는 연차 유급휴가의 청구 또는 사용을 이유로 근로자에 대한 불리한 처우를 금지하고, 위반 시 500만원 이하의 벌금에 처하도록 함으로써 연차 유급휴가의 사용을 권장하려는 것임."
+    },
+    {
+     "lsiSeq": "285279",
+     "ancYd": "2026-04-07",
+     "lawNo": "21533",
+     "efYd": "2027-01-01",
+     "kind": "일부개정",
+     "changedArticles": [],
+     "notable": true,
+     "reason": "노동감독관의 직무ㆍ권한, 업무 절차를 규정하는 등 노동 감독 행정의 법적 근거를 마련하는 내용으로 「노동감독관 직무집행법」이 제정됨에 따라, 근로감독관 관련 조항을 정비하는 한편, 임금체불 관련 법정형을 현행 3년 이하의 징역 또는 3천만원 이하의 벌금에서 5년 이하의 징역 또는 5천만원 이하의 벌금으로 상향하고, 국가ㆍ지방자치단체ㆍ공공기관 등에 해당하는 도급인이 일정한 업종, 금액 규모 및 기간의 사업을 도급하는 경우 그 도급금액 중 수급인이 자신의 근로자에게 지급하여야 하는 임금에 해당하는 비용을 구분하여 매월 지급하도록 하려는 것임.\n<법체저 제공>\n【제정·개정문】\n국회에서 의결된 근로기준법 일부개정법률을 이에 공포한다.\n대통령        이재명 (인)\n2026년 4월 7일\n국무총리        김민석\n국무위원 고용노동부 장관        김영훈\n⊙법률 제21533호\n근로기준법 일부개정법률\n근로기준법 일부를 다음과 같이 개정한다.\n제13조 중 \"근로감독관\"을 \"「노동감독관 직무집행법」에 따른 노동감독관\"으로 한다.\n제44조의4를 다음과 같이 신설한다.\n제44조의4(도급 사업에서 임금비용의 구분지급) ① 다음 각 호의 어느 하나에 해당하는 도급인은 대통령령으로 정하는 업종, 금액 규모 및 기간에 해당하는 사업을 도급하는 경우 그 도급금액 중 수급인이 자신의 근로자에게 지급하여야 할 임금에 해당하는 비용(이하 \"임금비용\"이라 한다)을 구분하여 매월 지급하여야 한다.\n1. 국가\n2. 지방자치단체\n3. 「공공기관의 운영에 관한 법률」 제5조에 따른 공공기관\n4. 「지방공기업법」 제49조에 따른 지방공사 및 같은 법 제76조에 따른 지방공단\n5. 「지방자치단체 출자ㆍ출연 기관의 운영에 관한 법률」 제2조에 따른 출자기관 또는 출연기관\n6. 그 밖에 제1호부터 제5호까지에 해당하지 않는 도급인\n② 제1항에 따른 사업이 한 차례 이상의 도급에 따라 행하여지는 경우 직상 수급인과 하수급인을 각각 도급인과 수급인으로 본다.\n③ 제1항에 따라 임금비용을 구분하여 지급하여야 하는 도급인이 고용노동부장관이 지정하는 금융기관에 임금비용을 예치하는 때에는 해당 임금비용을 수급인에게 지급한 것으로 본다.\n④ 도급인이 제1항에 따라 임금비용을 구분하여 지급하는 때에는 수급인이 전월(前月)[임금비용을 최초로 지급한 월(月)의 전월은 제외한다]에 자신의 근로자에게 임금을 지급하였는지를 확인하여야 한다. 이 경우 수급인은 도급인에게 전월 임금 지급내역 등 고용노동부령으로 정하는 자료를 도급인이 정하는 방법에 따라 제출하여야 한다.\n⑤ 도급인이 제4항에 따라 임금 지급 여부를 확인한 결과 수급인이 자신의 근로자에게 임금을 지급하지 아니한 경우에는 그 사실을 고용노동부장관에게 통보하여야 한다.\n⑥ 수급인은 제1항에 따라 지급받은 임"
+    },
+    {
+     "lsiSeq": "284443",
+     "ancYd": "2026-03-17",
+     "lawNo": "21472",
+     "efYd": "2027-01-01",
+     "kind": "타법개정",
+     "changedArticles": [],
+     "notable": false,
+     "reason": ""
+    },
+    {
+     "lsiSeq": "286771",
+     "ancYd": "2026-06-09",
+     "lawNo": "21784",
+     "efYd": "2027-06-10",
+     "kind": "일부개정",
+     "changedArticles": [
+      "제60조",
+      "제61조"
+     ],
+     "notable": true,
+     "reason": "근로시간이 4시간인 경우로서 근로자가 휴게시간을 이용하지 아니할 것을 명시적으로 요청한 때에는 휴게시간을 부여하지 아니하도록 하여 근로자의 휴게시간 선택권을 확대하고 근로시간 운영의 유연성을 높이며, 근로자가 일정한 시간단위 및 일수의 범위에서 연차 유급휴가를 분할하여 청구한 때에는 그에 따라 부여하도록 하고, 위반 시 2년 이하의 징역 또는 2천만원 이하의 벌금에 처하도록 함으로써 근로자의 휴식권을 보다 실질적으로 보장하며, 사용자는 연차 유급휴가의 청구 또는 사용을 이유로 근로자에 대한 불리한 처우를 금지하고, 위반 시 500만원 이하의 벌금에 처하도록 함으로써 연차 유급휴가의 사용을 권장하려는 것임."
+    }
+   ]
+  },
+  "채용절차법": {
+   "official": "채용절차의 공정화에 관한 법률",
+   "lsId": "011990",
+   "current": {
+    "lsiSeq": "218301",
+    "efYd": "2020-05-26",
+    "ancYd": "2020-05-26",
+    "lawNo": "17326",
+    "kind": "타법개정"
+   },
+   "upcoming": []
+  },
+  "최저임금법": {
+   "official": "최저임금법",
+   "lsId": "000129",
+   "current": {
+    "lsiSeq": "218303",
+    "efYd": "2020-05-26",
+    "ancYd": "2020-05-26",
+    "lawNo": "17326",
+    "kind": "타법개정"
+   },
+   "upcoming": [
+    {
+     "lsiSeq": "285389",
+     "ancYd": "2026-04-07",
+     "lawNo": "21534",
+     "efYd": "2026-12-08",
+     "kind": "타법개정",
+     "changedArticles": [],
+     "notable": false,
+     "reason": ""
+    }
+   ]
+  },
+  "퇴직급여법": {
+   "official": "근로자퇴직급여 보장법",
+   "lsId": "009883",
+   "current": {
+    "lsiSeq": "284455",
+    "efYd": "2026-09-18",
+    "ancYd": "2026-03-17",
+    "lawNo": "21475",
+    "kind": "일부개정"
+   },
+   "upcoming": []
+  },
+  "임금채권보장법": {
+   "official": "임금채권보장법",
+   "lsId": "000128",
+   "current": {
+    "lsiSeq": "283451",
+    "efYd": "2026-08-20",
+    "ancYd": "2026-02-19",
+    "lawNo": "21376",
+    "kind": "일부개정"
+   },
+   "upcoming": [
+    {
+     "lsiSeq": "285383",
+     "ancYd": "2026-04-07",
+     "lawNo": "21534",
+     "efYd": "2026-12-08",
+     "kind": "타법개정",
+     "changedArticles": [],
+     "notable": false,
+     "reason": ""
+    }
+   ]
+  },
+  "고령자고용법": {
+   "official": "고용상 연령차별금지 및 고령자고용촉진에 관한 법률",
+   "lsId": "000121",
+   "current": {
+    "lsiSeq": "243057",
+    "efYd": "2022-06-10",
+    "ancYd": "2022-06-10",
+    "lawNo": "18921",
+    "kind": "일부개정"
+   },
+   "upcoming": []
+  },
+  "남녀고용평등법": {
+   "official": "남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률",
+   "lsId": "000130",
+   "current": {
+    "lsiSeq": "284457",
+    "efYd": "2026-09-18",
+    "ancYd": "2026-03-17",
+    "lawNo": "21476",
+    "kind": "일부개정"
+   },
+   "upcoming": [
+    {
+     "lsiSeq": "286255",
+     "ancYd": "2026-05-26",
+     "lawNo": "21700",
+     "efYd": "2026-11-27",
+     "kind": "일부개정",
+     "changedArticles": [
+      "제18조의3",
+      "제12조",
+      "제13조"
+     ],
+     "notable": true,
+     "reason": "현행법은 직장 내 성희롱의 경우에는 사업주에 대해서만 과태료를 부과하도록 하고 있어 사업주 등의 친족의 성희롱 행위에 대한 제재가 어려운 실정인바, 법인의 대표자, 사업주 및 법인 대표자의 친족인 상급자ㆍ근로자가 직장 내 성희롱을 한 경우에도 사업주와 동일하게 과태료를 부과하도록 하여 제재의 실효성을 확보하고, 난임치료휴가 중 유급기간을 2일에서 4일로 확대하여 일ㆍ가정 양립 환경을 보다 실질적으로 개선하려는 것임."
+    }
+   ]
+  },
+  "고용보험법": {
+   "official": "고용보험법",
+   "lsId": "001761",
+   "current": {
+    "lsiSeq": "284449",
+    "efYd": "2026-09-18",
+    "ancYd": "2026-03-17",
+    "lawNo": "21473",
+    "kind": "일부개정"
+   },
+   "upcoming": [
+    {
+     "lsiSeq": "286253",
+     "ancYd": "2026-05-26",
+     "lawNo": "21699",
+     "efYd": "2026-11-27",
+     "kind": "일부개정",
+     "changedArticles": [],
+     "notable": true,
+     "reason": "난임치료휴가 중 유급기간을 2일에서 4일로 확대하는 등의 내용으로 「남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률」이 개정된 것에 맞추어, 난임치료휴가 급여 지원 기간을 2일에서 4일로 확대하여 제도의 실효성을 확보하고 저출생 극복을 위한 국가의 책임을 보다 적극적으로 이행하려는 것임."
+    },
+    {
+     "lsiSeq": "284449",
+     "ancYd": "2026-03-17",
+     "lawNo": "21473",
+     "efYd": "2027-01-01",
+     "kind": "일부개정",
+     "changedArticles": [
+      "제10조"
+     ],
+     "notable": true,
+     "reason": "출산전후휴가 급여 등의 지원 대상에 배우자 유산ㆍ사산에 따른 휴가를 받은 경우를 추가하고, 고용보험 가입이 누락된 근로자를 발굴하고 직권 가입을 통해 고용보험 사각지대를 해소하기 위하여 근로자의 고용보험 적용기준을 ‘소정근로시간’에서 ‘보수’로 개편하고, 근로자의 구직급여 산정기준과 보험료 산정기준을 일치시키기 위하여 종전에는 평균임금을 기준으로 근로자의 구직급여를 산정하던 것을 앞으로는 보수를 기준으로 산정하도록 하는 등 소득을 기반으로 한 고용보험 체계로 전환하려는 것임."
+    },
+    {
+     "lsiSeq": "284449",
+     "ancYd": "2026-03-17",
+     "lawNo": "21473",
+     "efYd": "2028-01-01",
+     "kind": "일부개정",
+     "changedArticles": [],
+     "notable": true,
+     "reason": "출산전후휴가 급여 등의 지원 대상에 배우자 유산ㆍ사산에 따른 휴가를 받은 경우를 추가하고, 고용보험 가입이 누락된 근로자를 발굴하고 직권 가입을 통해 고용보험 사각지대를 해소하기 위하여 근로자의 고용보험 적용기준을 ‘소정근로시간’에서 ‘보수’로 개편하고, 근로자의 구직급여 산정기준과 보험료 산정기준을 일치시키기 위하여 종전에는 평균임금을 기준으로 근로자의 구직급여를 산정하던 것을 앞으로는 보수를 기준으로 산정하도록 하는 등 소득을 기반으로 한 고용보험 체계로 전환하려는 것임."
+    }
+   ]
+  },
+  "영유아보육법": {
+   "official": "영유아보육법",
+   "lsId": "000191",
+   "current": {
+    "lsiSeq": "286057",
+    "efYd": "2026-05-19",
+    "ancYd": "2026-05-19",
+    "lawNo": "21657",
+    "kind": "일부개정"
+   },
+   "upcoming": [
+    {
+     "lsiSeq": "286057",
+     "ancYd": "2026-05-19",
+     "lawNo": "21657",
+     "efYd": "2026-11-20",
+     "kind": "일부개정",
+     "changedArticles": [],
+     "notable": true,
+     "reason": ""
+    }
+   ]
+  },
+  "장애인차별금지법": {
+   "official": "장애인차별금지 및 권리구제 등에 관한 법률",
+   "lsId": "010420",
+   "current": {
+    "lsiSeq": "279699",
+    "efYd": "2025-11-11",
+    "ancYd": "2025-11-11",
+    "lawNo": "21115",
+    "kind": "일부개정"
+   },
+   "upcoming": []
+  },
+  "장애인고용법": {
+   "official": "장애인고용촉진 및 직업재활법",
+   "lsId": "001763",
+   "current": {
+    "lsiSeq": "279737",
+    "efYd": "2026-05-12",
+    "ancYd": "2025-11-11",
+    "lawNo": "21138",
+    "kind": "일부개정"
+   },
+   "upcoming": [
+    {
+     "lsiSeq": "286231",
+     "ancYd": "2026-05-26",
+     "lawNo": "21695",
+     "efYd": "2028-05-27",
+     "kind": "타법개정",
+     "changedArticles": [],
+     "notable": false,
+     "reason": ""
+    }
+   ]
+  },
+  "기간제법": {
+   "official": "기간제 및 단시간근로자 보호 등에 관한 법률",
+   "lsId": "010356",
+   "current": {
+    "lsiSeq": "232201",
+    "efYd": "2021-05-18",
+    "ancYd": "2021-05-18",
+    "lawNo": "18177",
+    "kind": "일부개정"
+   },
+   "upcoming": [
+    {
+     "lsiSeq": "285375",
+     "ancYd": "2026-04-07",
+     "lawNo": "21534",
+     "efYd": "2026-12-08",
+     "kind": "타법개정",
+     "changedArticles": [],
+     "notable": false,
+     "reason": ""
+    }
+   ]
+  },
+  "파견법": {
+   "official": "파견근로자 보호 등에 관한 법률",
+   "lsId": "000122",
+   "current": {
+    "lsiSeq": "286257",
+    "efYd": "2026-05-26",
+    "ancYd": "2026-05-26",
+    "lawNo": "21701",
+    "kind": "일부개정"
+   },
+   "upcoming": []
+  },
+  "산업안전보건법": {
+   "official": "산업안전보건법",
+   "lsId": "001766",
+   "current": {
+    "lsiSeq": "283449",
+    "efYd": "2026-08-01",
+    "ancYd": "2026-02-19",
+    "lawNo": "21374",
+    "kind": "일부개정"
+   },
+   "upcoming": [
+    {
+     "lsiSeq": "285379",
+     "ancYd": "2026-04-07",
+     "lawNo": "21534",
+     "efYd": "2026-12-08",
+     "kind": "타법개정",
+     "changedArticles": [],
+     "notable": false,
+     "reason": ""
+    },
+    {
+     "lsiSeq": "283449",
+     "ancYd": "2026-02-19",
+     "lawNo": "21374",
+     "efYd": "2027-01-01",
+     "kind": "일부개정",
+     "changedArticles": [],
+     "notable": true,
+     "reason": ""
+    },
+    {
+     "lsiSeq": "287805",
+     "ancYd": "2026-07-07",
+     "lawNo": "21853",
+     "efYd": "2027-01-08",
+     "kind": "일부개정",
+     "changedArticles": [],
+     "notable": true,
+     "reason": "「화학물질관리법」에 따라 기후에너지환경부장관의 금지물질 수입 허가를 받은 경우에는 고용노동부장관의 별도 승인을 받지 않고 유해ㆍ위험물질로서 제조 등이 금지된 물질을 수입할 수 있도록 하는 한편,\n사업주는 외국인근로자를 채용할 때에 그 외국인근로자가 고용노동부령으로 정하는 외국인근로자 기초안전보건교육을 이수하도록 하고, 이를 위반하는 경우에는 사업주에게 과태료를 부과하도록 하며, 안전보건교육기관으로 등록하지 아니한 자가 안전보건교육기관이라고 사칭하는 것을 금지하고, 이를 위반하는 경우에는 500만원 이하의 과태료를 부과하려는 것임."
+    }
+   ]
+  },
+  "중대재해처벌법": {
+   "official": "중대재해 처벌 등에 관한 법률",
+   "lsId": "013993",
+   "current": {
+    "lsiSeq": "228817",
+    "efYd": "2022-01-27",
+    "ancYd": "2021-01-26",
+    "lawNo": "17907",
+    "kind": "제정"
+   },
+   "upcoming": []
+  },
+  "산재보험법": {
+   "official": "산업재해보상보험법",
+   "lsId": "001760",
+   "current": {
+    "lsiSeq": "283459",
+    "efYd": "2026-07-01",
+    "ancYd": "2026-02-19",
+    "lawNo": "21375",
+    "kind": "일부개정"
+   },
+   "upcoming": [
+    {
+     "lsiSeq": "290149",
+     "ancYd": "2026-09-29",
+     "lawNo": "22025",
+     "efYd": "2027-03-30",
+     "kind": "일부개정",
+     "changedArticles": [],
+     "notable": true,
+     "reason": "근로복지공단은 사회취약계층이 보험급여를 청구하거나 보험급여 결정 등에 대하여 심사 및 재심사를 청구하는 경우에 변호사나 공인노무사가 대리하게 할 수 있도록 함으로써 사회취약계층이 법률대리인 지원을 받을 수 있도록 하려는 것임."
+    }
+   ]
+  },
+  "고용산재보험료징수법": {
+   "official": "고용보험 및 산업재해보상보험의 보험료징수 등에 관한 법률",
+   "lsId": "009589",
+   "current": {
+    "lsiSeq": "247481",
+    "efYd": "2024-01-01",
+    "ancYd": "2022-12-31",
+    "lawNo": "19209",
+    "kind": "일부개정"
+   },
+   "upcoming": [
+    {
+     "lsiSeq": "285369",
+     "ancYd": "2026-04-07",
+     "lawNo": "21532",
+     "efYd": "2026-10-08",
+     "kind": "일부개정",
+     "changedArticles": [],
+     "notable": true,
+     "reason": "현행법은 거짓이나 그 밖의 부정한 방법으로 재해예방활동의 인정을 받은 경우로서 재해예방활동의 인정이 취소된 사업의 경우에는 산재예방요율을 적용받은 기간에 대한 산재보험료를 다시 산정하여 부과하도록 하고 있으나, 중대재해가 발생하여 재해예방활동의 인정이 취소된 사업의 경우에는 산재보험료 재산정 부과 대상으로 규정하고 있지 아니한바, 재해예방활동의 인정기간 중에 중대재해가 발생하여 재해예방활동의 인정이 취소된 사업의 경우에도 산재보험료를 다시 산정하여 부과하도록 하여 보다 충실한 재해예방활동이 이루어질 수 있도록 하려는 것임."
+    },
+    {
+     "lsiSeq": "284441",
+     "ancYd": "2026-03-17",
+     "lawNo": "21472",
+     "efYd": "2027-01-01",
+     "kind": "일부개정",
+     "changedArticles": [
+      "제13조"
+     ],
+     "notable": true,
+     "reason": "사업주가 소득 자료가 포함된 국세신고와 별개로 근로복지공단에 고용ㆍ산재보험료 산정을 위한 근로자 보수를 따로 신고하여야 하는 불편을 줄이기 위하여 앞으로는 근로복지공단이 근로자의 국세소득 자료를 고용ㆍ산재보험료 산정에 활용할 수 있도록 하고, 고용ㆍ산재보험료에 근로자의 실제 소득이 반영되어 보험료 부과의 정확성을 제고하고 고용ㆍ산재보험료 정산 부담을 줄일 수 있도록 고용ㆍ산재보험료 산정 기준을 전년도 월평균보수에서 해당 연도 월 보수로 변경하는 등 고용ㆍ산재보험료 산정 방식 등을 개편하려는 것임."
+    }
+   ]
+  },
+  "노동조합법": {
+   "official": "노동조합 및 노동관계조정법",
+   "lsId": "000143",
+   "current": {
+    "lsiSeq": "273667",
+    "efYd": "2026-03-10",
+    "ancYd": "2025-09-09",
+    "lawNo": "21045",
+    "kind": "일부개정"
+   },
+   "upcoming": []
+  },
+  "근로자참여법": {
+   "official": "근로자참여 및 협력증진에 관한 법률",
+   "lsId": "000141",
+   "current": {
+    "lsiSeq": "243063",
+    "efYd": "2022-12-11",
+    "ancYd": "2022-06-10",
+    "lawNo": "18927",
+    "kind": "일부개정"
+   },
+   "upcoming": []
+  }
+ },
+ "provisions": {
+  "근로기준법|제2조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제7조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제9조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제15조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제17조": {
+   "latestAmend": "2021-01-05",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제19조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제20조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제21조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제22조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제40조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제41조": {
+   "latestAmend": "2021-01-05",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제42조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제67조": {
+   "latestAmend": "2021-01-05",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제36조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제37조": {
+   "latestAmend": "2024-10-22",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제38조": {
+   "latestAmend": "2010-06-10",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제43조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제43조의2·제43조의3·제43조의4": {
+   "latestAmend": "2024-10-22",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제44조·제44조의2": {
+   "latestAmend": "2020-03-31",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제45조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제46조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제47조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제48조": {
+   "latestAmend": "2021-05-18",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제49조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제50조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제51조": {
+   "latestAmend": "2021-01-05",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제51조의2": {
+   "latestAmend": "2021-01-05",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제52조": {
+   "latestAmend": "2021-01-05",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제53조": {
+   "latestAmend": "2021-01-05",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제54조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [
+    {
+     "efYd": "2026-12-10",
+     "lawNo": "21784",
+     "ancYd": "2026-06-09",
+     "lsiSeq": "286771"
+    }
+   ],
+   "found": true
+  },
+  "근로기준법|제55조": {
+   "latestAmend": "2018-03-20",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제56조": {
+   "latestAmend": "2018-03-20",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제57조": {
+   "latestAmend": "2021-01-05",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제58조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제59조": {
+   "latestAmend": "2025-10-01",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제60조": {
+   "latestAmend": "2026-02-19",
+   "changedSinceBase": false,
+   "upcoming": [
+    {
+     "efYd": "2027-06-10",
+     "lawNo": "21784",
+     "ancYd": "2026-06-09",
+     "lsiSeq": "286771"
+    }
+   ],
+   "found": true
+  },
+  "근로기준법|제61조": {
+   "latestAmend": "2020-03-31",
+   "changedSinceBase": false,
+   "upcoming": [
+    {
+     "efYd": "2027-06-10",
+     "lawNo": "21784",
+     "ancYd": "2026-06-09",
+     "lsiSeq": "286771"
+    }
+   ],
+   "found": true
+  },
+  "근로기준법|제62조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제63조": {
+   "latestAmend": "2021-01-05",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제69조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제23조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제24조": {
+   "latestAmend": "2010-06-04",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제25조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제26조": {
+   "latestAmend": "2019-01-15",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제27조": {
+   "latestAmend": "2014-03-24",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제28조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제30조": {
+   "latestAmend": "2021-05-18",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제33조": {
+   "latestAmend": "2021-05-18",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제95조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제23조제2항": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제65조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제70조": {
+   "latestAmend": "2010-06-04",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제71조": {
+   "latestAmend": "2018-03-20",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제73조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제74조": {
+   "latestAmend": "2024-10-22",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제74조의2": {
+   "latestAmend": "2008-03-21",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제75조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제6조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제76조의2": {
+   "latestAmend": "2019-01-15",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제76조의3": {
+   "latestAmend": "2021-04-13",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제18조": {
+   "latestAmend": "2008-03-21",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제93조": {
+   "latestAmend": "2019-01-15",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로기준법|제94조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "채용절차법|제4조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "채용절차법|제4조의2": {
+   "latestAmend": "2019-04-16",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "채용절차법|제4조의3": {
+   "latestAmend": "2019-04-16",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "채용절차법|제11조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "최저임금법|제5조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "최저임금법|제6조": {
+   "latestAmend": "2018-06-12",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "최저임금법|제11조": {
+   "latestAmend": "2008-03-21",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "퇴직급여법|제4조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "퇴직급여법|제7조": {
+   "latestAmend": "2021-04-13",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "퇴직급여법|제8조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "퇴직급여법|제9조": {
+   "latestAmend": "2026-03-17",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "퇴직급여법|제10조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "퇴직급여법|제20조·제22조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "임금채권보장법|제7조·제7조의2": {
+   "latestAmend": "2026-02-19",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "고령자고용법|제19조": {
+   "latestAmend": "2013-05-22",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "고령자고용법|제21조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "고령자고용법|제4조의4": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "남녀고용평등법|제18조의2": {
+   "latestAmend": "2026-03-17",
+   "changedSinceBase": true,
+   "upcoming": [],
+   "found": true
+  },
+  "남녀고용평등법|제18조의3": {
+   "latestAmend": "2024-10-22",
+   "changedSinceBase": true,
+   "upcoming": [
+    {
+     "efYd": "2026-11-27",
+     "lawNo": "21700",
+     "ancYd": "2026-05-26",
+     "lsiSeq": "286255"
+    }
+   ],
+   "found": true
+  },
+  "남녀고용평등법|제19조": {
+   "latestAmend": "2026-03-17",
+   "changedSinceBase": true,
+   "upcoming": [],
+   "found": true
+  },
+  "남녀고용평등법|제19조의2": {
+   "latestAmend": "2026-03-17",
+   "changedSinceBase": true,
+   "upcoming": [],
+   "found": true
+  },
+  "남녀고용평등법|제19조의3": {
+   "latestAmend": "2007-12-21",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "남녀고용평등법|제22조의2": {
+   "latestAmend": "2020-09-08",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "남녀고용평등법|제22조의3": {
+   "latestAmend": "2019-08-27",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "남녀고용평등법|제7조": {
+   "latestAmend": "2021-05-18",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "남녀고용평등법|제8조": {
+   "latestAmend": "2007-12-21",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "남녀고용평등법|제9조": {
+   "latestAmend": "2007-12-21",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "남녀고용평등법|제10조": {
+   "latestAmend": "2007-12-21",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "남녀고용평등법|제11조": {
+   "latestAmend": "2007-12-21",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "남녀고용평등법|제12조": {
+   "latestAmend": "2007-12-21",
+   "changedSinceBase": false,
+   "upcoming": [
+    {
+     "efYd": "2026-11-27",
+     "lawNo": "21700",
+     "ancYd": "2026-05-26",
+     "lsiSeq": "286255"
+    }
+   ],
+   "found": true
+  },
+  "남녀고용평등법|제13조": {
+   "latestAmend": "2017-11-28",
+   "changedSinceBase": false,
+   "upcoming": [
+    {
+     "efYd": "2026-11-27",
+     "lawNo": "21700",
+     "ancYd": "2026-05-26",
+     "lsiSeq": "286255"
+    }
+   ],
+   "found": true
+  },
+  "남녀고용평등법|제14조": {
+   "latestAmend": "2017-11-28",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "남녀고용평등법|제14조의2": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "남녀고용평등법|제26조": {
+   "latestAmend": "2021-05-18",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "고용보험법|제70조": {
+   "latestAmend": "2026-02-19",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "고용보험법|제73조의2": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "고용보험법|제75조": {
+   "latestAmend": "2026-03-17",
+   "changedSinceBase": true,
+   "upcoming": [],
+   "found": true
+  },
+  "고용보험법|제8조": {
+   "latestAmend": "2022-12-31",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "고용보험법|제10조": {
+   "latestAmend": "2022-12-31",
+   "changedSinceBase": false,
+   "upcoming": [
+    {
+     "efYd": "2027-01-01",
+     "lawNo": "21473",
+     "ancYd": "2026-03-17",
+     "lsiSeq": "284449"
+    }
+   ],
+   "found": true
+  },
+  "고용보험법|제15조": {
+   "latestAmend": "2023-08-08",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "고용보험법|제16조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "고용보험법|제40조": {
+   "latestAmend": "2025-10-01",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "고용보험법|제50조": {
+   "latestAmend": "2019-01-15",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "고용보험법|제58조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "고용보험법|제62조": {
+   "latestAmend": "2019-08-27",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "영유아보육법|제14조": {
+   "latestAmend": "2023-12-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "장애인차별금지법|제10조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "장애인고용법|제5조의2": {
+   "latestAmend": "2021-07-20",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "기간제법|제3조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "기간제법|제4조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "기간제법|제5조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "기간제법|제6조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "기간제법|제7조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "기간제법|제8조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "기간제법|제9조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "기간제법|제16조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "기간제법|제17조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "파견법|제5조": {
+   "latestAmend": "2019-04-30",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "파견법|제6조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "파견법|제6조의2": {
+   "latestAmend": "2019-04-30",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "파견법|제7조": {
+   "latestAmend": "2020-12-08",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "파견법|제16조": {
+   "latestAmend": "2019-04-30",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "파견법|제20조": {
+   "latestAmend": "2019-04-30",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "파견법|제21조": {
+   "latestAmend": "2019-04-30",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "파견법|제34조": {
+   "latestAmend": "2019-04-30",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "파견법|제35조": {
+   "latestAmend": "2019-04-30",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제5조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제10조의2": {
+   "latestAmend": "2026-02-19",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제15조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제17조": {
+   "latestAmend": "2021-05-18",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제19조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제24조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제25조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제29조": {
+   "latestAmend": "2020-06-09",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제36조": {
+   "latestAmend": "2026-02-19",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제38조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제39조": {
+   "latestAmend": "2024-10-22",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제41조": {
+   "latestAmend": "2021-04-13",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제51조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제52조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제54조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제57조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제63조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제125조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제129조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제130조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산업안전보건법|제132조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "중대재해처벌법|제2조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "중대재해처벌법|제3조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "중대재해처벌법|제4조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "중대재해처벌법|제5조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "중대재해처벌법|제6조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "중대재해처벌법|제8조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산재보험법|제37조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산재보험법|제40조": {
+   "latestAmend": "2010-06-04",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산재보험법|제52조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산재보험법|제57조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산재보험법|제62조": {
+   "latestAmend": "2020-05-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산재보험법|제111조의2": {
+   "latestAmend": "2016-12-27",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "산재보험법|제112조": {
+   "latestAmend": "2021-01-26",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "고용산재보험료징수법|제13조": {
+   "latestAmend": "2019-01-15",
+   "changedSinceBase": false,
+   "upcoming": [
+    {
+     "efYd": "2027-01-01",
+     "lawNo": "21472",
+     "ancYd": "2026-03-17",
+     "lsiSeq": "284441"
+    }
+   ],
+   "found": true
+  },
+  "노동조합법|제2조": {
+   "latestAmend": "2025-09-09",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "노동조합법|제3조": {
+   "latestAmend": "2025-09-09",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "노동조합법|제5조": {
+   "latestAmend": "2021-01-05",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "노동조합법|제10조": {
+   "latestAmend": "2014-05-20",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "노동조합법|제24조": {
+   "latestAmend": "2021-01-05",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "노동조합법|제29조의2": {
+   "latestAmend": "2021-01-05",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "노동조합법|제30조": {
+   "latestAmend": "2021-01-05",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "노동조합법|제31조": {
+   "latestAmend": "2006-12-30",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "노동조합법|제32조": {
+   "latestAmend": "2021-01-05",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "노동조합법|제33조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "노동조합법|제35조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "노동조합법|제37조": {
+   "latestAmend": "2021-01-05",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "노동조합법|제41조": {
+   "latestAmend": "2021-01-05",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "노동조합법|제43조": {
+   "latestAmend": "2006-12-30",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "노동조합법|제44조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "노동조합법|제45조": {
+   "latestAmend": "2006-12-30",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "노동조합법|제46조": {
+   "latestAmend": "1998-02-20",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "노동조합법|제81조": {
+   "latestAmend": "2021-01-05",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "노동조합법|제82조": {
+   "latestAmend": null,
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로자참여법|제4조": {
+   "latestAmend": "2007-12-27",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로자참여법|제20조": {
+   "latestAmend": "2019-04-16",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로자참여법|제21조": {
+   "latestAmend": "2007-12-27",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  },
+  "근로자참여법|제22조": {
+   "latestAmend": "2007-12-27",
+   "changedSinceBase": false,
+   "upcoming": [],
+   "found": true
+  }
+ }
+}

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { cards, stats, BASE_DATE } from '../lib/data';
 import { MODULES, SITE_NAME } from '../lib/modules';
-import { obligations, changes, documents } from '../lib/platform';
+import { obligations, changes, autoChanges, documents } from '../lib/platform';
 import { provisions } from '../lib/data';
 import UpcomingChanges from './upcoming-changes';
 import StatusBoard from './status-board';
@@ -44,7 +44,7 @@ export default function HomePage() {
           provisions={provisions.map((p) => p.threshold)}
           obligations={obligations.map((o) => o.thresholdMin || 1)}
           docs={documents.map((d) => ({ t: d.thresholdMin || 1, must: d.obligation === '법정 의무' }))}
-          changeDates={changes.map((c) => c.effectiveDate)}
+          changeDates={[...changes, ...autoChanges].map((c) => c.effectiveDate)}
         />
 
         <RecentProvisions />
@@ -61,7 +61,11 @@ export default function HomePage() {
           ))}
         </div>
 
-        <UpcomingChanges items={changes.map(({ id, effectiveDate, law, title }) => ({ id, effectiveDate, law, title }))} />
+        <UpcomingChanges
+          items={[...changes, ...autoChanges]
+            .sort((a, b) => a.effectiveDate.localeCompare(b.effectiveDate))
+            .map(({ id, effectiveDate, law, title, auto }) => ({ id, effectiveDate, law, title, auto: Boolean(auto) }))}
+        />
 
         <HomeMonth byMonth={byMonth} />
 

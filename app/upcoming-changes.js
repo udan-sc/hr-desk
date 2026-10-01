@@ -40,6 +40,7 @@ export default function UpcomingChanges({ items }) {
             </span>
             <span className="up-what">
               <span className="up-law">{c.law}</span>
+              {c.auto && <span className="tl-auto">자동 감지</span>}
               {c.title}
             </span>
           </Link>

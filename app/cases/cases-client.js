@@ -205,6 +205,7 @@ export default function CasesClient({ items, categories }) {
                   <span className="case-no">{p.caseNo}</span>
                   <span className="case-date">{fmt(p.date)} 선고</span>
                   {p.kind.startsWith('전원합의체') && <span className="prec-en">전원합의체</span>}
+                  {p.auto && <span className="tl-auto">자동 추가</span>}
                   <span className="case-cat">{p.category}</span>
                 </div>
                 <h3 className="case-name">{p.caseName}</h3>
