@@ -14,7 +14,10 @@ import { LAW_OFFICIAL } from '../lib/lawlinks.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(root, 'data/auto/precedents-auto.json');
-const SINCE = '2026-09-11'; /* 수록 판례를 고른 기준일 — 이 뒤에 선고된 판례만 자동으로 더한다 */
+/* 수록 판례를 고를 때(2026. 10. 1.) 데이터베이스의 가장 최근 대법원 판례가 2026. 6. 25. 선고였다.
+   그 뒤에 선고된 판례는 고를 때 볼 수 없었으므로 이날 다음부터 자동으로 더한다.
+   PREC_SINCE 환경변수로 바꿔 시험할 수 있다. */
+const SINCE = process.env.PREC_SINCE || '2026-06-26';
 const OC = process.env.LAW_OC || '';
 const today = new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
