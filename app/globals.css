@@ -850,3 +850,4 @@ mark{background:var(--accent-soft);color:inherit;padding:0 1px;border-radius:2px
 .wn-mark{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--good);color:var(--on-accent);font-size:12px}
 .wn-row{margin:5px 0 0;font-size:13px;line-height:1.7;color:var(--ink)}
 .wn-row a{color:var(--good);font-weight:600}
+.tl-note{margin:7px 0 0;font-size:12px;line-height:1.65;color:var(--ink3);border-left:2px solid var(--border2);padding-left:9px}

@@ -33,9 +33,10 @@ export default function ChangesPage() {
           <div className="eyebrow">공포·고시 완료된 개정만 · 계류 법안 제외</div>
           <h1>달라지는 노동법</h1>
           <p>
-            2026년부터 시행되는 인사노무 법령 개정 {all.length}건을 시행일 순으로 정리했습니다.
-            정리된 {changes.length}건에는 무엇이 바뀌는지와 실무에서 할 일을 함께 실었고,
-            매주 국가법령정보센터를 자동으로 확인해 새로 공포된 개정 {autoChanges.length}건을 공식 개정이유와 함께 더했습니다.
+            2026년부터 시행되는 인사노무 법령 개정 {all.length}건을 시행일 순으로 정리했습니다.{' '}
+            {autoChanges.length > 0
+              ? `정리된 ${changes.length}건에는 무엇이 바뀌는지와 실무에서 할 일을 함께 실었고, 매주 자동 확인에서 새로 잡힌 ${autoChanges.length}건은 공식 개정이유와 함께 먼저 실었습니다(실무 해설은 검토 후 추가).`
+              : '항목마다 무엇이 바뀌는지와 실무에서 할 일을 함께 실었습니다. 매주 국가법령정보센터를 자동으로 확인해, 새로 공포된 개정이 있으면 공식 개정이유와 함께 바로 더합니다.'}{' '}
             조문 본문은 {BASE_DATE} 시행 기준입니다.
           </p>
           {watchStatus.checkedAt && (
@@ -91,6 +92,7 @@ export default function ChangesPage() {
                               <b>실무에서</b>
                               {c.practice}
                             </p>
+                            {c.note && <p className="tl-note">{c.note}</p>}
                           </>
                         )}
                         <div className="tl-foot">
