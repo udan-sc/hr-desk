@@ -8,6 +8,7 @@ out/
 # 빌드 때 data/*.json에서 자동 생성된다 (scripts/build-search-index.mjs)
 public/search-index.json
 public/palette-index.json
+public/prec/
 
 # 이 PC의 절대경로가 들어 있는 로컬 실행 설정
 .claude/

@@ -18,6 +18,7 @@ const calendar = readJson('data/platform/calendar.json');
 const documents = readJson('data/platform/documents.json');
 const glossary = readJson('data/platform/glossary.json');
 const changes = readJson('data/platform/changes.json');
+const precedents = readJson('data/platform/precedents.json');
 
 /* ── 1. 조문 전문 색인 ── */
 const rows = raw.flatMap((area) => area.provisions.map((p) => [`${p.law}|${p.article}`, p.text]));
@@ -33,6 +34,13 @@ const palette = [
   ...MODULES.map((m) => ({ g: '메뉴', t: m.name, d: cut(m.blurb), k: m.short, h: m.href })),
   { g: '메뉴', t: '규모별 문턱 지도', d: '5·10·30·50명 문턱을 넘을 때 새로 생기는 조문·의무·서류', k: '인원 규모 문턱 상시 근로자', h: '/thresholds' },
   { g: '메뉴', t: '즐겨찾기 모아보기', d: '별표한 조문을 한곳에, 링크로 팀 공유', k: '즐겨찾기 별표 공유', h: '/favorites' },
+  ...precedents.map((p) => ({
+    g: '판례',
+    t: `${p.caseNo} — ${p.caseName}`.slice(0, 80),
+    d: cut(p.point || p.issues, 56),
+    k: `판례 ${p.court} ${p.category || ''} ${(p.provisions || []).map((x) => x.law + ' ' + x.article).join(' ')}`,
+    h: `/cases?q=${encodeURIComponent(p.caseNo)}`,
+  })),
   ...changes.map((c) => ({
     g: '개정',
     t: `${c.effectiveDate.replace(/-/g, '. ')}. ${c.title}`,
@@ -82,6 +90,13 @@ const outFile = path.join(outDir, 'search-index.json');
 fs.writeFileSync(outFile, JSON.stringify(rows));
 const palFile = path.join(outDir, 'palette-index.json');
 fs.writeFileSync(palFile, JSON.stringify(palette));
+/* 판례 목록 화면은 판결요지를 펼칠 때 그 판례 것만 받아온다: public/prec/<원문 일련번호>.json = [판결요지, 참조조문]
+   (283건을 한 파일로 묶으면 800KB가 넘어 휴대폰에서 첫 펼침이 느리다) */
+const precDir = path.join(outDir, 'prec');
+fs.rmSync(precDir, { recursive: true, force: true });
+fs.mkdirSync(precDir, { recursive: true });
+for (const p of precedents) fs.writeFileSync(path.join(precDir, `${p.precSeq}.json`), JSON.stringify([p.summary || '', p.refs || '']));
+fs.rmSync(path.join(outDir, 'precedents-full.json'), { force: true });
 console.log(
   `search-index.json: ${rows.length}건, ${Math.round(fs.statSync(outFile).size / 1024)}KB · ` +
   `palette-index.json: ${palette.length}건, ${Math.round(fs.statSync(palFile).size / 1024)}KB`

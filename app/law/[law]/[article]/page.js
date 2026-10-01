@@ -7,7 +7,8 @@ import { RecentTracker } from '../../../recent-provisions';
 import TermLinks from '../../../term-links';
 import TipDismiss from '../../../tip-dismiss';
 import ChangeNotice from '../../../change-notice';
-import { interpretationsFor, changesForProvision } from '../../../../lib/platform';
+import Precedents from '../../../precedents';
+import { interpretationsFor, changesForProvision, precedentsFor } from '../../../../lib/platform';
 import { SITE_URL } from '../../../../lib/site';
 import { lawGoKrDisplayUrl } from '../../../../lib/lawlinks';
 import {
@@ -152,6 +153,8 @@ export default async function ProvisionPage({ params }) {
               </>
             )}
           </dl>
+
+          <Precedents items={precedentsFor(p.law, p.article)} law={p.law} article={p.article} />
 
           <Interpretations items={interpretations} law={p.law} article={p.article} />
 
