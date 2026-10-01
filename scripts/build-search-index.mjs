@@ -131,7 +131,14 @@ fs.writeFileSync(
       upcoming: Object.values(lawWatch.laws || {}).reduce((n, l) => n + (l.upcoming || []).length, 0),
       autoChanges: autoChanges.length,
     },
-    precedents: { enabled: Boolean(precWatch.enabled), checkedAt: precWatch.checkedAt || null, added: autoPrec.length },
+    precedents: {
+      enabled: Boolean(precWatch.enabled),
+      checkedAt: precWatch.checkedAt || null,
+      searchedLaws: precWatch.searched ?? null,
+      candidates: precWatch.candidates ?? null,
+      errors: (precWatch.errors || []).slice(0, 5),
+      added: autoPrec.length,
+    },
   }, null, 1)
 );
 console.log(

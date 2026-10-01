@@ -53,6 +53,7 @@ async function main() {
   const errors = [];
 
   const candidates = new Map();
+  let searched = 0;
   for (const law of laws) {
     const name = LAW_OFFICIAL[law] || law;
     const url =
@@ -61,7 +62,10 @@ async function main() {
     try {
       const res = await fetch(url);
       const json = await res.json();
-      for (const r of collect(json)) {
+      const found = collect(json);
+      if (found.length) searched++;
+      else errors.push(`${law} 검색 결과 없음: ${JSON.stringify(json).slice(0, 120)}`);
+      for (const r of found) {
         const no = String(r['사건번호']).replace(/\s+/g, '');
         const d = String(r['선고일자'] || '').replace(/\D/g, '');
         const date = d.length === 8 ? `${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}` : '';
@@ -103,7 +107,8 @@ async function main() {
   }
 
   items.sort((a, b) => b.date.localeCompare(a.date));
-  write({ checkedAt: today, enabled: true, since: SINCE, errors, items });
+  /* searched: 검색이 실제로 결과를 돌려준 법령 수 — 0이면 API 접속 자체가 안 된 것 */
+  write({ checkedAt: today, enabled: true, since: SINCE, searched, candidates: candidates.size, errors, items });
   console.log(`새 판례 ${items.length}건 (후보 ${candidates.size}건) · 오류 ${errors.length}건`);
 }
 
