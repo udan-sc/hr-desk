@@ -14,11 +14,36 @@ const EMPTY_SET = new Set();
 
 const norm = (s) => (s || '').toLowerCase().replace(/\s+/g, '');
 
+/* 위반 벌칙 분류 — lib/data.js의 penaltyKind와 같은 이름을 쓴다 */
+const PENALTY_KINDS = [
+  { key: '형사처벌', label: '형사처벌 (징역·벌금)' },
+  { key: '과태료', label: '과태료' },
+  { key: '없음', label: '벌칙 없음' },
+];
+
+/* 검색어 목록 — 중복을 빼고 10개까지만. 긴 ?q= 링크 하나로 탭이 멈추지 않게 한다. */
+const MAX_TERMS = 10;
+const QUERY_MAX = 200;
+const splitTerms = (query) => [...new Set((query || '').trim().toLowerCase().split(/\s+/).filter(Boolean))].slice(0, MAX_TERMS);
+
+/* 검색어 하이라이트 — 일치하는 부분을 <mark>로 감싼다.
+   score()는 공백을 지우고 비교하므로 여기서도 글자 사이 공백을 허용해 '연차수당'이 '연차 수당'에 걸리게 하고,
+   긴 검색어를 먼저 맞춰 '근로 근로기준'에서 '근로'만 칠해지는 일을 막는다. */
+const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+function hl(text, query) {
+  const terms = splitTerms(query).sort((a, b) => b.length - a.length);
+  if (!terms.length || !text) return text;
+  const re = new RegExp(`(${terms.map((t) => [...t].map(escapeRe).join('\\s*')).join('|')})`, 'gi');
+  const parts = String(text).split(re);
+  if (parts.length === 1) return text;
+  return parts.map((part, i) => (i % 2 === 1 ? <mark key={i}>{part}</mark> : part));
+}
+
 /* 검색 점수. 모든 검색어가 걸려야 결과에 남는다(AND).
    body는 조문 전문이며, 전문 색인을 아직 받지 못했으면 미리보기로 대신한다. */
 function score(p, body, query) {
   if (!query) return 1;
-  const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+  const terms = splitTerms(query);
   let total = 0;
   for (const t of terms) {
     const tn = norm(t);
@@ -42,6 +67,7 @@ export default function BrowseClient({ provisions, categories, laws, cards, base
   const [law, setLaw] = useState(null);
   const [onlyFav, setOnlyFav] = useState(false);
   const [hideOutOfScope, setHideOutOfScope] = useState(false);
+  const [pen, setPen] = useState(null);
   const { headcount } = useHeadcount();
   const [sort, setSort] = useState('rel');
   const [favs, setFavs] = useState(() => new Set());
@@ -81,7 +107,7 @@ export default function BrowseClient({ provisions, categories, laws, cards, base
     } catch {
       /* 저장소를 못 읽어도 즐겨찾기 없이 정상 동작한다 */
     }
-    const q = new URLSearchParams(window.location.search).get('q');
+    const q = (new URLSearchParams(window.location.search).get('q') || '').slice(0, QUERY_MAX);
     if (q) {
       setQuery(q);
       loadFullText();
@@ -138,6 +164,7 @@ export default function BrowseClient({ provisions, categories, laws, cards, base
     if (cat) list = list.filter((r) => r.p.category === cat);
     if (law) list = list.filter((r) => r.p.law === law);
     if (onlyFav) list = list.filter((r) => favsForFilter.has(r.p.key));
+    if (pen) list = list.filter((r) => r.p.penaltyKind === pen);
     if (hideOutOfScope) list = list.filter((r) => applies(headcount, r.p.threshold));
     list = [...list];
     if (sort === 'law') {
@@ -150,7 +177,7 @@ export default function BrowseClient({ provisions, categories, laws, cards, base
       list.sort((a, b) => b.s - a.s || a.i - b.i);
     }
     return list;
-  }, [qRows, cat, law, onlyFav, favsForFilter, sort, hideOutOfScope, headcount]);
+  }, [qRows, cat, law, onlyFav, favsForFilter, pen, sort, hideOutOfScope, headcount]);
 
   /* 인원수가 설정되면 사이드바 숫자는 그 규모에서 실제로 적용되는 조문만 센다 —
      숨기기 토글과 무관하게. 다만 버튼 비활성화는 검색어 기준(qBy*)으로 판단해서,
@@ -165,15 +192,19 @@ export default function BrowseClient({ provisions, categories, laws, cards, base
     const byLaw = {};
     const qByCat = {};
     const qByLaw = {};
+    const byPen = {};
+    const qByPen = {};
     scopedRows.forEach(({ p }) => {
       byCat[p.category] = (byCat[p.category] || 0) + 1;
       byLaw[p.law] = (byLaw[p.law] || 0) + 1;
+      byPen[p.penaltyKind] = (byPen[p.penaltyKind] || 0) + 1;
     });
     qRows.forEach(({ p }) => {
       qByCat[p.category] = (qByCat[p.category] || 0) + 1;
       qByLaw[p.law] = (qByLaw[p.law] || 0) + 1;
+      qByPen[p.penaltyKind] = (qByPen[p.penaltyKind] || 0) + 1;
     });
-    return { byCat, byLaw, qByCat, qByLaw };
+    return { byCat, byLaw, qByCat, qByLaw, byPen, qByPen };
   }, [qRows, scopedRows]);
 
   /* 목록 상단 안내용 — 숨기기를 끈 채 인원만 설정한 경우, 나열된 것 중 몇 건이 적용인지 */
@@ -226,6 +257,7 @@ export default function BrowseClient({ provisions, categories, laws, cards, base
           placeholder="예: 연차 수당, 주휴, 해고 예고, 근로기준법 60조"
           aria-label="조문 검색"
           autoComplete="off"
+          maxLength={QUERY_MAX}
         />
         <span className="kbd" aria-hidden="true">/</span>
       </div>
@@ -320,12 +352,37 @@ export default function BrowseClient({ provisions, categories, laws, cards, base
           </section>
 
           <section>
+            <div className="side-h">위반 벌칙</div>
+            <div className="nav">
+              {PENALTY_KINDS.map((k) => {
+                const n = counts.byPen[k.key] || 0;
+                return (
+                  <button
+                    key={k.key}
+                    type="button"
+                    className={pen === k.key ? 'on' : ''}
+                    aria-pressed={pen === k.key}
+                    disabled={(counts.qByPen[k.key] || 0) === 0 && pen !== k.key}
+                    onClick={() => setPen((cur) => (cur === k.key ? null : k.key))}
+                  >
+                    <span>{k.label}</span>
+                    <span className="n">{n}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </section>
+
+          <section>
             <div className="side-h">즐겨찾기</div>
             <div className="nav">
               <button type="button" className={onlyFav ? 'on' : ''} aria-pressed={onlyFav} onClick={() => setOnlyFav((v) => !v)}>
                 <span><span className="star" aria-hidden="true">★</span> 즐겨찾기만 보기</span>
                 <span className="n">{favs.size}</span>
               </button>
+              <Link className="more-laws" href="/favorites">
+                모아보기 · 팀에 공유 →
+              </Link>
             </div>
           </section>
         </aside>
@@ -399,10 +456,10 @@ export default function BrowseClient({ provisions, categories, laws, cards, base
                         </div>
                         <h3>
                           <Link href={p.href}>
-                            {p.article}({p.title})
+                            {p.article}({hl(p.title, query)})
                           </Link>
                         </h3>
-                        {p.summary && <p className="sum">{p.summary}</p>}
+                        {p.summary && <p className="sum">{hl(p.summary, query)}</p>}
                       </div>
                       <button
                         type="button"
@@ -415,7 +472,7 @@ export default function BrowseClient({ provisions, categories, laws, cards, base
                       </button>
                     </div>
 
-                    <p className={`body${p.hasMore && !open ? ' clamp' : ''}`} id={bodyId}>{body}</p>
+                    <p className={`body${p.hasMore && !open ? ' clamp' : ''}`} id={bodyId}>{hl(body, query)}</p>
                     {p.hasMore && (
                       <button
                         type="button"

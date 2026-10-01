@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import { cards, stats, BASE_DATE } from '../lib/data';
 import { MODULES, SITE_NAME } from '../lib/modules';
-import { obligations, changes } from '../lib/platform';
+import { obligations, changes, documents } from '../lib/platform';
+import { provisions } from '../lib/data';
 import UpcomingChanges from './upcoming-changes';
+import StatusBoard from './status-board';
 import HomeMonth from './home-month';
 import HeadcountBar from './headcount-bar';
 import RecentProvisions from './recent-provisions';
@@ -37,6 +39,13 @@ export default function HomePage() {
         </form>
 
         <HeadcountBar hint="한 번 넣어 두면 노무법전·캘린더·규정서식이 모두 우리 회사 기준으로 표시됩니다." />
+
+        <StatusBoard
+          provisions={provisions.map((p) => p.threshold)}
+          obligations={obligations.map((o) => o.thresholdMin || 1)}
+          docs={documents.map((d) => ({ t: d.thresholdMin || 1, must: d.obligation === '법정 의무' }))}
+          changeDates={changes.map((c) => c.effectiveDate)}
+        />
 
         <RecentProvisions />
 

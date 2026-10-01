@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { obligations, resolveCitations } from '../../lib/platform';
 import { BASE_DATE } from '../../lib/data';
 import CalendarNow from './calendar-now';
+import YearStrip from './year-strip';
 import { ScopeBadge } from '../scope-badges';
 import HeadcountBar from '../headcount-bar';
 import ScopeFilter from '../scope-filter';
@@ -56,6 +57,16 @@ export default function CalendarPage() {
           label="법정 의무"
         />
 
+        <div className="sec-head" style={{ marginTop: 18 }}>
+          <h2>한 해 한눈에</h2>
+          <span className="note">달을 누르면 그 달로 이동합니다</span>
+        </div>
+        <YearStrip
+          items={seasonal.map((o) => ({ id: o.id, title: o.title, months: o.months, thresholdMin: o.thresholdMin }))}
+          monthlyCount={monthly.length}
+          anytimeCount={anytime.length}
+        />
+
         {monthly.length > 0 && (
           <section style={{ marginBottom: 26 }}>
             <div className="sec-head">
@@ -83,7 +94,7 @@ export default function CalendarPage() {
             const m = idx + 1;
             const items = seasonal.filter((o) => o.months.includes(m));
             return (
-              <CalendarNow key={m} month={m}>
+              <CalendarNow key={m} month={m} id={`cal-m-${m}`}>
                 <h2>{name}</h2>
                 {items.length === 0 ? (
                   <p className="none">이 달에만 하는 일 없음</p>

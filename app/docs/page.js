@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { documents, resolveCitations } from '../../lib/platform';
+import { documents, resolveCitations, docAnchor } from '../../lib/platform';
 import { BASE_DATE } from '../../lib/data';
 import { ScopeBadge } from '../scope-badges';
 import HeadcountBar from '../headcount-bar';
@@ -43,7 +43,7 @@ export default function DocsPage() {
         {sorted.map((d) => {
           const cites = resolveCitations(d.citations).filter((x) => x.href);
           return (
-            <article key={d.name} className="doc" data-scope-id={d.name}>
+            <article key={d.name} className="doc" id={docAnchor(d)} data-scope-id={d.name}>
               <div className="dh">
                 <h3>{d.name}</h3>
                 <span className="kind">{d.kind}</span>

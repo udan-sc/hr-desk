@@ -331,7 +331,7 @@ aside.side{position:sticky;top:20px;max-height:calc(100vh - 40px);overflow-y:aut
 .ob{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 19px;box-shadow:var(--shadow);scroll-margin-top:16px}
 .ob .oh{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .ob h3{font-family:var(--serif);font-size:15.5px;font-weight:700;margin:0}
-.ob .cadence{font-size:12px;font-weight:700;color:var(--accent-ink);white-space:nowrap}
+.ob .cadence{font-size:12px;font-weight:700;color:var(--accent-ink);overflow-wrap:anywhere}
 .ob .od{font-size:13.5px;color:var(--ink);line-height:1.7;margin:6px 0 0;max-width:70ch}
 .ob .of{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;align-items:flex-start}
 
@@ -699,3 +699,106 @@ body.hide-out-of-scope .doc:has(.badge.scope.off){display:none}
 }
 .gvp-n{display:block;font-size:12.5px;font-weight:800;color:var(--ink)}
 .gvp-w{display:block;font-size:11px;line-height:1.5;color:var(--ink2);margin-top:2px}
+
+/* ── 홈 · 적용 현황판 ── */
+.board{margin:14px 0 0;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px 12px;box-shadow:var(--shadow)}
+.bd-h{font-size:12.5px;font-weight:700;color:var(--ink3);letter-spacing:.02em;margin-bottom:10px}
+.bd-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.bd{display:flex;flex-direction:column;gap:3px;text-decoration:none;color:var(--ink);background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:11px 13px;transition:border-color .15s}
+.bd:hover{border-color:var(--accent-line)}
+.bd-n{font-family:var(--font-serif),serif;font-size:26px;font-weight:900;line-height:1;color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.bd-n small{font-family:var(--font-sans),sans-serif;font-size:12px;font-weight:600;color:var(--ink3);margin-left:2px}
+.bd-l{font-size:12px;font-weight:600;color:var(--ink2)}
+.bd-note{margin:10px 0 0;font-size:12.5px;color:var(--ink2)}
+.bd-note a{color:var(--accent-ink);text-decoration:none;font-weight:700}
+@media (max-width:640px){ .bd-grid{grid-template-columns:repeat(2,minmax(0,1fr))} .bd-n{font-size:22px} }
+
+/* ── 규모별 문턱 지도 ── */
+.tier{margin:22px 0 0;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 20px;box-shadow:var(--shadow)}
+.tier.base{background:var(--surface2)}
+.tier-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.tier-h h2{margin:0;font-family:var(--font-serif),serif;font-size:19px}
+.tier-sum{font-size:12.5px;color:var(--ink3);margin-left:auto}
+.tier-st{font-size:11.5px;font-weight:700;border-radius:5px;padding:2px 8px;border:1px solid var(--border);color:var(--ink3);background:var(--surface2)}
+.tier-st.on{color:var(--accent-ink);border-color:var(--accent-line);background:var(--accent-soft)}
+.tier-p{margin:8px 0 0;font-size:13.5px;line-height:1.7;color:var(--ink2)}
+.tier-p a{color:var(--accent-ink)}
+.tier-block{margin-top:14px}
+.tier-block h3{margin:0 0 8px;font-size:13px;color:var(--ink3);letter-spacing:.02em}
+.tier-cat{display:flex;gap:10px;align-items:baseline;margin-bottom:8px}
+.tier-cat-n{flex:none;width:118px;font-size:12px;font-weight:700;color:var(--ink2)}
+.tier-cat .tagrow{display:flex;flex-wrap:wrap;gap:6px}
+.tier-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.tier-list li{display:flex;gap:10px;align-items:baseline;font-size:13.5px;flex-wrap:wrap}
+.tier-list a{color:var(--ink);font-weight:600;text-decoration:none}
+.tier-list a:hover{color:var(--accent-ink)}
+.tier-when{font-size:12px;color:var(--ink3)}
+@media (max-width:640px){ .tier-cat{flex-direction:column;gap:4px} .tier-cat-n{width:auto} .tier-sum{margin-left:0} }
+
+/* ── 캘린더 · 연간 뷰 ── */
+.ystrip{margin:0 0 26px}
+.ys-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:6px}
+.ys-cell{display:flex;flex-direction:column;align-items:center;gap:6px;padding:9px 4px 8px;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--border);border-radius:10px;transition:border-color .15s}
+.ys-cell:hover{border-color:var(--accent-line)}
+.ys-cell.now{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.ys-m{font-size:12px;font-weight:700}
+.ys-cell.now .ys-m{color:var(--accent-ink)}
+.ys-dots{display:flex;flex-wrap:wrap;justify-content:center;gap:3px;min-height:9px;max-width:40px}
+.ys-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);opacity:.9}
+.ys-dot.out-of-scope{background:var(--ctrl);opacity:.45}
+.ys-n{font-size:11px;color:var(--ink3);font-variant-numeric:tabular-nums}
+.ys-note{margin:8px 2px 0;font-size:12px;color:var(--ink3)}
+@media (max-width:760px){ .ys-grid{grid-template-columns:repeat(6,minmax(0,1fr))} }
+@media (max-width:420px){ .ys-grid{grid-template-columns:repeat(4,minmax(0,1fr))} }
+
+/* ── 따라다니는 목차 ── */
+.stoc{position:sticky;top:0;z-index:20;display:flex;gap:7px;flex-wrap:wrap;padding:10px 0;margin:4px 0 22px;background:var(--bg);border-bottom:1px solid var(--border)}
+.stoc .tag.on{background:var(--accent-soft);color:var(--accent-ink);border-color:var(--accent-line);font-weight:700}
+.stoc-n{margin-left:5px;font-size:11px;font-weight:400}
+/* 목차 높이(sticky-toc.js가 실측값으로 덮어씀)만큼 앵커 대상에 여백을 줘 제목이 목차 뒤에 숨지 않게 한다 */
+:root{--stoc-h:56px}
+.gloss-group,.tl-year,.gloss-item,.tl-item{scroll-margin-top:calc(var(--stoc-h) + 8px)}
+@media (max-width:640px){ .stoc{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding:8px 0} .stoc .tag{flex:none} }
+
+/* ── 즐겨찾기 모아보기 ── */
+.fav-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:0 0 22px}
+.fav-mine{font-size:13px;color:var(--accent-ink);text-decoration:none;font-weight:600}
+.fav-group{margin:26px 0 0}
+.fav-group>h2{font-family:var(--font-serif),serif;font-size:17px;margin:0 0 10px;padding-bottom:6px;border-bottom:2px solid var(--border2)}
+
+/* ── 조문 상세 · 관련 개정 알림 ── */
+.chg-notice{margin:14px 0 4px;border:1px solid var(--accent-line);background:var(--accent-soft);border-radius:10px;padding:10px 14px}
+.cn-h{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:var(--accent-ink);margin-bottom:6px}
+.cn-mark{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:5px;background:var(--accent);color:var(--on-accent);font-size:12px}
+.cn-item{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;padding:6px 0;text-decoration:none;color:var(--ink);font-size:13.5px;border-top:1px dashed var(--accent-line)}
+.cn-item:first-of-type{border-top:0}
+.cn-date{font-weight:700;font-variant-numeric:tabular-nums;color:var(--ink)}
+.cn-t{font-weight:600}
+.cn-law{font-size:11.5px;color:var(--ink3)}
+.cn-item:hover .cn-t{color:var(--accent-ink);text-decoration:underline}
+
+/* ── 본문 속 용어 링크 + 툴팁 ── */
+.term{position:relative;color:inherit;text-decoration:none;border-bottom:1px dotted var(--accent);cursor:help}
+.term:hover{color:var(--accent-ink)}
+/* 툴팁은 숨겨진 동안 레이아웃에서 완전히 빠지고(display:none), 폭은 화면 안으로 묶는다.
+   툴팁 위로 마우스를 옮겨도 사라지지 않도록 아래쪽 6px 틈을 보이지 않는 다리로 메운다. */
+.term .tip{display:none;position:absolute;left:0;bottom:100%;z-index:30;min-width:200px;max-width:min(320px,calc(100vw - 32px));margin-bottom:6px;padding:8px 11px;font-size:12px;font-weight:500;line-height:1.55;color:var(--ink);background:var(--surface);border:1px solid var(--border2);border-radius:8px;box-shadow:var(--shadow);white-space:normal;pointer-events:auto;cursor:default}
+.term .tip::before{content:"";position:absolute;left:0;right:0;top:100%;height:8px}
+.term:hover .tip,.term:focus-visible .tip{display:block}
+@media (hover:none){ .term .tip{display:none !important} }
+html{overflow-x:clip}
+
+/* ── 검색어 강조 ── */
+mark{background:var(--accent-soft);color:inherit;padding:0 1px;border-radius:2px;box-shadow:inset 0 -1px 0 var(--accent-line)}
+
+@media print { .stoc,.board,.ystrip,.fav-actions{display:none !important} .term{border-bottom:0} }
+
+/* ── 리뷰 반영 보정 ── */
+.doc{scroll-margin-top:20px}
+.ob .cadence{min-width:0}
+.ys-now{font-size:10px;font-weight:700;color:var(--accent-ink);background:var(--accent-soft);border-radius:4px;padding:0 5px;margin-top:-3px}
+.fav-sub{margin:-6px 0 16px;font-size:13.5px;color:var(--ink2);line-height:1.7}
+.fav-sub b{color:var(--ink)}
+.fav-loading{font-size:13px;color:var(--ink3);margin:8px 0 20px}
+.tips-off .term .tip{display:none !important}
+@media print { .term .tip{display:none !important} }

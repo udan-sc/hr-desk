@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import StickyToc from '../sticky-toc';
 import { glossary, GLOSSARY_CATEGORIES, resolveCitations } from '../../lib/platform';
 import { BASE_DATE } from '../../lib/data';
 
@@ -113,13 +114,7 @@ export default function TermsPage() {
           </p>
         </header>
 
-        <nav className="gloss-toc" aria-label="분류 바로가기">
-          {groups.map((g) => (
-            <a key={g.c} className="tag" href={`#${encodeURIComponent(g.c)}`}>
-              {g.c} {g.items.length}
-            </a>
-          ))}
-        </nav>
+        <StickyToc items={groups.map((g) => ({ id: g.c, label: g.c, count: g.items.length }))} />
 
         {groups.map((g) => (
           <section key={g.c} className="gloss-group" id={g.c}>

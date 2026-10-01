@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import TimeBadge from './time-badge';
+import StickyToc from '../sticky-toc';
 import { changes, resolveCitations } from '../../lib/platform';
 import { BASE_DATE } from '../../lib/data';
 
@@ -31,13 +32,9 @@ export default function ChangesPage() {
           </p>
         </header>
 
-        <nav className="gloss-toc" aria-label="연도 바로가기">
-          {years.map((y) => (
-            <a key={y} className="tag" href={`#y-${y}`}>
-              {y}년 {changes.filter((c) => c.effectiveDate.startsWith(y)).length}건
-            </a>
-          ))}
-        </nav>
+        <StickyToc
+          items={years.map((y) => ({ id: `y-${y}`, label: `${y}년`, count: changes.filter((c) => c.effectiveDate.startsWith(y)).length }))}
+        />
 
         {years.map((y) => (
           <section key={y} className="tl-year" id={`y-${y}`}>

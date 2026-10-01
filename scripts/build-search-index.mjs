@@ -31,6 +31,8 @@ const cut = (s, n = 64) => {
 
 const palette = [
   ...MODULES.map((m) => ({ g: '메뉴', t: m.name, d: cut(m.blurb), k: m.short, h: m.href })),
+  { g: '메뉴', t: '규모별 문턱 지도', d: '5·10·30·50명 문턱을 넘을 때 새로 생기는 조문·의무·서류', k: '인원 규모 문턱 상시 근로자', h: '/thresholds' },
+  { g: '메뉴', t: '즐겨찾기 모아보기', d: '별표한 조문을 한곳에, 링크로 팀 공유', k: '즐겨찾기 별표 공유', h: '/favorites' },
   ...changes.map((c) => ({
     g: '개정',
     t: `${c.effectiveDate.replace(/-/g, '. ')}. ${c.title}`,

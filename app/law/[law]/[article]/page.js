@@ -4,7 +4,10 @@ import ScopeBadges from '../../../scope-badges';
 import Interpretations from '../../../interpretations';
 import CopyButton, { PrintButton } from '../../../copy-button';
 import { RecentTracker } from '../../../recent-provisions';
-import { interpretationsFor } from '../../../../lib/platform';
+import TermLinks from '../../../term-links';
+import TipDismiss from '../../../tip-dismiss';
+import ChangeNotice from '../../../change-notice';
+import { interpretationsFor, changesForProvision } from '../../../../lib/platform';
 import { SITE_URL } from '../../../../lib/site';
 import { lawGoKrDisplayUrl } from '../../../../lib/lawlinks';
 import {
@@ -58,6 +61,7 @@ export default async function ProvisionPage({ params }) {
   if (!p) notFound();
   const related = relatedProvisions(p);
   const interpretations = interpretationsFor(p.law, p.article);
+  const relatedChanges = changesForProvision(p.law, p.article);
 
   /* 근거 복사 — 메일·보고서에 그대로 붙일 수 있는 인용문 */
   const citationText = [
@@ -94,9 +98,11 @@ export default async function ProvisionPage({ params }) {
           <h1>
             {p.article}({p.title})
           </h1>
-          <p className="lede">{p.summary}</p>
+          <p className="lede"><TermLinks text={p.summary} /></p>
 
           <ScopeBadges threshold={p.threshold} note={p.thresholdNote} penalty={p.penalty} />
+
+          <ChangeNotice items={relatedChanges} />
 
           <div className="cite-row">
             <CopyButton text={citationText} label="근거 복사" copiedLabel="복사됨 — 붙여넣기 하세요" />
@@ -104,11 +110,12 @@ export default async function ProvisionPage({ params }) {
             <span className="cite-hint">복사하면 조문명·요지·적용 범위·원문 주소가 인용문으로 담깁니다</span>
           </div>
           <RecentTracker law={p.law} article={p.article} title={p.title} />
+          <TipDismiss />
 
           <div className="text">
             {splitProvisionText(p.text).map((b, i) => (
               <p key={i} className={b.kind}>
-                {b.text}
+                <TermLinks text={b.text} />
               </p>
             ))}
           </div>
