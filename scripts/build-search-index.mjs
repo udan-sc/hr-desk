@@ -219,6 +219,8 @@ fs.writeFileSync(
       const n = fs.existsSync(path.join(root, 'data/auto/news.json')) ? readJson('data/auto/news.json') : {};
       return { updatedAt: n.updatedAt || null, runner: n.runner || null, sources: n.status || {}, items: (n.items || []).length, issues: (n.issues || []).map((i) => `${i.label} ${i.count}`) };
     })(),
+    /* 바뀐 것 장부 — ledger가 deployed면 지난 배포본에서 이어 쓴 것, repo면 저장소 장부(첫 배포)에서 시작한 것 */
+    updates: { updatedAt: updates.updatedAt || null, today: updates.today || null, ledger: updates.ledger || null, items: updates.items.length },
     precedents: {
       enabled: Boolean(precWatch.enabled),
       checkedAt: precWatch.checkedAt || null,
