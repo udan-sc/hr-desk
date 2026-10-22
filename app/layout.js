@@ -97,7 +97,7 @@ export default function RootLayout({ children }) {
             </p>
             {watchStatus.checkedAt && (
               <p className="watch-foot">
-                법령 원문 자동 확인: {watchStatus.checkedAt.replace(/-0?/g, '. ')}. · 매주 월요일 국가법령정보센터 기준으로 개정 여부를 확인합니다.
+                법령 원문 자동 확인: {watchStatus.checkedAt.replace(/-0?/g, '. ')}. · 매일 국가법령정보센터 기준으로 개정 여부를 확인합니다.
               </p>
             )}
             <div className="fl">

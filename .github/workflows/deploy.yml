@@ -4,9 +4,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-  # 매주 월요일 오전 6시(한국 시간)에 국가법령정보센터 원문을 다시 확인해 사이트를 새로 굽는다.
+  # 매일 07시·12시·18시(한국 시간)에 인사노무 소식을 모으고 국가법령정보센터 원문을 다시 확인해 사이트를 새로 굽는다.
   schedule:
-    - cron: '0 21 * * 0'
+    - cron: '0 22 * * *'
+    - cron: '0 3 * * *'
+    - cron: '0 9 * * *'
 
 permissions:
   contents: read
@@ -50,6 +52,12 @@ jobs:
         continue-on-error: true
         timeout-minutes: 20
         run: node scripts/precedent-watch.mjs
+
+      # 고용노동부 발표·노동 전문지·주요 언론의 인사노무 기사 제목을 모으고 오늘의 주요 이슈를 집계한다.
+      - name: 인사노무 소식 모으기
+        continue-on-error: true
+        timeout-minutes: 10
+        run: node scripts/news-watch.mjs
 
       # 계산기 검산 36건과 근거 조문 인용 연결을 먼저 확인한다. 틀리면 배포하지 않는다.
       - name: 데이터·산식 검사

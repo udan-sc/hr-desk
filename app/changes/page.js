@@ -7,7 +7,7 @@ import { BASE_DATE } from '../../lib/data';
 export const metadata = {
   title: '달라지는 노동법',
   description:
-    '2026년부터 연도별로 시행되는 근로기준법·모성보호·산업안전 등 인사노무 법령 개정을 시행일 순 타임라인으로 정리했습니다. 매주 국가법령정보센터를 자동 확인해 새로 공포된 개정을 더합니다.',
+    '2026년부터 연도별로 시행되는 근로기준법·모성보호·산업안전 등 인사노무 법령 개정을 시행일 순 타임라인으로 정리했습니다. 매일 국가법령정보센터를 자동 확인해 새로 공포된 개정을 더합니다.',
   alternates: { canonical: '/changes' },
 };
 
@@ -35,13 +35,13 @@ export default function ChangesPage() {
           <p>
             2026년부터 시행되는 인사노무 법령 개정 {all.length}건을 시행일 순으로 정리했습니다.{' '}
             {autoChanges.length > 0
-              ? `정리된 ${changes.length}건에는 무엇이 바뀌는지와 실무에서 할 일을 함께 실었고, 매주 자동 확인에서 새로 잡힌 ${autoChanges.length}건은 공식 개정이유와 함께 먼저 실었습니다(실무 해설은 검토 후 추가).`
-              : '항목마다 무엇이 바뀌는지와 실무에서 할 일을 함께 실었습니다. 매주 국가법령정보센터를 자동으로 확인해, 새로 공포된 개정이 있으면 공식 개정이유와 함께 바로 더합니다.'}{' '}
+              ? `정리된 ${changes.length}건에는 무엇이 바뀌는지와 실무에서 할 일을 함께 실었고, 매일 자동 확인에서 새로 잡힌 ${autoChanges.length}건은 공식 개정이유와 함께 먼저 실었습니다(실무 해설은 검토 후 추가).`
+              : '항목마다 무엇이 바뀌는지와 실무에서 할 일을 함께 실었습니다. 매일 국가법령정보센터를 자동으로 확인해, 새로 공포된 개정이 있으면 공식 개정이유와 함께 바로 더합니다.'}{' '}
             조문 본문은 {BASE_DATE} 시행 기준입니다.
           </p>
           {watchStatus.checkedAt && (
             <p className="watch-stamp">
-              <span className="tl-auto">자동 확인</span> 마지막 확인 {fmtFull(watchStatus.checkedAt)} · 매주 월요일 국가법령정보센터 원문 기준
+              <span className="tl-auto">자동 확인</span> 마지막 확인 {fmtFull(watchStatus.checkedAt)} · 매일 국가법령정보센터 원문 기준
             </p>
           )}
         </header>
@@ -82,7 +82,7 @@ export default function ChangesPage() {
                             )}
                             <p className="tl-practice">
                               <b>실무에서</b>
-                              매주 자동 확인에서 새로 잡힌 개정입니다. 실무 해설은 검토 후 추가됩니다.
+                              매일 자동 확인에서 새로 잡힌 개정입니다. 실무 해설은 검토 후 추가됩니다.
                             </p>
                           </>
                         ) : (

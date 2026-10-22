@@ -5,6 +5,7 @@ import { obligations, changes, autoChanges, documents } from '../lib/platform';
 import { provisions } from '../lib/data';
 import UpcomingChanges from './upcoming-changes';
 import StatusBoard from './status-board';
+import NewsBoard from './news-board';
 import HomeMonth from './home-month';
 import HeadcountBar from './headcount-bar';
 import RecentProvisions from './recent-provisions';
@@ -48,6 +49,8 @@ export default function HomePage() {
         />
 
         <RecentProvisions />
+
+        <NewsBoard />
 
         <h2 className="vh">{SITE_NAME} 모듈</h2>
         <div className="mods">

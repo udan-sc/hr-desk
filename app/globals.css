@@ -851,3 +851,39 @@ mark{background:var(--accent-soft);color:inherit;padding:0 1px;border-radius:2px
 .wn-row{margin:5px 0 0;font-size:13px;line-height:1.7;color:var(--ink)}
 .wn-row a{color:var(--good);font-weight:600}
 .tl-note{margin:7px 0 0;font-size:12px;line-height:1.65;color:var(--ink3);border-left:2px solid var(--border2);padding-left:9px}
+
+/* ── 홈 · 오늘의 인사노무 이슈 ── */
+.newsboard{margin:26px 0 30px}
+.nb-issues{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.nb-issue{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:13px 15px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px}
+.nb-ih{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.nb-rank{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:6px;background:var(--accent);color:var(--on-accent);font-size:12px;font-weight:800;flex:none;align-self:center}
+.nb-ih b{font-size:15px;font-family:var(--serif)}
+.nb-count{font-size:11.5px;color:var(--ink3)}
+.nb-heads{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.nb-li{display:flex;flex-direction:column;gap:1px;min-width:0}
+.nb-li a{font-size:13px;line-height:1.5;color:var(--ink);text-decoration:none}
+.nb-li a:hover{color:var(--accent-ink);text-decoration:underline}
+.nb-meta{font-size:11px;color:var(--ink3)}
+.nb-links{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:6px;border-top:1px dashed var(--border)}
+.nb-links-l{font-size:11px;font-weight:700;color:var(--ink3)}
+.nb-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
+.nb-col{background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:12px 15px}
+.nb-col h3{margin:0 0 8px;font-size:13px;color:var(--ink2)}
+.nb-col ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.nb-foot{margin:10px 2px 0;font-size:12px;color:var(--ink3);line-height:1.6}
+.nb-foot a{color:var(--accent-ink);font-weight:600;text-decoration:none}
+@media (max-width:640px){ .nb-cols{grid-template-columns:minmax(0,1fr)} .nb-issues{grid-template-columns:minmax(0,1fr)} }
+
+/* ── 소식 전체 페이지 ── */
+.news-upd{color:var(--ink3);font-weight:400;font-size:12.5px}
+.news-day{margin:20px 0 0}
+.news-day>h2{font-family:var(--serif);font-size:16px;margin:0 0 8px;padding-bottom:6px;border-bottom:2px solid var(--border2)}
+.news-ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:2px}
+.news-ul li{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;padding:7px 4px;border-bottom:1px dashed var(--border)}
+.news-ul a{flex:1 1 340px;min-width:0;font-size:13.5px;color:var(--ink);text-decoration:none;line-height:1.55}
+.news-ul a:hover{color:var(--accent-ink);text-decoration:underline}
+.news-src{flex:none;font-size:11px;font-weight:700;border-radius:5px;padding:1px 7px;border:1px solid var(--border2);color:var(--ink2);background:var(--surface)}
+.news-src.k-official{color:var(--good);border-color:var(--good);background:var(--good-soft)}
+.news-src.k-labor{color:var(--accent-ink);border-color:var(--accent-line);background:var(--accent-soft)}
+@media print { .newsboard{display:none !important} }

@@ -1,0 +1,1950 @@
+{
+ "updatedAt": "2026-10-22T01:22:18.793Z",
+ "runner": "local",
+ "status": {
+  "고용노동부 보도자료": {
+   "ok": true,
+   "count": 10
+  },
+  "고용노동부 정책자료": {
+   "ok": true,
+   "count": 10
+  },
+  "매일노동뉴스": {
+   "ok": true,
+   "count": 50
+  },
+  "구글 뉴스": {
+   "ok": true,
+   "count": 511
+  }
+ },
+ "issues": [
+  {
+   "key": "safety",
+   "label": "산업재해·중대재해",
+   "count": 67,
+   "articles": 74,
+   "officialCount": 0,
+   "headlines": [
+    {
+     "title": "지방정부 노동감독 권한으로 산재 제대로 예방하려면",
+     "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237348",
+     "source": "매일노동뉴스",
+     "ms": 1792618206000
+    },
+    {
+     "title": "[고 이한빛 PD 10주기] 방송노동자 사각지대 여전, 산재보험 가입 16.9%",
+     "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237338",
+     "source": "매일노동뉴스",
+     "ms": 1792618205000
+    },
+    {
+     "title": "또 끼임 사망사고 현대제철 “전면 감독해야”",
+     "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237335",
+     "source": "매일노동뉴스",
+     "ms": 1792618205000
+    }
+   ],
+   "links": [
+    {
+     "label": "중대재해처벌법 제4조",
+     "href": "/law/중대재해처벌법/제4조"
+    },
+    {
+     "label": "산업안전 분야",
+     "href": "/topic/safety"
+    }
+   ]
+  },
+  {
+   "key": "nonregular",
+   "label": "비정규·플랫폼·위장고용",
+   "count": 15,
+   "articles": 15,
+   "officialCount": 0,
+   "headlines": [
+    {
+     "title": "가짜 3.3 위장고용, 끝까지 책임을 물으려면",
+     "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237349",
+     "source": "매일노동뉴스",
+     "ms": 1792618206000
+    },
+    {
+     "title": "임금 불평등 해소 실패, 정규직-비정규직 임금격차 최대",
+     "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237343",
+     "source": "매일노동뉴스",
+     "ms": 1792618205000
+    },
+    {
+     "title": "[단독] 메가커피·명륜진사갈비 지점 ‘가짜 3.3’ 활용",
+     "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237331",
+     "source": "매일노동뉴스",
+     "ms": 1792618204000
+    }
+   ],
+   "links": [
+    {
+     "label": "근로기준법 제2조(근로자 정의)",
+     "href": "/law/근로기준법/제2조"
+    },
+    {
+     "label": "기간제·파견 분야",
+     "href": "/topic/nonregular"
+    }
+   ]
+  },
+  {
+   "key": "pension",
+   "label": "퇴직금·퇴직연금",
+   "count": 11,
+   "articles": 12,
+   "officialCount": 0,
+   "headlines": [
+    {
+     "title": "해산된 재외동포협력센터, 퇴직금 안 주더니…‘기한 연장’ 동의 요구",
+     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBlUnYtRFZnMk9lUkhpZUh5ZkMzNGRiN3VKQWVJcmNCaG9YRlhwd2hOTXUxd2M4eDBSSGdpeHB4cDQtTWJ1ZFRwODJJTVRLZmFiMUExdjl1c2ZxSURiYk5yWjZmQQ?oc=5",
+     "source": "한겨레",
+     "ms": 1792580460000
+    },
+    {
+     "title": "후임 정교사 뽑을 때까지 남으라는 학원…프리랜서 교사, 퇴직금 받을 수 있나?",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1lajZXNk9WWmdaQVB1cnEtMDlHOE8tcHZMWHU0YkpSR2JVd3dkVnlRT194NVdhOGtUTHhFUkx1Ym1tMjhFQ3dOdHZOQmpyQktKcUw5ZEQweFROQQ?oc=5",
+     "source": "로톡뉴스",
+     "ms": 1792573440000
+    },
+    {
+     "title": "‘퇴사 다음 달 말 퇴직금 정산’이라는 회사...계약서에 적혀 있으면 14일 지나고 받나?",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1zcHRQZWZqZzdkcGVJMngtRVU1X3Z5X1FETV9aeEhLTTg2OEl4YmJxbTJoWlNSLTlValkxMVRvR0hvYmtORFBkaWJCVURtRGxEMDBsLVBwSFhwdw?oc=5",
+     "source": "로톡뉴스",
+     "ms": 1792572900000
+    }
+   ],
+   "links": [
+    {
+     "label": "퇴직급여법 제8조",
+     "href": "/law/퇴직급여법/제8조"
+    },
+    {
+     "label": "퇴직금 계산기",
+     "href": "/calc/severance-pay"
+    }
+   ]
+  },
+  {
+   "key": "wage-arrears",
+   "label": "임금체불",
+   "count": 9,
+   "articles": 12,
+   "officialCount": 0,
+   "headlines": [
+    {
+     "title": "임금체불·부당해고 고민, 정읍에서 무료 노동상담",
+     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPdEJMR25sdU84M3lSWWF6d2p5SFdmb19nOUFIV3dtZFRQVlVQSGZvbXFVWWM2YlBDdThfMWxqWWZ0RDE1VFZWY0x5NE1LcE9OR1lIZGZnVmoyUXVyRWR0UlJzRTZoMXZObmxrOS00emJkRFlVUldKTVpFQ3Q4QWJCbTdLUQ?oc=5",
+     "source": "주간해피데이",
+     "ms": 1792625640000
+    },
+    {
+     "title": "직원 횡령 주장한 사장, 임금체불 유죄 확정",
+     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE04b3M2VjNHYzBsS0xXTjZ0VGNNcU5jNXdUdndpQmJ3RjV1VHIxWG1zd25ad1lyWGRGQ01lVTgwd0d2YWJyRXRid1REWk9wMzdaLUdLb3B3?oc=5",
+     "source": "로톡",
+     "ms": 1792608689000
+    },
+    {
+     "title": "대안학교 전환한다더니…임금 체불에 학비 미반환",
+     "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1zTGh6c2RPRk5IMTBSc0EzcFUwM3h6MXo1UGJPcG5acmxjRXU4SlFDR2RsSW5hRUozUzQ5ejdoU25WeDBaTE1INDVRTEJVSzg3V3IwZm5laEVpeU1xYVlxNzYxQVJQQQ?oc=5",
+     "source": "KBS 뉴스",
+     "ms": 1792586880000
+    }
+   ],
+   "links": [
+    {
+     "label": "근로기준법 제43조(임금 지급)",
+     "href": "/law/근로기준법/제43조"
+    },
+    {
+     "label": "퇴직금 계산기",
+     "href": "/calc/severance-pay"
+    }
+   ]
+  },
+  {
+   "key": "labor-relations",
+   "label": "노조·노사관계",
+   "count": 8,
+   "articles": 9,
+   "officialCount": 0,
+   "headlines": [
+    {
+     "title": "부산지하철 파업에 시험대 오른 전재수 시장",
+     "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237346",
+     "source": "매일노동뉴스",
+     "ms": 1792618206000
+    },
+    {
+     "title": "“공장 신설시 인력재배치 교섭대상서 제외해 달라”",
+     "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237337",
+     "source": "매일노동뉴스",
+     "ms": 1792618205000
+    },
+    {
+     "title": "서울대병원 노동자 쟁의행위 찬성 91.6%",
+     "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237333",
+     "source": "매일노동뉴스",
+     "ms": 1792618205000
+    }
+   ],
+   "links": [
+    {
+     "label": "노동조합법 제2조",
+     "href": "/law/노동조합법/제2조"
+    },
+    {
+     "label": "노사관계 분야",
+     "href": "/topic/labor-relations"
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "title": "\"육아휴직 신청하자 해고\"…`사업주 법 위반` 3년간 219건→607건",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPV2hVWlpFb2hZTkxYeDh0SmNLZ05Gb3p1LUNtMUJRMjlNVUwxai15ZTRUQks4YUlxTUVNcW9CRTlOWFdCOFRMSHdWS3J5Q2RDUFVQby1HRmNFWnM0ZGd0N2F4N1RDQ2RVNGk0NWhWLWYtV0NlcnJNSEtnWGJ5Nm1lc1ZiWGV4bzFJNWx5NzVNeEZoT1ozazg3Mw?oc=5",
+   "ms": 1792632000000,
+   "source": "국제신문",
+   "kind": "news",
+   "topics": [
+    "parental",
+    "dismissal"
+   ],
+   "also": 1
+  },
+  {
+   "title": "산림 현장 중대재해 Zero화 위해 지방청과 관리소가 함께 뛴다!",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1ySk5hdmFHM0ZRUVhNQkFEalN6LWZtWWRIalZXaWZncmVOVjdvUzFnOHIzZTVqbHVDdmlZNDh2TC1Ia09DQmFnTkE2eU9BUXJQQUdnYkNsM2pzMUIzOWE2aXlOMU9FQQ?oc=5",
+   "ms": 1792631935000,
+   "source": "데일리대구경북뉴스",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "서부발전, 협력사와 손잡고 산업재해 예방 강화",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBnZWlRWFJ4YWk3MXd5QnAtQnNESnBhOFFZUEd2MEI5QUczMjRGb1NmRHBRRUtZd2VhSXZjSzN3eWVlRmhTQ1h5TGRLbVFuLWlLQjk4dlI5eGQzeU5HMUV2eU8yc2kzRDY2TEZnSg?oc=5",
+   "ms": 1792630183000,
+   "source": "중도일보",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "(주)K-ROTEC, 철도차량 정비현장 안전체계 고도화…'산업재해 ZERO'",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9nODlfaW0zQ2thRm1xOTRTc0tZeGdmSE8zUmdtNDhaMnpfOGtmRzFJQmszdVpxYUxYdEZGMFBXMXowaGF0ck9zUHhFZ2h6eEd0S2oyYWtWbzBLb1ZLYnM2R1pXNF9mX1FsN2VZ?oc=5",
+   "ms": 1792629688000,
+   "source": "철도경제신문",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "\"법정 다툼 없앤다\"…경기도교육청, 폐암 산재 급식원 '선제 배상' - 머니투데이",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1JZ00xMTVzeGVaY3Bib3cwRUJHU2VBS0N4dy03QmFrVTB1dFB3d1UzajZqUnBIemVYdmNUSmx1UWctQm93LU5sMG01YWpWWk1rUXo1dElpb1NvQVMxSVBEcnRWRE9sQWNSMnfSAW9BVV95cUxNVkJaMG84MEhiLWY0NGpGei1KajVucGgxb0VwY0toeUxHY1BIMGNQSjRiSHRVdnBuZ1AtVFladmQ3RXhJV1I2SDl2enRidXcxYXNTUkFKSUZHMlRKX0NiZnNXTlVja1JYbGZXOG1uSXc?oc=5",
+   "ms": 1792629651000,
+   "source": "머니투데이",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "경기도교육청, 폐암 산재 급식종사자에 1인당 1000만원 선제 지급 추진",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE42SGZiUHNTSjU4bi0wMEJSVTlmUWRmRU80NVBsNkpMTFAwaDJCSFhfVkprR1laZWQtZUlxV1lzSjUxOWJrZVJweWg1MGZsdmFrOExRMlBmekdfdHZjNy1WYzY4WlZlcjlsZEE?oc=5",
+   "ms": 1792629420000,
+   "source": "인천일보",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "중기부 산하기관 갑질·성비위 37건…피해자 퇴사까지",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4xQjVmRnlOTHp5SFpWMFdqaGw4TW9MVzh3cEd1bjdSdFdyaVRPWWVmUkFGUm9JZGpYamdYdGRSaWZ3SVRXWFpZblAySW02MlZBRVJzMjlnS2FtNnJWeVpaNW1NRFRUT1BNdG44aQ?oc=5",
+   "ms": 1792629400000,
+   "source": "스페셜경제",
+   "kind": "news",
+   "topics": [
+    "harassment"
+   ],
+   "also": 0
+  },
+  {
+   "title": "한국사회보장정보원 부장, 부하직원에 결혼 30주년 연애편지 작성 지시…직장 내 괴롭힘 인정",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE10b0ItV25ac2VJeFcwbjZDWWctdGl0MFQtUWt2c0ZYai16bDRtYU5jaU1OWFdNSnRwc3lYam80c1VZVTZkcjIxZXhNcVp3VlFhODJxUm1YeFRMUWEtTlNqcERKUlhmU2dXRjRsUmVvMA?oc=5",
+   "ms": 1792629213000,
+   "source": "월드장애인사랑뉴스",
+   "kind": "news",
+   "topics": [
+    "harassment"
+   ],
+   "also": 0
+  },
+  {
+   "title": "육아휴직 신청했더니 해고·무급휴직…법 위반 신고 3년 새 2.8배",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1IVXpjNVdLalZSSDlsMTB5R21ndm1KVVJIZVJRc3JuZzBVcXFlTnVFZERDVktPZ1NESmZRdkVHVXozcUZtN24xNHQ5Q3ZIMmtPRWU4RlZ3?oc=5",
+   "ms": 1792628744000,
+   "source": "헤럴드경제",
+   "kind": "news",
+   "topics": [
+    "parental",
+    "dismissal"
+   ],
+   "also": 1
+  },
+  {
+   "title": "서부발전, 협력사 간 안전 협력 확대…산업재해 예방 총력",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1ySkR6YjJQLXJmLUJxQjVrWU9xbWVLS3ZlMTdUNEtmeEFjdUt0X3hDdXBOMGdNOURrbHJSYVRfZ2EyRTlraFdQUkVJaGVSZnIyYTc0WG9OOE9RTEcxZEVQQTlGcy0xRno5Z1V3?oc=5",
+   "ms": 1792628367000,
+   "source": "일간투데이",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "광주전남기협 '초임 최저임금 1.5배 이상' 미이행 점검·징계",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1MRzFQcFRocVQ1bmZEazZZQUJZOHlMZmQzR1M5bXVyaVNrdnBDY1pra2IxdTlwaVhpZC1nSFBIcDFxNE1UVUwxbmU2QVhxQTBrQlVMTTIwNk8yWlliRWZqaC0zbkJkZw?oc=5",
+   "ms": 1792627910000,
+   "source": "한국기자협회",
+   "kind": "news",
+   "topics": [
+    "min-wage"
+   ],
+   "also": 0
+  },
+  {
+   "title": "노란봉투법 8개월, 이제는 교섭을 말할 때",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5EMG03dHBRUXJVZ2xjbmxMbV9NSUo4bWdoRlQyWFhsdkpvVEtJYjhQRXVabktrY1U0cERjeXNfMTJiM1hBU2x6Z0VLbWYzYmp4dkQ1NWt4TVplN05jS0NQNlNfSUUxaVc1U2pVZTlfN28zdmRFazAw?oc=5",
+   "ms": 1792627680000,
+   "source": "OhmyNews",
+   "kind": "news",
+   "topics": [
+    "labor-relations"
+   ],
+   "also": 0
+  },
+  {
+   "title": "에쓰오일, 정기보수 기간 중대재해 예방 총력.. 협력사와 합동 안전캠페인",
+   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1QSDdiRE9MeDBTTEt6VW5lUG1Nc1JKM3ByX3JjTk1QeTEtTUI2YmltSFRoNGNTOVotSHpXOWs0R25VX09BZHY2OVl1T3d4T2VXTjREV3lFR1FPYlY4Vnc?oc=5",
+   "ms": 1792627072000,
+   "source": "한국재난안전뉴스",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "임금체불·부당해고 고민, 정읍에서 무료 노동상담",
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPdEJMR25sdU84M3lSWWF6d2p5SFdmb19nOUFIV3dtZFRQVlVQSGZvbXFVWWM2YlBDdThfMWxqWWZ0RDE1VFZWY0x5NE1LcE9OR1lIZGZnVmoyUXVyRWR0UlJzRTZoMXZObmxrOS00emJkRFlVUldKTVpFQ3Q4QWJCbTdLUQ?oc=5",
+   "ms": 1792625640000,
+   "source": "주간해피데이",
+   "kind": "news",
+   "topics": [
+    "wage-arrears",
+    "dismissal"
+   ],
+   "also": 0
+  },
+  {
+   "title": "충남도, “4년 내 산업재해 사망 절반 줄인다”",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE15RlNwbWhmNjZWd3VJSzlDWDEwQThHc2s1VUh4cXVpY3V2RXREWmd5dDVma21hbndiMllrT3RweVdPZW5UeVhYNjdEcEt0RS1FNkczLXJTcFhvWlgyZXpHMTRhMVIyWUpRd2g1a9IBcEFVX3lxTE1VVjZDWFpfYm9jWUk1d1poWVRVQVR6Mmg4U0ZZbGducnAzNkFYUEtKU1p5aDJ4WHd1ZlBmMmNfVEtGSlE0cXZVWkdLblUyZ1dhTjhJdTBoOFQ5eE9oUE54T0RwZHNwTDR4VjN6emxZRzc?oc=5",
+   "ms": 1792624603000,
+   "source": "뉴스체크",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "임실군, 관내중소 민간기업 중대재해 예방 '무료 안전컨설팅’나선다:경찰연합신문",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBmYkJ0SmhoYS03OG1ncGQwbk5SamhidnhQUEE4Y0pkVlZYazlvSUd1a1ROSXZHRTk4aG9LSzRGREl1NmVaSjd3anBwWDZfSzh3YW5LMlBCRkVCQ3JwdVpRR0FWQlU2eXpWWUlOctIBbEFVX3lxTFBmYkJ0SmhoYS03OG1ncGQwbk5SamhidnhQUEE4Y0pkVlZYazlvSUd1a1ROSXZHRTk4aG9LSzRGREl1NmVaSjd3anBwWDZfSzh3YW5LMlBCRkVCQ3JwdVpRR0FWQlU2eXpWWUlOcg?oc=5",
+   "ms": 1792623721000,
+   "source": "경찰연합신문",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 1
+  },
+  {
+   "title": "교섭 대상 놓고 갈등하는 노사...판단은 법원 몫? [율촌의 노동법 라운지]",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE54d2JzT2l1c25rWXl1T0VtaFJqbVBlajJvaVVscW5YUWRjX3dEaHNUdERPT0szX3dPNG1qNDJIWEFublg0ZjEzM2FUdWtLRWJvLTlDY09Za1ZOUQ?oc=5",
+   "ms": 1792620006000,
+   "source": "한국경제",
+   "kind": "news",
+   "topics": [
+    "labor-relations"
+   ],
+   "also": 1
+  },
+  {
+   "title": "HD현대중공업·HJ중공업·한화오션, 중대재해 발생 보고 10건",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBQUV9QaXpuTHRRSmlCbE5DTC1sVVFfdW43RHFkLUpNaGtqeHRSOGkzUWRNTjk4d2xjVXZhc3FtYXNBMW1vbmpRVnJtX0JhbGdUS0phbUFkTmx2d3RhWDNSZ3dTYnZzX2ZqRy1J?oc=5",
+   "ms": 1792620000000,
+   "source": "해사신문",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "산재전문병원 근로복지공단 울산병원 10월 진료개시",
+   "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFB1RTNSbVBfNDA2am5NWkpzeDc1cVVjV042WkJ2MzhUZ0k5NGxZaWtsN2pTT2lWSlI0UGM5akhaS191NzI3?oc=5",
+   "ms": 1792620000000,
+   "source": "후생신보",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "중대재해 끊이지 않는 기업 11곳…포스코이앤씨 등 8곳이 건설사",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFAzZjY5V2phSzJscE9PRW96c0NGNV9kd3dRNXAySVZBTko3RWZDbEdpQmg4SXJTT18yamQwT2tHQU55X3hsZ0w1d21zN1duMDN0QTJXRFpZMS1kdGJ2NUlVYzhCeTUzQjNLUTd6b1Nn0gFuQVVfeXFMUDNmNjlXamFLMmxwT09Fb3pzQ0Y1X2R3d1E1cDJJVkFOSjdFZkNsR2lCaDhJclNPXzJqZDBPa0dBTnlfeGxnTDV3bXM3V24wM3RBMldEWlkxLWR0YnY1SVVjOEJ5NTNCM0tRN3pvU2c?oc=5",
+   "ms": 1792618455000,
+   "source": "뉴시안",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "가짜 3.3 위장고용, 끝까지 책임을 물으려면",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237349",
+   "ms": 1792618206000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [
+    "nonregular"
+   ],
+   "also": 0
+  },
+  {
+   "title": "지방정부 노동감독 권한으로 산재 제대로 예방하려면",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237348",
+   "ms": 1792618206000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "주요일정(10월22일)",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237347",
+   "ms": 1792618206000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [],
+   "also": 1
+  },
+  {
+   "title": "부산지하철 파업에 시험대 오른 전재수 시장",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237346",
+   "ms": 1792618206000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [
+    "labor-relations"
+   ],
+   "also": 0
+  },
+  {
+   "title": "“버르장머리 없다” “분 단위 업무보고” 괴롭힘 아니라고?",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237345",
+   "ms": 1792618206000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [
+    "harassment"
+   ],
+   "also": 3
+  },
+  {
+   "title": "[단독] ‘모범사용자’ 돼야 할 공공부문 노동교육 2년 연속 목표 미달",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237344",
+   "ms": 1792618206000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "임금 불평등 해소 실패, 정규직-비정규직 임금격차 최대",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237343",
+   "ms": 1792618205000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [
+    "nonregular"
+   ],
+   "also": 0
+  },
+  {
+   "title": "브라질, 38년 만에 주 40시간제 헌법 개정",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237342",
+   "ms": 1792618205000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [],
+   "also": 1
+  },
+  {
+   "title": "학교 청소노동자 “같은 교육공무직인데 상여금은 절반”",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237341",
+   "ms": 1792618205000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "바로잡습니다",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237340",
+   "ms": 1792618205000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "선박용 엔진 기술·인력 다 뺏긴 STX엔진",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237339",
+   "ms": 1792618205000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "[고 이한빛 PD 10주기] 방송노동자 사각지대 여전, 산재보험 가입 16.9%",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237338",
+   "ms": 1792618205000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "“공장 신설시 인력재배치 교섭대상서 제외해 달라”",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237337",
+   "ms": 1792618205000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [
+    "labor-relations"
+   ],
+   "also": 0
+  },
+  {
+   "title": "[단독] 정부, 업무상 질병 ‘추정 원칙’ 입법 추진",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237336",
+   "ms": 1792618205000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "또 끼임 사망사고 현대제철 “전면 감독해야”",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237335",
+   "ms": 1792618205000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "아이돌봄사 10명 중 8명 “근속수당 못 받는다”",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237334",
+   "ms": 1792618205000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "서울대병원 노동자 쟁의행위 찬성 91.6%",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237333",
+   "ms": 1792618205000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [
+    "labor-relations"
+   ],
+   "also": 0
+  },
+  {
+   "title": "선관위 직원 사망에 노조 “강압수사 밝혀야”",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237332",
+   "ms": 1792618204000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "[단독] 메가커피·명륜진사갈비 지점 ‘가짜 3.3’ 활용",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237331",
+   "ms": 1792618204000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [
+    "nonregular"
+   ],
+   "also": 0
+  },
+  {
+   "title": "가사노동자 보호 첫발은 근기법 11조1항 개정",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237330",
+   "ms": 1792618204000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "‘지옥철’ 김포골드라인 “민간위탁 중단, 공영화해야”",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237329",
+   "ms": 1792618204000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "LS전선 노조탄압 ‘논란’ 김준영 위원장 단식 돌입",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237328",
+   "ms": 1792618204000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "민주노총, 박상혁 의원 사무실 앞 농성",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237327",
+   "ms": 1792618204000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "금속노조 “한화오션, 호황 이익 나누고 원청교섭 해야”",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237326",
+   "ms": 1792618204000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [
+    "labor-relations"
+   ],
+   "also": 0
+  },
+  {
+   "title": "[단독] ‘일방통행’ 제조 암묵지 AI 개발사업",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237325",
+   "ms": 1792618204000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "[단독] “납 쏘는 실탄사격장” 2년 흘러도 여전히 ‘사각지대’",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237324",
+   "ms": 1792618204000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "\"중기부 '직장 괴롭힘·갑질·성비위' 5년 간 37건\"",
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFAweXJMS0pqZ3JvbGc2dWRlWUZuT3VNa25kOW9EZVdBS2xhckdFZUt2by1qU05oRTJUZDlzQlpIMUw2LXpRU2pOTWdkd3hTY2djclFJeGZJUVFBbnFqNjk3VE5PUUFtc1JKdHBMWjBGZmhqdTZaWERVTdIBeEFVX3lxTFAweXJMS0pqZ3JvbGc2dWRlWUZuT3VNa25kOW9EZVdBS2xhckdFZUt2by1qU05oRTJUZDlzQlpIMUw2LXpRU2pOTWdkd3hTY2djclFJeGZJUVFBbnFqNjk3VE5PUUFtc1JKdHBMWjBGZmhqdTZaWERVTQ?oc=5",
+   "ms": 1792616460000,
+   "source": "뉴시스",
+   "kind": "news",
+   "topics": [
+    "harassment"
+   ],
+   "also": 0
+  },
+  {
+   "title": "'집단 성폭행' 전통예고, 직장 괴롭힘 의혹·교장 공모 잡음도... 문체부 관리 역량 '도마'",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9xSkZ2NHNVSG11RnBWVVNyMzN3OXZXZFJVS1JtTGtJT29FNFZQMkRWRDAxLVBoUFU3ektCU3FEMjB5anVOVFkwSHJmd1lJWnRvNEFpdVhNNDlNcDNocTcwbkt4M2pPSDBfS2twMFBkQVMyVm_SAXNBVV95cUxPcUpGdjRzVUhtdUZwVlVTcjMzdzl2V2RSVUtSbUxrSU9vRTRWUDJEVkQwMS1QaFBVN3pLQlNxRDIweWp1TlRZMEhyZndZSVp0bzRBaXVYTTQ5TXAzaHE3MG5LeDNqT0gwX0trcDBQZEFTMlZv?oc=5",
+   "ms": 1792611000000,
+   "source": "한국일보",
+   "kind": "news",
+   "topics": [
+    "harassment"
+   ],
+   "also": 0
+  },
+  {
+   "title": "직원 횡령 주장한 사장, 임금체불 유죄 확정",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE04b3M2VjNHYzBsS0xXTjZ0VGNNcU5jNXdUdndpQmJ3RjV1VHIxWG1zd25ad1lyWGRGQ01lVTgwd0d2YWJyRXRid1REWk9wMzdaLUdLb3B3?oc=5",
+   "ms": 1792608689000,
+   "source": "로톡",
+   "kind": "news",
+   "topics": [
+    "wage-arrears"
+   ],
+   "also": 0
+  },
+  {
+   "title": "LAUSD 교사들, 첫 유급 육아휴직 받는다",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQZWFJVVRTSGRmWFlvVkFGR3QzUzRDVlFINnRQclpVWXRaX0dfbVpkT1B2dlBuTzJRNHMzSDNSNzhDWnBQdjVaWlZzbnNfRk1nTWdhRGs5N3dRV1ExT0NMdlU4LW9SUnAyaFFTMW5tS1V2TlgtQVdLem1LYjBRX2FaX3BHY1d2Q1FoOXVMb2dQb2dxVG1yekx5V2ctZml0YTkyQmVwM254eE42MU9laGppV0dTSFFxVkhzOHZsY2g0RVRMcGM?oc=5",
+   "ms": 1792607641000,
+   "source": "미주조선일보",
+   "kind": "news",
+   "topics": [
+    "parental"
+   ],
+   "also": 0
+  },
+  {
+   "title": "농협손보 경남총국, 중대재해 대비 안전경영 강화",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE91b2V6NWZaTmMzWlkwX19Lbkk4OVdac1dFNUR5WnZkZE5vN3NvbTlqS0pFcHNySHdOMk84MllLc1RIQzVWVDNGMFZvZnViX3BDZ3VpMHdjODdZZXJRZG93M1AxUzF6QlVpbkVuUGl6bzhSUQ?oc=5",
+   "ms": 1792595954000,
+   "source": "인더스트리뉴스",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "윤종군, ‘AI·자동화로 인한 대량해고, 국가가 알아야’ AI 해고 공개법 대표 발의",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE85VVZoT2xkNjJGV1puYmcwczcwSm9Ia1c5N1o5QXBtVV85MEIzTWN2cGM5bTktLTUxVExiaGxtOXVwaVdzdGxJRHhyVDR3YVFBWUFGMWljaTZyNmpfMGhMa056ZmdLTXBvX1BpbzFhbV9MaFh6?oc=5",
+   "ms": 1792594800000,
+   "source": "아시아뉴스통신",
+   "kind": "news",
+   "topics": [
+    "dismissal"
+   ],
+   "also": 0
+  },
+  {
+   "title": "이천 마장농협, 중대재해 배상책임보험 가입",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBVUFQ0NUdhYWpRSFdQc0FYTW41eGw0TnVDRHF1STctRnZiVEh5NWdOX0ItQjU3S3pkXzJUVXBYWVRLaU1VUFBPNkt5LTVVaDlEbVRRM0lyNXBWdw?oc=5",
+   "ms": 1792588980000,
+   "source": "농민신문",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "대안학교 전환한다더니…임금 체불에 학비 미반환",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1zTGh6c2RPRk5IMTBSc0EzcFUwM3h6MXo1UGJPcG5acmxjRXU4SlFDR2RsSW5hRUozUzQ5ejdoU25WeDBaTE1INDVRTEJVSzg3V3IwZm5laEVpeU1xYVlxNzYxQVJQQQ?oc=5",
+   "ms": 1792586880000,
+   "source": "KBS 뉴스",
+   "kind": "news",
+   "topics": [
+    "wage-arrears"
+   ],
+   "also": 0
+  },
+  {
+   "title": "직장 내 괴롭힘 매뉴얼 뭐가 달라졌나... 인사노무 실무쟁점 짚은 웨비나 개최",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE94WTZwZ0RpSC1TaEJzTmdybzA3VW5ZQVdqYmgxOGNSemhvRVlIdm9tTGkxdmRZSTZ1YzgwWUpVUGhYeWc3aFRYUEFYd09IRnU4a0pvOFA2WUFVc2xJa2xBQTZsQml3ZEdJN3Bv?oc=5",
+   "ms": 1792586474000,
+   "source": "마일드경제",
+   "kind": "news",
+   "topics": [
+    "harassment"
+   ],
+   "also": 0
+  },
+  {
+   "title": "안전 책임, 처벌에서 공급망 관리로…싱가포르·독일이 택한 산업재해 예방책",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1TTFJHeHRhU2YtNHpOMTZCQjVhNHZLXzc1Z0hidUVNbnNqd1dsdkRhWXZtZXFOb0xoa1hxRjFZMWRDU0Viakd0Mnp1VmhhREpzWWVFeGlhcmRJdmZWZC1iWWJCMGw4VUVUTmROakpzNjRwSFRITWYw?oc=5",
+   "ms": 1792585669000,
+   "source": "하이뉴스",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "중대재해법은 왔지만 안전 인력은 없다…중소기업의 딜레마",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5FcjV3dDBqeGhpQ0pFRFJIblNzc0d2eHV3dmFneWt6d0xvSHdKUEgzaktsazNob2hLTFRDV2d4bzJwVHZsNWE5WHJZcENMN1pmMVYzTTNnalRnVnpaQ2hZNi1faFFCRXNaODR6Rkd6SV9Ka0pvVFFj?oc=5",
+   "ms": 1792585434000,
+   "source": "하이뉴스",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "안전 매뉴얼은 있는데…산재는 왜 반복되나",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1BLW1WNUQwemRZTGpnLUJMODcyZktTMkxvMWR2cHdHZ3BFcHowNmM1ZndLWDdBby1ob0pLZC1aZGtMWjVkTC1FV1pBcVhPUE1BZUlITVFibXIySk5IX2o3UFdCUG9SUmtiT2FFWGdleTBqSDZPVjR3?oc=5",
+   "ms": 1792585124000,
+   "source": "하이뉴스",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "위험은 하청에, 책임은 어디에…중대재해법의 빈틈",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1xblYxemxqY1RXNHAxXzFyRzE0NUd5Q2lkelFCWGZMM0w3bTJldDlZUE1GOXlJTDJlazEtUVJJcmY2YllIanNSek5JTUp1ZWYzWUR5SV9FWWFHVjJwWkVhM2xKTlM2ZGt4dzBQQUJiclBYT3hiUXhn?oc=5",
+   "ms": 1792584605000,
+   "source": "하이뉴스",
+   "kind": "news",
+   "topics": [
+    "safety",
+    "nonregular"
+   ],
+   "also": 0
+  },
+  {
+   "title": "중대재해법에도 사망자 다시 늘었다…현장은 달라졌나",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB6MWlZVjd0OGV0YnhUUW5DNi02ZWxuTUtfYWFSVzcycm5xczlydEFTenVSUFg2VGhqOUJDbUluY0p3S1FTZ3Z6SlZtZS1uQWZNNUl0SDZtNDNFZnRmRzhmY2VlcXpscGNuTHZLaV9QTXp4TkgtMEFj?oc=5",
+   "ms": 1792584103000,
+   "source": "하이뉴스",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "아리셀 대표 징역 4년 확정…중대재해법, 경영책임의 경계 어디까지",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE4zdXZreGxGSVMxVG9WeWVQOGtQb0JOM3FpOTJEbFg2OXhjekhzbGxRZFZYSHV1ZndiWV9mRmNkSUkxcWtqR3F6U0RLSURjNEU0YnVRSVRNTW9PMWlfNWJ4eHIzUGFlRmRubVk4RWRxR0NoUmQ0VC1F?oc=5",
+   "ms": 1792583682000,
+   "source": "하이뉴스",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "[사설] 정규직 1만명, 비정규직 10만명… 1년 새 더 벌어진 격차",
+   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE8yS1AzdlRONGNTZU9IOF8wM0tkSmYzVWNsOVlLYWJuUmdTVG9FdkFwRHV2dk5DckIySzA2Tk1QSlQ2U216N3I4VFRPN2QxX18wNVNxQTN1aw?oc=5",
+   "ms": 1792583493000,
+   "source": "서울신문",
+   "kind": "news",
+   "topics": [
+    "nonregular"
+   ],
+   "also": 0
+  },
+  {
+   "title": "남부산림청·영덕관리소, 안전보건협의체 개최…“산림현장 중대재해 Zero화”",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1qNl82ekFHRlN5Mk5YX05DallGRk5yRDlkS3RQb2xwV0JIdy1IVXJRMXdLWWVzamRuT0pKQldSZnRJQkNhMEt2MGtZMHM1bEJ4TGtJc1VXTl9hc002ZldZc2lkc2JhOUZQNXo4SHItMA?oc=5",
+   "ms": 1792582173000,
+   "source": "프라임경북뉴스",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "경기 서안성농협, 중대재해배상책임보험 가입",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5nalBOZEJkTER3TzF2Z0lIcUdQeFlHYjhuaTJyV3FOeWxQV0FSQXRNb2g0X3U2Ni1RNUZ1WW1ObThPby1ZazlSanFZVXBkOUI0c3Z4Vm1wNktCQQ?oc=5",
+   "ms": 1792581300000,
+   "source": "농민신문",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "농협손보 경기총국·양동농협, 중대재해보험 가입 현판식",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9qbDZUczR5ZXg3bTExZkJVdHJGNFBnNTYtOGhqRG10NkZ5NVNFblVVVU1iblJvTnk5c0Fkd1dsMkZ2ZUNiaWRRWWVfTEoyUUlzdVhzTGdjZzdKQQ?oc=5",
+   "ms": 1792580820000,
+   "source": "농민신문",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "농협손보 경남총국, 중대재해배상책임보험 가입 현판식",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB3SGNsdHJGWG55MklYRE4wN3RfazRzZDNNclVRNXVDOTZ4U0RZczB1d2J3ZmRLQzJ2eUdzYVJhRHdfc3JKS3dDekhyNEQwOElIWS1kTHZ3bFFMQQ?oc=5",
+   "ms": 1792580580000,
+   "source": "농민신문",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "해산된 재외동포협력센터, 퇴직금 안 주더니…‘기한 연장’ 동의 요구",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBlUnYtRFZnMk9lUkhpZUh5ZkMzNGRiN3VKQWVJcmNCaG9YRlhwd2hOTXUxd2M4eDBSSGdpeHB4cDQtTWJ1ZFRwODJJTVRLZmFiMUExdjl1c2ZxSURiYk5yWjZmQQ?oc=5",
+   "ms": 1792580460000,
+   "source": "한겨레",
+   "kind": "news",
+   "topics": [
+    "pension"
+   ],
+   "also": 0
+  },
+  {
+   "title": "산재 사고사망 366명, 첫 300명대…제조업은 13명 증가",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBoWFVnMGNRT0o2bE9WbTJWRDhFam1tcEVmTURweVZ1dGJBUTBNdWJrUDlWYm83SlA5dEVwTHVVWGl0Ql8wUk5zUUhZRXhRUW9zOTdBeFBOdHZlX093NHRSeWExYkJvdTlRdUNNZ0JJTQ?oc=5",
+   "ms": 1792577857000,
+   "source": "세이프티퍼스트닷뉴스",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "AI활용 산재위험 예측체계 구축 법제화 추진",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5VYVdzUzNfYjVHRWhxNF93WVNScXpGTG9ma2NqeThlelp1UlR6dEhkRkNDbHpXM3dJMFNLVGZUM2IzZVdjaklfdU5MSUxraVk1bmtBem5TRFdiMk5yTkMxa1NWZHpIdm5hZHc?oc=5",
+   "ms": 1792577104000,
+   "source": "충청매일",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "경기농협, 양동농협 ,‘중대재해 배상책임보험 현판식’개최",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBCQWsxaWJtV0M5N3Y5b2pBWG1XZGwycmFLbWtWZE1EZmRXeENiQ0lCcVRINlY3RTRSMjNJbm1oWF9PTmZzMmlMQkNSb3Q5MDVHMF96Rk5VMGhHR2RYdHR1bE9leEl0aTlvTGMyMllxZ9IBckFVX3lxTFBqN2Zrajh5SVAwWWNIajRJYUZNdW83ck5lLUI3cGFrNVRINThDNXVfN0lRblJHVERYSldxVXlGVjFEekRrZGctOTQ3TjhQXy1ydk9aQTIxVHBzaVVSUWYxTDRsemNYeW9rTEZraFhMQ2ItQQ?oc=5",
+   "ms": 1792576800000,
+   "source": "뉴스 따옴",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 3
+  },
+  {
+   "title": "[기업하기 힘든 대한민국] 고강도 산재 과징금에 메가특구 52시간 제외 요구도 애매모호",
+   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB4bU1rbUZwT0ZiR3JNVWhBZi1zZE9mQm0zVnI1N1BwbkFLay0yOHY5TjZfSUFwZy1jVEdvSHRmLUlnT1FVRUpaZWdQdkd5Ul9SbVpiZXk3Wk3SAVhBVV95cUxQeG1Na21GcE9GYkdyTVVoQWYtc2RPZkJtM1ZyNTdQcG5BS2stMjh2OU42X0lBcGctY1RHb0h0Zi1JZ09RVUVKWmVnUHZHeVJfUm1aYmV5N1pN?oc=5",
+   "ms": 1792574302000,
+   "source": "아주경제",
+   "kind": "news",
+   "topics": [
+    "safety",
+    "hours"
+   ],
+   "also": 0
+  },
+  {
+   "title": "“구조조정에 날개 달아준 노동부”… 이랜드노조, 특별근로감독 촉구",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1ubDVGSXYxc1JmTkpIYkNqSE42eDJsLWtGZ2g5Ym54eGhFRTJXYWZvQ1hYLTB3QmxEc2ZCbmVMT2Q1Z3Juc0R6UC1ITVFFTU9jdWk4NTdnckJSS2xVSHFCckFlamQtVlN3V3BXdF9qN2FaQdIBckFVX3lxTE1ubDVGSXYxc1JmTkpIYkNqSE42eDJsLWtGZ2g5Ym54eGhFRTJXYWZvQ1hYLTB3QmxEc2ZCbmVMT2Q1Z3Juc0R6UC1ITVFFTU9jdWk4NTdnckJSS2xVSHFCckFlamQtVlN3V3BXdF9qN2FaQQ?oc=5",
+   "ms": 1792574190000,
+   "source": "노동과세계",
+   "kind": "news",
+   "topics": [
+    "dismissal"
+   ],
+   "also": 2
+  },
+  {
+   "title": "작년 이후 중대재해 3건 이상 기업 11곳···8곳이 건설사",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4zY2JMTWF3S1VNWVBiaXp0MlBNNXhGeXZ6c0t3RUdjaVNzY0p5N3JYdFdnWDQ1dENVVGRXM2Y1NnhoX2FfTWs3ZFltUHZNNllZX0dUY0VWWlptdlA3R2tDbUhWOGxEQ1l1T0dtTdIBbEFVX3lxTE4zY2JMTWF3S1VNWVBiaXp0MlBNNXhGeXZ6c0t3RUdjaVNzY0p5N3JYdFdnWDQ1dENVVGRXM2Y1NnhoX2FfTWs3ZFltUHZNNllZX0dUY0VWWlptdlA3R2tDbUhWOGxEQ1l1T0dtTQ?oc=5",
+   "ms": 1792574151000,
+   "source": "대한전문건설신문",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 3
+  },
+  {
+   "title": "[사설]정규·비정규직 임금 격차 194만원, 4만달러 시대가 의미 있으려면",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9aODFkSDE4ZUZrejV4dVpQYzI0VkUwLXplS0Q1bFBPb1lmSU51MmZVbWQwTHF1OVhyTVVkbFJnNUZ5U1BYTGxGZ3NJWE50b2pxd0ZJNVNWZnZpUdIBX0FVX3lxTE81Y1pzOWwtUjF1OFRQRXV4Si1tNUpYaE4yU1FramExcHpNbW9JWndlTzljWnNiRkxrU1NyUWU4T1kwM1kyYnUya09PY1VDdlpnbGJFUm1ad2l6M25oTmpr?oc=5",
+   "ms": 1792574100000,
+   "source": "경향신문",
+   "kind": "news",
+   "topics": [
+    "nonregular"
+   ],
+   "also": 0
+  },
+  {
+   "title": "울산산재사망노동자디지털기록관 개관…1천67명 기록",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE94em56WVVqTTQ2LXN2d3cwRTBDR21QbVdlcFpSS2QzZHJQcEN4cmNkX2EzVUhSY2RMM2Ffbm5ZUXY1N3p2WUZ4bGV0Q2V3R3drbDZVQm1mZG55c29wOS1Qa9IBYEFVX3lxTE94em56WVVqTTQ2LXN2d3cwRTBDR21QbVdlcFpSS2QzZHJQcEN4cmNkX2EzVUhSY2RMM2Ffbm5ZUXY1N3p2WUZ4bGV0Q2V3R3drbDZVQm1mZG55c29wOS1Qaw?oc=5",
+   "ms": 1792574006000,
+   "source": "연합뉴스",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "후임 정교사 뽑을 때까지 남으라는 학원…프리랜서 교사, 퇴직금 받을 수 있나?",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1lajZXNk9WWmdaQVB1cnEtMDlHOE8tcHZMWHU0YkpSR2JVd3dkVnlRT194NVdhOGtUTHhFUkx1Ym1tMjhFQ3dOdHZOQmpyQktKcUw5ZEQweFROQQ?oc=5",
+   "ms": 1792573440000,
+   "source": "로톡뉴스",
+   "kind": "news",
+   "topics": [
+    "nonregular",
+    "pension"
+   ],
+   "also": 0
+  },
+  {
+   "title": "‘퇴사 다음 달 말 퇴직금 정산’이라는 회사...계약서에 적혀 있으면 14일 지나고 받나?",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1zcHRQZWZqZzdkcGVJMngtRVU1X3Z5X1FETV9aeEhLTTg2OEl4YmJxbTJoWlNSLTlValkxMVRvR0hvYmtORFBkaWJCVURtRGxEMDBsLVBwSFhwdw?oc=5",
+   "ms": 1792572900000,
+   "source": "로톡뉴스",
+   "kind": "news",
+   "topics": [
+    "pension"
+   ],
+   "also": 1
+  },
+  {
+   "title": "건설·제조업 중대재해 실태",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9YTFpaNEZ2dElIN2U1UFk4SFlIYXBZdjdjUHhtMlNSRW1vVG9KWlU1ME1ZOWlzNVdtSmNPNHhhZGg0WDVJTXV0TjlwcFUtQ1FVT3BIekhhZnJ1dmRETmNzR0ZjbElQdUpYRG9RSg?oc=5",
+   "ms": 1792572824000,
+   "source": "메디컬투데이",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "대통령도 언급한 '이케아 육아휴직' 논란…노동청 \"위반없어\"",
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE85ek9UNE1yZU5ERDhFOEdKVWR0Z2NKZ3J5VFpLRWlMR2xReUNJR3NRRjdmenVLckhrcUd1NFZ6eFl3ZW1WMy1LeHpYQU45TWRhRGJiOW1mNXJQdFU4UW9QSDA0MDFncm9uMXMtcGlaQnlfSGJjUXVaQdIBeEFVX3lxTE85ek9UNE1yZU5ERDhFOEdKVWR0Z2NKZ3J5VFpLRWlMR2xReUNJR3NRRjdmenVLckhrcUd1NFZ6eFl3ZW1WMy1LeHpYQU45TWRhRGJiOW1mNXJQdFU4UW9QSDA0MDFncm9uMXMtcGlaQnlfSGJjUXVaQQ?oc=5",
+   "ms": 1792572648000,
+   "source": "뉴시스",
+   "kind": "news",
+   "topics": [
+    "parental"
+   ],
+   "also": 1
+  },
+  {
+   "title": "이용우 의원 “아리셀 참사 대표 징역 4년 확정, 중대재해법 실효성 훼손”",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4zR3hyWW04MU84OHNKY2UxdEVXME1VMERpQ3FIbUN4Skp6djNtaTE3SkhVQUpCTE9faW44MXM3X3hjRHQ3dUpIWUk3RE8wb2VOMjBrXzRzYUFzOGtqbGFFeEFrNk41ZDdBNS01TdIBcEFVX3lxTE1ESENZZGhvbjB4NnRtWFI2RmNnX1NuVXBzRG16V1BhTEdtSjFXZHI2dm5NcF81ZFJmZXl1NUhXSGMtYnZzeDA5Z094UjBNUHpKXzhmUEpDR2NtSkZ5czVaRzlCdmVhSlQ2c3RSa3dvemo?oc=5",
+   "ms": 1792572581000,
+   "source": "글로벌경제신문",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "퇴직금만 무려 10억원…BMW 직원들 줄줄이 퇴사 신청한 이유",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9rUHEtUkI4U2E1a3FKalhxdzJZbWFsM0FvYllWTkdINXBVTWNHTml6WHcwMVg5a1JlU2h2Zl90OW90RXlVdXMzZEMtZWdmM1RHMEpYc1BNZFhOTnM4YVBMaWxfZU5reWZFOUF2NlhR0gFuQVVfeXFMT2tQcS1SQjhTYTVrcUpqWHF3MlltYWwzQW9iWVZOR0g1cFVNY0dOaXpYdzAxWDlrUmVTaHZmX3Q5b3RFeVV1czNkQy1lZ2YzVEcwSlhzUE1kWE5OczhhUExpbF9lTmt5ZkU5QXY2WFE?oc=5",
+   "ms": 1792572386000,
+   "source": "더드라이브",
+   "kind": "news",
+   "topics": [
+    "pension"
+   ],
+   "also": 0
+  },
+  {
+   "title": "[동정] 조재구 대구 남구청장, 사업실무자 중대재해 예방교육 참석",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1Ic1pOVjJPYnF1eDhXODdaOUtLd3J0eGE1RnF0VUl3TU9xeWpXSTdRTlU1UFVKX1dWQkVsQ2dNcHZpdG5hb0RlM0FvcTBkd2oxUUdSbzBGeGdkbFlDU1VSc0hYbzh0U1hIa1E?oc=5",
+   "ms": 1792571637000,
+   "source": "천지일보",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "[단독]“집 사려 퇴직금 깼다” 상반기 2.5만건…노후자금 태워 ‘영끌’",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9BQWQtMVVvSHB4X0JSb2VGbm9NVUp1SjNnNm4ybHNOTDhMY3ZER2tTRWkzSjZDbmFNV21obklOWllZdFZJX2x2Tlc1c0M3SS1SWUJXNVVBWVpKeFF3UWxQdk1DYnExTjZfWHBJTzQxM3NyWms2TUZv0gFmQVVfeXFMTVhiamFWaFN6VXlXdmhOLUI1OW1CNEdIOEk4bEdPU3hfdlJmR2FEdG56U2N3OWtiazF2Y1F3M1JSWS11R2ctcTJZSXVQc2k4Zk0tblJfMVFacUVOZGxUZWVDb0loNEh3?oc=5",
+   "ms": 1792571460000,
+   "source": "동아일보",
+   "kind": "news",
+   "topics": [
+    "pension"
+   ],
+   "also": 0
+  },
+  {
+   "title": "3분기 광주·전남 산재사망 30명으로 감소",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9ZamNuelRiUU9Ya2RvYlFmUmRmNkdpeFpuLUFTSHFpUnhBdDhoY3J1bmItS0t4YVFZcnpweGNzcDhmTmdrLXBteTl4WWdqQ1RqdWFkeWQwM3YzYldGSG10ZTdEYS0zbkhs?oc=5",
+   "ms": 1792571262000,
+   "source": "광주드림",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "세종시노사민정협의회, ‘노동시간 단축 포럼’ 개최",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1aMWV3V2xjQ0JHbU9jMTl5VThVbmZCdC1VSmFDUUFpQWRBanBDVlVJbG44bW5ETkFKUHVEbW55dms2SWVQalJ6YlltUmNOUUVzUGd2YTJoR0NKTm1LSGtua2EtRldKcmJwbmhWQTdEZkM?oc=5",
+   "ms": 1792570647000,
+   "source": "로컬투데이",
+   "kind": "news",
+   "topics": [
+    "hours"
+   ],
+   "also": 0
+  },
+  {
+   "title": "임금체불, 최대 3배 배상 인정 기준은",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9ncjZtazJGNWdCbEV4NWs5YjF5MERmcXR4ekVCcXotQk9oRmwzU3p5cktuYXA4ai1JekFsb3ppeWJkTXZqd1hOS2lwLUdxMlVDR2FYZ1EwT2J5QUtfZ0pMbGwwc08?oc=5",
+   "ms": 1792570642000,
+   "source": "https://www.ppss.kr/",
+   "kind": "news",
+   "topics": [
+    "wage-arrears"
+   ],
+   "also": 1
+  },
+  {
+   "title": "파주 프런티어 FC 임금 체불 현실화…선수단 급여 50~70%만 지급",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9EazJIQllRemhmaHVKOE9Pc1VNb3QyTkNTQjZ6OWFiUFdZVzlaS191ckJKd3kxYUp4aXBYVGRZak9vdGUxNzd5YjY1U1FLMk1pSlhVdTM2RUgwZjQ?oc=5",
+   "ms": 1792570172000,
+   "source": "경기일보",
+   "kind": "news",
+   "topics": [
+    "wage-arrears"
+   ],
+   "also": 0
+  },
+  {
+   "title": "\"코스피 폭락에 퇴직금도 와르르\"…놀란 직장인들 '대탈출'",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPRy05bnJFNGU4blBST0lTb2J1N2xQTy01VWRmZGtoZUl5VnktVk1JWlJsalhjNW1XVEluelc3cExwUDNTT0lmWkZ3MWZTRU1IQlVqbzFBcjVtbEp3cE03dXZUMDhJam8xRDFjMXkyUExDVlpvOEhkT2QtZlYzMlE1Rg?oc=5",
+   "ms": 1792570166000,
+   "source": "이데일리",
+   "kind": "news",
+   "topics": [
+    "pension"
+   ],
+   "also": 0
+  },
+  {
+   "title": "비정규직 근로자 867만명으로 ‘역대 최대’… 비중도 23년 만에 가장 높아 - 조선비즈",
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPeWk0NG5HVks3V2plUjd0bmNQWFJYUmNFZHpQUkpyX2xkZkVCTURuWnpzZHY4N0RsYXpacTg3eHhyclpfWHczbXhhZ2NyWS1ZNzJyYXNuSGQ0VUlVT01walJISXBaUm02WHk2RHU1REFsV2JmZ05qVjhEVkxOb21zcFJ6WlpPd9IBmgFBVV95cUxNQjNLTy1YczNWMG1vajNobXI3TEYzdktqM0RpaGxQSW9iM1dIMENLVXcwTzd0d2dxUXJGSDd2bnd0ZFhqOXVXaGJFN19nSVdTcTd0T2RlTXZ5T0ZVOEVmNVVubHUtSUFoUEFUSjFBRUpVZlU0dUtoTldDYVJ2YWVUTkN4YUNjUWJvTzdBOXdMQzNyY1RrU3V4bTR3?oc=5",
+   "ms": 1792570020000,
+   "source": "Chosunbiz",
+   "kind": "news",
+   "topics": [
+    "nonregular"
+   ],
+   "also": 0
+  },
+  {
+   "title": "한승구 대한건설협회장 “산재 사망사고 발생 기업에 대한 징벌적 과징금 재고돼야”",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9YRUpYMHBZVVgwQVZITkJTb3A2UVdjSkNVcUgxRWJsbEtMV2VMcUJTY3lfM2hza3dlZkxCOUVvVENuU0p1TTZRN3lxZEJVSk4xN3FFOXk5bWxVUlNoc2prUUw4TVhPLTBGdS1ncmpoek1OQQ?oc=5",
+   "ms": 1792569900000,
+   "source": "한겨레",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "이재명 산재 '예방적 제재' 입법 주문, 사망사고 없어도 안전조치 위반 과징금 속도 내나",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9tVm5CalJZWDFGMGdyMElqNkxVN0NJMk5YUkNPU3dxbHdfaXhSbE5hTGRIYzc3LXN6ZUpLVWg4WUdwWVprZW5LajFiam9mYm1LTTY0VWFKaE9BYU82TEloTmI1ZHQ5WUhibDZoQ3U5ZzFyTTg?oc=5",
+   "ms": 1792569757000,
+   "source": "비즈니스포스트",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "정규직 임금 4% 오를때 비정규직은 1%…임금 격차 2004년 이래 가장 커",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9wdTdjbzUzYkNyd010c1pNRVNwOHVXRTFsOFFrYkg5Y21LeTBKVlY1QUFyaVVlaWttcjV2RjB2TEdvdmFfUkxLM3BQNW5ad01vb091aGtwaXJvVV94NThvTTFaU2x2MWlvazZHejNqbWU3dw?oc=5",
+   "ms": 1792568460000,
+   "source": "한겨레",
+   "kind": "news",
+   "topics": [
+    "nonregular"
+   ],
+   "also": 0
+  },
+  {
+   "title": "“시급 6500원인 데도 있다고?” 대학생도 당했다…최저임금 위반 신고 6년째 전국 1위인 ‘이곳’",
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE52dzRrN214WHlSVmJ5d0tLNmVNZkxjQ1h1MTZtbHRBZmFGdDh6YS1VcUg3WVlNSzNqZVQ1al9pcXRtbXNjaUNZZndmcVF0eGhNOEHSAVNBVV95cUxQc2RhaDRkcEdpRWZwVjBCc0J1MWF3Mmk0eDVBdV9ncjluMXZqRVVfT2lRMmJ6enpCYml2S0R0Y0ZtaFhwWUpkRnhtdGxyVi1JNmFraw?oc=5",
+   "ms": 1792567949000,
+   "source": "서울경제",
+   "kind": "news",
+   "topics": [
+    "min-wage"
+   ],
+   "also": 0
+  },
+  {
+   "title": "24년간 계약직으로 일한 회사, 회생절차 폐지...지금 퇴사해야 퇴직금 받을까",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB3VVhlZklNNkEwN205NWVTRXlraUxYeEg1Q3J1RU8walVwZFhKaVZvcGxMTldSSmRPUGo0ak9RSTA5WHNRZ21ZRXhhb0Q4Y0dCVDc2em16NnNDUQ?oc=5",
+   "ms": 1792567920000,
+   "source": "로톡뉴스",
+   "kind": "news",
+   "topics": [
+    "pension"
+   ],
+   "also": 0
+  },
+  {
+   "title": "[울산소식]S-OIL, 중대재해 예방 '합동 안전 캠페인' 등",
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9JU1dUQkZLaVB1WWtoX2pTVkUxN0o5V0VpdHNOaDlkQTFUZXdhdUI1cWszX05qeW9zUWllZFNBcUt6YVhYSVV3R1JkNWtsaTY3N1dnSWlwRGU2TXd1RFFrSWRxcElCeEx0RmlsVFdUY2YwR3hHT1dnddIBeEFVX3lxTE9JU1dUQkZLaVB1WWtoX2pTVkUxN0o5V0VpdHNOaDlkQTFUZXdhdUI1cWszX05qeW9zUWllZFNBcUt6YVhYSVV3R1JkNWtsaTY3N1dnSWlwRGU2TXd1RFFrSWRxcElCeEx0RmlsVFdUY2YwR3hHT1dndQ?oc=5",
+   "ms": 1792567814000,
+   "source": "뉴시스",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "산재사망 과징금 도입, 신중하게 디테일을 살펴야 한다",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE42V2hFRm5SNWZvN3dtV0kxSWZRajZqZVNUMTlGQlhiQUFuT1VGazFVNzczT2cwbkNhM09pdFZEUDZfLWR1aDg5YlZQZjYwd3VTWl9lamgzYU9lakFtci1rSmdsWmhwdTA?oc=5",
+   "ms": 1792567138000,
+   "source": "안전저널",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "부산고용노동청·안전보건공단, 건설기계 사고예방 세미나 개최",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE45WEpNVTVTQTVrNlUyYThxaGVObng3bmhpLW44N0diODlKSmFIQUl2TDVyTERoNXhOcGN4UGVYREJ6SnRhNlROS3dGZGFNY3FJOVY4UnVBbjcyUQ?oc=5",
+   "ms": 1792567020000,
+   "source": "브릿지경제",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "‘52억 임금체불’ 성지건설 전 대표, 징역 4년…선고 불출석에 지명수배",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5tSWtNNFIxRnlJYUE3S29Ib2RjZGtfYThsS0xjMWRGNURFTWdCbWhYN2QzTGQwZTM2LWkzSm9XczJRbmZTckdzUWdWWUFWQnpuNnZjZUxBaWxPMnFxQ2Rhd1dUVkhIelVPTENj0gFvQVVfeXFMTVVWWnJ4cFFLX3docjByS0NfQTMtSG8yd0VpTTJlY0FaT3E5NFdvOEI0VW1SSFZaclZBdGpuQy14d1lJZXcyYW1zcm5UMWI5Mmo0RkdDM0l6S0VfeDU4eHBOdGY4ekFpWU5iRWVxRUJN?oc=5",
+   "ms": 1792566858000,
+   "source": "더퍼블릭",
+   "kind": "news",
+   "topics": [
+    "wage-arrears"
+   ],
+   "also": 0
+  },
+  {
+   "title": "양동농협, NH농협손해보험과 중대재해 배상책임보험 현판식 개최",
+   "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE8xYW90ZlM2NXo1LVNodEVQcW1uNWlTUUw5dmZWbXJrbEpyZ1ktQVFMWDVzZ1BNNVZQYlZGMnA5SE9hbVk3ZjRjRlJGNDJlQQ?oc=5",
+   "ms": 1792566840000,
+   "source": "모닝투데이",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "“가장 엄한 처벌을”…쿠팡 퇴직금 재판서 일용직 호소",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1EYzJ1d2EzX3p0ZTByVDg5al9kOTV2LUthZzFKeENZd3BhellmOGJWSzZKcDB3RWI1UDVnTnZERDBXOF9LYTdWMEkybHRIMExsT0VlQ3hhUDhfRkF5V21QRG5wd21kUE1iZG1TTGRxbHNXR1nSAXNBVV95cUxNRGMydXdhM196dGUwclQ4OWpfZDk1di1LYWcxSnhDWXdwYXpZZjhiVks2SnAwd0ViNVA1Z052REQwVzhfS2E3VjBJMmx0SDBMbE9FZUN4YVA4X0ZBeVdtUERucHdtZFBNYmRtU0xkcWxzV0dZ?oc=5",
+   "ms": 1792566286000,
+   "source": "시사저널",
+   "kind": "news",
+   "topics": [
+    "pension"
+   ],
+   "also": 0
+  },
+  {
+   "title": "농협손보 경남총국, 일운농협 중대재해배상보험 가입식",
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE94YnI4bFFwekZfTFFNc3lESEdGXzBHS2dycGFJVGl1TEcyR2xWa3JwSjV6WVhyTEhrTVY4UTl3WkpEM0lsUEx3NmlwZkRGMVZUNl9xblpHSGE1N3hreEZ6R29MeUYwZHpUZnR2OExXdEpMdFRWVWtOOdIBeEFVX3lxTE94YnI4bFFwekZfTFFNc3lESEdGXzBHS2dycGFJVGl1TEcyR2xWa3JwSjV6WVhyTEhrTVY4UTl3WkpEM0lsUEx3NmlwZkRGMVZUNl9xblpHSGE1N3hreEZ6R29MeUYwZHpUZnR2OExXdEpMdFRWVWtOOQ?oc=5",
+   "ms": 1792566034000,
+   "source": "뉴시스",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "장애인 최저임금 적용 제외, “저임금 구조 고착”… 폐지 필요성 제기",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0zZUNmdG95SzlOTE4ySXM2OEVUVWRfa2FkbXNZNG10S3I1dXJwaUVOeHVJVXVDSU1KX0xjU09jUWIySUhSZlRFUG9RazU0cmkwTTlIVjd5NnR4Ti1WZDAtU0ZpVjRsQ2hobnNCWg?oc=5",
+   "ms": 1792565469000,
+   "source": "베이비뉴스",
+   "kind": "news",
+   "topics": [
+    "min-wage"
+   ],
+   "also": 0
+  },
+  {
+   "title": "‘10명 중 9명 여성’ 의상·미술 방송 스태프... 성희롱 경험·최저 임금도 못 받아",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1VXzZ1anJuTy0xdmNsQmpmOXpGN2oySEM3allWN2JuOHl6cDFYSVN2OTVjVjg3ZThYTTJnMVctN3dVYm9tSXdDazU4SUhQZC1iQVZKMmQzRzdKSEt0VC0tYXNmeGpzdGFFSHFsMGNjMVh5OEXSAXNBVV95cUxNVV82dWpybk8tMXZjbEJqZjl6RjdqMkhDN2pZVjdibjh5enAxWElTdjk1Y1Y4N2U4WE0yZzFXLTd3VWJvbUl3Q2s1OElIUGQtYkFWSjJkM0c3SkhLdFQtLWFzZnhqc3RhRUhxbDBjYzFYeThF?oc=5",
+   "ms": 1792565323000,
+   "source": "여성신문",
+   "kind": "news",
+   "topics": [
+    "harassment"
+   ],
+   "also": 0
+  },
+  {
+   "title": "음성군 잇단 산재 사망사고…노동계, 안전대책 강화 촉구",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9XYVMwYjJTX0tGR2NpRDFfelUtRXZZZHNRMzZfdGpYUGxaMFB4WlU2dkhpSU5PbGxoREVhVEw3YXhMcDNKeHdyLXpPSWdlQ3UwTWtmZFBOdXhrTDA0X2h5Y3pMVkZ3TFZt?oc=5",
+   "ms": 1792564740000,
+   "source": "음성뉴스",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "[기자수첩] 산재 사망자 ‘역대 최저’…안전한 일터 향한 의미 있는 변화",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE50TFVid3hDcE9QY0lWZVgwVGtLS1hDWXZKRTR6YlVwaUhUUFk3WERBMUx1cE1GY0lRZjZ1MDZKSWRkSFl0dGU1YjExWlZWNEJrV2Z4V3J2Rlg5Zw?oc=5",
+   "ms": 1792564620000,
+   "source": "브릿지경제",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "\"청년 취업난·임금체불 심각…추 시장 경제정책 전환해야\"",
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWV9KS2p0Tm9UdlFKNVJnU1FKTDFxdTZlWFpnd1lKaDZkMFhxOVRFajZBZDI0NGtOSDN4d2E0cWlVeGVpTHdLbW9QdjRRczNhSmVmNGtiU19CZzZTQ1Z3alBqcm5Nd29zbU5BeGpqby1ObEFNbHF6QXVUcERGS09GRHVCVF9TQQ?oc=5",
+   "ms": 1792564188000,
+   "source": "Tbc.co.kr",
+   "kind": "news",
+   "topics": [
+    "wage-arrears"
+   ],
+   "also": 1
+  },
+  {
+   "title": "법 시행 5년에도 계속되는 중대재해 …포스코이앤씨·현대건설 사망사고 등 최다",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5qaGV2VjhWazZjQ0tWcVdUWWtfb3llNnlGMXEyS29yTzF4WlVIdVppbkJwUFVyazhLYXV2Z3NCNU5qSDYtSnAxbnRVMVl5RUh2eUJJRXF6V1VPVTZiSGI0MVNHZy13R1c5UFZDS0xn?oc=5",
+   "ms": 1792563823000,
+   "source": "S저널",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "에쓰오일, 정기보수 현장 안전 강화…원하청 합동 안전캠페인",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9TUlBzeUl1WXFpVXVKMnRIcFo4UWJJck5yNzk5eFkzSlFjdUdKVVM5Z2JGMFM1ZkM5akNPcklPbGxIZHlnU2FnektQZ0NmOXVrYjJnZU40VWxkbk3SAWBBVV95cUxNMVBjU0J0VUotVjFLcGUta1dIcHYtQVd5NjY0ZGpTQ2V5YWtxRDFsS0pCaWdsTTNTb1BJcnBDc1g0WDJxSUFQZDJEOUNhbjZldl83cGc3Sm5WbnR4eEJGLWM?oc=5",
+   "ms": 1792563750000,
+   "source": "연합뉴스",
+   "kind": "news",
+   "topics": [
+    "nonregular"
+   ],
+   "also": 0
+  },
+  {
+   "title": "사각지대 없는 안전제주, 제주 중대재해 예방의 새로운 출발",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBDejc0ZWxmT2lLaWdnQ3VuNEpNR1NfZm8tY2dPQ19GNkV3aERRMER6N0poeFVGbDVuMlhFQURxMTJRLUZaekFrTjBRZ3I5RExZWGdwa0JNODQ2bUJRb1R3TTJLTnluRzBGaTJlYg?oc=5",
+   "ms": 1792562415000,
+   "source": "삼다일보",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "아리셀 경영책임자 징역 4년…민변 “중대재해 책임 묻기 어려워졌다”",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9oMzc3NFhmTDJYZHNZZUMxU1d0Z0xqZjhvem9tUlU4dEZJX0NNZmhFcS0xY1MwbXU5Qjl3QmNCdkkxeElCdTBkLTEzcERfcHNYOU8wUlJBS3ZuUzV0VmFpbEJOUkQzZmk5?oc=5",
+   "ms": 1792562149000,
+   "source": "한국NGO신문",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "주 4.5일제 도입했더니 생산성 8%↑…부산 중소기업의 실험",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8zMWV2RDBxR0IwU1hlS1lPdmtNS29JenJna252VHpKS2lKMzF3SU9qUVU4UERmeVFnTzlSRC1oZDdvaXNpMXBqNVg2MlhobTIwbUtHYmloLXU4UWRxOTZ3TA?oc=5",
+   "ms": 1792561760000,
+   "source": "아시아경제",
+   "kind": "news",
+   "topics": [
+    "hours"
+   ],
+   "also": 0
+  },
+  {
+   "title": "5년간 7명 중대재해로 숨진 현대제철…“위험의 외주화 끝내야”",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5vR3BJOGlqR29WRlJVMy1LTmtETjh0cVgtZUo0amRpVUNpR0FhdExaU1IxV2lydG92aDYyTEw2RXJDVEljcVVjTUV2Q09zYkRKVnlBajZHcjMwRFQxNXNXMUZGQkxuZHND?oc=5",
+   "ms": 1792561620000,
+   "source": "한겨레",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "비정규직 867만 명 역대 최다…정규직보다 월급 194만 원이나 적다고? 👤📊",
+   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5XelZrMmFLOXpMZlB0MVlvQ2pHQ05PWW1Hc2ZISDFvUld0eUZ4VHotZkt2eVQ4YzlraFpMWk92TmVrYnZnUjhBbjBDdmYya1hxUDRv?oc=5",
+   "ms": 1792560506000,
+   "source": "뉴닉",
+   "kind": "news",
+   "topics": [
+    "nonregular"
+   ],
+   "also": 0
+  },
+  {
+   "title": "\"월급 좀 주세요\"…전주시, 외국인 임금체불·노동상담 6배 급증",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1Xdi1aVVRzZmpITDJSZm5GLTZ5UzRZLUZZMWJXbHBQdHlrSU8xU1FXd1ZoVWNFX1EybjBEZmlxaThmM180V2xDYU9aaU5sVmw4YXNrZTNiTTBYVG1na0hidzFOS281ZGtuZXB3?oc=5",
+   "ms": 1792560287000,
+   "source": "프레시안",
+   "kind": "news",
+   "topics": [
+    "wage-arrears"
+   ],
+   "also": 0
+  },
+  {
+   "title": "부산지하철 ‘원·하청 파업’ D-1…개정 노조법 첫 시험대",
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBCck1BQWJLQml5T0lnSnN3TFp1bG5ITDY5YTlCOFZPLVZuWW84bE56NlM1NDItVG1wZEpYbWxNOS1HV2h2dkFSSFAwZTIxLS1jWnfSAVNBVV95cUxNc3NienFjX2x1dWlaWUNDU1JXc0NSX0h5UDFwV1diTlRLYl91XzVNSTNxUHBLbVVaWlItU25vcFNkLXVKbnNrSXlOb01RM0tfNEJDSQ?oc=5",
+   "ms": 1792560182000,
+   "source": "서울경제",
+   "kind": "news",
+   "topics": [
+    "labor-relations",
+    "nonregular"
+   ],
+   "also": 0
+  },
+  {
+   "title": "대법 \"대표이사, 안전책임자 있어도 중대재해 책임 질 수 있다\"",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFAtU2ZGcHFPdUNvWV9qWmRsYWdaSVppX3RmbXcxSXJPUURWQWJqWEdCeHcyUzd1a215U0duaDl4Q2dwblpyaFZfYWktenI4Q3FpTXNXdEY3SHlybVpRb0FNWjNuUVh5WTFj?oc=5",
+   "ms": 1792559520000,
+   "source": "동행일보",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "고 이한빛 PD 10주기…드라마 스태프 3명 중 1명 최저임금 못 받아",
+   "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE82aG1iT2w0bzdEbzlFNk9oTGQzQU1vTXgyUkZXNlg0WkNkYjBFTnlmRXotM2htbkItczZxLTN3NlQ5MndBY01Lb04tNU5yUkF1?oc=5",
+   "ms": 1792559280000,
+   "source": "cpbc News",
+   "kind": "news",
+   "topics": [
+    "min-wage"
+   ],
+   "also": 1
+  },
+  {
+   "title": "대전 유성농협, 중대재해 예방·경영 안정 나서 ‘주목’",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8wY2xlWDloQ1VPYUx2ZVpyNjRMOWlvUDU3am5CREpFUzNKQklEaGpTSFBmSXIzTzNSbWRVOTYwLU1YNDZGMXg1RC1mSDdZMjlzZzZvUW1HMmtHdw?oc=5",
+   "ms": 1792559160000,
+   "source": "농민신문",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "기획예산처 육아휴직 혁신 나선다 : 행정",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9DVVFsYmRlVVdjV3RISUJOVXYwWURfdzJiOGNFZTN3dk9UVWxNNkxXejRQaTJuODRKZ2NsdGt3ZFdKVlV3SFFRT3Q0dzJTb2RRR2oxZw?oc=5",
+   "ms": 1792558800000,
+   "source": "의약일보",
+   "kind": "news",
+   "topics": [
+    "parental"
+   ],
+   "also": 0
+  },
+  {
+   "title": "\"일용직은 을, 엄벌 촉구\"…'쿠팡 퇴직금 미지급' 재판 내달 마무리",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1Hd0psbmxFQWdoZm1uLUxHdU1FaDRocUwyQVBEZDRQa2RGUU5JMkFObWhZM1FrWnJSQnZ1MXhHSFVRbUVmTEpzX1Nzbk8wek9SaE5zZDZqY0lBZUl2cWdGUVBfSVQ?oc=5",
+   "ms": 1792558563000,
+   "source": "뉴스1",
+   "kind": "news",
+   "topics": [
+    "pension"
+   ],
+   "also": 0
+  },
+  {
+   "title": "주 4.5일제 도입 부산 기업, 인원감축 없이 생산성 8% 향상",
+   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBmNzBHcEhWdUFyd3FneWI4N0hock5RZWVKcEM4MUF0OFBCZ0UwTEFHMk9NWjRUSnRhSXdldlc4d1dZQUJQci1qZVBYTVJmWDMtbjYtVWZGNjU0Z185eHFhRTFn?oc=5",
+   "ms": 1792558499000,
+   "source": "매일신문",
+   "kind": "news",
+   "topics": [
+    "hours"
+   ],
+   "also": 0
+  },
+  {
+   "title": "비정규직 867만 명 역대 최대…정규직과 월급 격차 194만 원",
+   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBoaXd4YzJKTGFNOVJKOXBabXp0bFZPSUthQVYxZGFSbzRZSkt6dnpnZHZXRjl3SkxRcEJJRlhXYzlzbWhEVmJGa3VYMzFUaUdCMTZSSVBEaw?oc=5",
+   "ms": 1792558380000,
+   "source": "부산경남대표방송 KNN 뉴스",
+   "kind": "news",
+   "topics": [
+    "nonregular"
+   ],
+   "also": 0
+  },
+  {
+   "title": "임금삭감 없이 매주 4+0.5...노사발전재단, '노동시간↓+생산성↑' 사례 확인",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5BVllTWDY2TTdBQ3ZYaF9GTEVqWDhhdnVKcGg3aGpKMENlMmI3a1p0TENMNWpfaUpGUVRtS090Y0ZibVhxN3Fyc2RueC1yUGVjZEdnQ19MR2lRb01aQ19saQ?oc=5",
+   "ms": 1792557983000,
+   "source": "메트로신문",
+   "kind": "news",
+   "topics": [
+    "hours"
+   ],
+   "also": 0
+  },
+  {
+   "title": "부하 직원과 성관계한 맥도날드 전 CEO 1억500만달러 퇴직금 반납",
+   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNdFpOYU5mVVJUbVdaLVlYVGx2aHNwb19fMGVrMFgyNndPdGI2OWdfTV9YRlkxUW1YdTkweUNLWFRiZXQ2VGFlWlZ0dGo5c2ctcjlVbW1HNWZqRnFkRDF4bDFuMkh5NkhrR3d4dUV6aVlzbWRnb1F4QXlHY2lxNk9fdDhfZ3M1ZGcwd3ZUVDJwNHBlV29ZelVYZFhXbVNmeHgwcFJBdVhDMl83RmhqUzBJMzJ2a2JEYWlQNUtacFpjWlR1NmxaYjFDbFozSGN2ZWxp?oc=5",
+   "ms": 1792557466000,
+   "source": "미주조선일보",
+   "kind": "news",
+   "topics": [
+    "pension"
+   ],
+   "also": 0
+  },
+  {
+   "title": "박홍근, 기획처 직원 간담회…육아휴직 '편히 쓰는' 환경 건의",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9KZkN4aXFHV1JWMElWY0RobHJGbDFFMmxnN2EzdVI4d0RXQ2VTS2JLMlY1XzdkMGYySDRBMmluamQzbGVxbnQ5TFJYX202MXBQNTdKVnNPME9UZWtIQy1GR9IBYEFVX3lxTE9KZkN4aXFHV1JWMElWY0RobHJGbDFFMmxnN2EzdVI4d0RXQ2VTS2JLMlY1XzdkMGYySDRBMmluamQzbGVxbnQ5TFJYX202MXBQNTdKVnNPME9UZWtIQy1GRw?oc=5",
+   "ms": 1792557380000,
+   "source": "연합뉴스",
+   "kind": "news",
+   "topics": [
+    "parental"
+   ],
+   "also": 0
+  },
+  {
+   "title": "정규직 405만원·비정규직 211만원…월급 격차 194만원 ‘역대 최대’",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5mZUVwRnVSUXdkQWh2d0NBakludW9ob0RSeGJyVE5DUHdURzlyTWVuRjFrR3FMTEdtZHZqeFZxa1hET0lkdUlFQ2dQU3ZYLXBJY0ZYNDFn?oc=5",
+   "ms": 1792557137000,
+   "source": "중앙일보",
+   "kind": "news",
+   "topics": [
+    "nonregular"
+   ],
+   "also": 0
+  },
+  {
+   "title": "쿠팡 일용직 근로자, '퇴직금 미지급' 재판서 엄벌 호소…내달 결심",
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1OSnlQTGUtR1Bpb2lKQ3RZdEhhX0twRS1JMDVGd3VHWHZHbC1fUTlpM0xDcDJkUDlPSjJTR3YzejRfTTlpSlNoSmFZSlFSUVBlMGpCU1NTaEc1SDhBYXdDTnUyX2Z3Y0huVnlSMDJjMjBNRTA5R0c1TtIBeEFVX3lxTE1OSnlQTGUtR1Bpb2lKQ3RZdEhhX0twRS1JMDVGd3VHWHZHbC1fUTlpM0xDcDJkUDlPSjJTR3YzejRfTTlpSlNoSmFZSlFSUVBlMGpCU1NTaEc1SDhBYXdDTnUyX2Z3Y0huVnlSMDJjMjBNRTA5R0c1Tg?oc=5",
+   "ms": 1792556782000,
+   "source": "뉴시스",
+   "kind": "news",
+   "topics": [
+    "pension"
+   ],
+   "also": 0
+  },
+  {
+   "title": "S-OIL, 정기보수 기간 중대재해 예방 총력… 유관기관 합동 안전캠페인",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBJSnZ1bjZiQlJSS1g1SHE4Zmhha1EzbUFBcFI2V0RQN3dScDFVSV9aZkZDY1hET1hlZmE2Q21laHhlSWFmUU1waW85cktxWlYtdjdsMEFiUVBOOFlXYURiUk00R0gtWnpCMTBuNW9RaUY?oc=5",
+   "ms": 1792556324000,
+   "source": "울산종합일보",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "중대재해법 5년째 사고 여전…건설사 8곳 위험 신호",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFA5S1NSS2NKV08tX1hydG1GYVF5N25aX2Q3VjJMNmdHMkVxemlMTGlPUU5GNklKenNrdUJiWG92eml2TW5JY2tjeTBHM1owVlRoLVlDd0JoUUxNdWVGTFVhSWJySE10OHhvd1Vj?oc=5",
+   "ms": 1792556174000,
+   "source": "대한데일리",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "주 4.5일제 도입했더니 생산성 8% 향상…노동시간 줄이고 업무효율 높였다",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9JQ2NLcVZyWjNyOWM4NVNDRGh4XzQyNWJSdFNhMXNCZ184dGtfUEt1VU1YSE03WEZ3LUtJVExGa3IzeVRweG5zY2c0SnNpUDk1ejhmdU93?oc=5",
+   "ms": 1792554575000,
+   "source": "헤럴드경제",
+   "kind": "news",
+   "topics": [
+    "hours"
+   ],
+   "also": 0
+  },
+  {
+   "title": "이종배 의원, AI 활용 산업재해 위험예측법 대표발의",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9GWnhpMGdGb1VidDNyMGNKSG5pN2pHSzBCdUZRQTFob0d4LVdfMkd3UDhDX2ZyUy15M0ZEZURQdm9JMzhLWGlJai1seEx5NVBwZFpTSDNzVlNCV2YzZm1PZWFjcFZuTk9pclFR?oc=5",
+   "ms": 1792553886000,
+   "source": "동양일보",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "공주시, 중대산업재해 예방 특별교육 실시",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1oUE9fbWRWNm42MnBmWXJsN1RKeG52bENvVHM4cTV4T2FMbnBpeGxoMVZ1QV9KMjUtRUNkcG9MSjRKVGhzR0wtZldCd3FlcHBZNkdnaFc4RkxhdndxUzVRVU5SRTNYbVdnbVhacdIBbEFVX3lxTE1oUE9fbWRWNm42MnBmWXJsN1RKeG52bENvVHM4cTV4T2FMbnBpeGxoMVZ1QV9KMjUtRUNkcG9MSjRKVGhzR0wtZldCd3FlcHBZNkdnaFc4RkxhdndxUzVRVU5SRTNYbVdnbVhacQ?oc=5",
+   "ms": 1792553633000,
+   "source": "충남문화신문",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "공주시, 중대산업재해 예방·안전관리 강화",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9fbzNGbGVncDk5dncxbjdubHRRTDRQZ0hyeHNseWRYV2l5bHBOa28zNDZMN2tLeUVPM0FJdzBla0RucWdRa2VPLWQwdzBEVlE0Y0FTZVFidExONUphaGFHXzZjdnZXY1B5b3NKbURkRlhEZw?oc=5",
+   "ms": 1792553200000,
+   "source": "투데이충남",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "중대재해 보고 ‘건설사 쏠림’…현대건설·포스코이앤씨 6건씩",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBzc2lYT3plOWJvcTRKTmh1TWNRR3ZSQTZ5V0J2V0JEMHloUThnazBCb2UwcUNVQWN1bF9SbjNOY0cwQ0lQUFN6bF95dDdFc2h0S0hZQ182Q0RvOGJfRlVrRVhlbVY4d2lHWWtZWDlNMFFRTXfSAXNBVV95cUxQc3NpWE96ZTlib3E0Sk5odU1jUUd2UkE2eVdCdldCRDB5aFE4Z2swQm9lMHFDVUFjdWxfUm4zTmNHMENJUFBTemxfeXQ3RXNodEtIWUNfNkNEbzhiX0ZVa0VYZW1WOHdpR1lrWVg5TTBRUU13?oc=5",
+   "ms": 1792552583000,
+   "source": "시사저널",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "중처법 5년 차에도… 21개월간 대기업 11곳서 ‘중대재해 보고’ 3건 이상 반복",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBuYlFHUW1zTXV6bUsxWlRuTjlmdzZDZUJJMlg4eENFY1Q4N2dEbUdMazZCZ3ZQQ1B6ZzJId3RGLUlqWjEzMXBWX0xacEhvQUpjRUM0dzBJUkJMOUs0d2VLM2FWYw?oc=5",
+   "ms": 1792552461000,
+   "source": "매일산업뉴스",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "[김근식 칼럼] 청년의 ‘당당한 육아휴직’을 위해… 기업 부담 넘어 ‘국가 직접 책임제’로 전환할 때",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE81SXlrTkJUaGR6NHpiQXA5UU9jTUZUeXR0MGNwSkY2NUZ6VWt0ZEwxMHNfYlo2U1RvbEZrd3l6dTN4bmNscGpuaHhBWXU2czJrYnh4YmFwQWpuaG1pd0g5Wg?oc=5",
+   "ms": 1792552086000,
+   "source": "유교신문",
+   "kind": "news",
+   "topics": [
+    "parental"
+   ],
+   "also": 0
+  },
+  {
+   "title": "근로시간 줄이고 자동화 도움 받았더니…인원감축 없이 생산성↑",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5JZG9wa195bTh0U1JWQXNmdElGbVBkS0puMEtJZnczLS11Z0NKQ1RTUWRraEhRSGpMaTYzdm53eXZ0S2x5VnVGRG9qNWdQajU3dmx6UGFWSUF0SHA5SnNybdIBYEFVX3lxTE5JZG9wa195bTh0U1JWQXNmdElGbVBkS0puMEtJZnczLS11Z0NKQ1RTUWRraEhRSGpMaTYzdm53eXZ0S2x5VnVGRG9qNWdQajU3dmx6UGFWSUF0SHA5SnNybQ?oc=5",
+   "ms": 1792551632000,
+   "source": "연합뉴스",
+   "kind": "news",
+   "topics": [
+    "hours"
+   ],
+   "also": 0
+  },
+  {
+   "title": "정규직·비정규직 임금 격차 200만원 육박…역대 최대",
+   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE81dVZFdTExTE0yWG5nX21zYk5aWVctaGxObHIwZGFaeXBjUGl1Y3FYS2ZmR3Z6aHAteGFtVHR6TjVhZW4xbjc5MlRNX3JGZ3hqaVR3VGhFYmZDLUxCTjRV0gFfQVVfeXFMTzV1VkV1MTFMTTJYbmdfbXNiTlpZVy1obE5scjBkYVp5cGNQaXVjcVhLZmZHdnpocC14YW1UdHpONWFlbjFuNzkyVE1fckZneGppVHdUaEViZkMtTEJONFU?oc=5",
+   "ms": 1792551600000,
+   "source": "경향신문",
+   "kind": "news",
+   "topics": [
+    "nonregular"
+   ],
+   "also": 0
+  },
+  {
+   "title": "\"하루 더 쉬었는데 생산성은 향상\"…'노동시간 단축' 우수사례 소개",
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBvTXNmajJVQk9MV2xodUVxdC02cVZnZFVvUVB3TklJZGJma1psU2gyQ21xSFY4Wlh3enpFTVBBLS1naEltOE4wRUdLY2g3V25lMUZDSlhSeTJ4YXhYYkRqbHAweGJyVWdpSXZmVlp4Z0RjaHBkU1JhZ9IBeEFVX3lxTFBvTXNmajJVQk9MV2xodUVxdC02cVZnZFVvUVB3TklJZGJma1psU2gyQ21xSFY4Wlh3enpFTVBBLS1naEltOE4wRUdLY2g3V25lMUZDSlhSeTJ4YXhYYkRqbHAweGJyVWdpSXZmVlp4Z0RjaHBkU1JhZw?oc=5",
+   "ms": 1792551600000,
+   "source": "뉴시스",
+   "kind": "news",
+   "topics": [
+    "hours"
+   ],
+   "also": 0
+  },
+  {
+   "title": "끊이지 않는 ‘중대재해’…작년 이후 3건 이상 발생 기업 11곳",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5ZYkR6RXlqRHcwejIxeDVvUmxQRk4xUy0zMldKcG5EWWUzM0JwY0tiMVJndktTc0xKb0NXTDBtWDNOaU1DM2psVnlRS2h1djR0aUI5RFBxQnBPNy1uQTFOdA?oc=5",
+   "ms": 1792549916000,
+   "source": "뉴스토마토",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "포스코이앤씨·현대건설, 중대재해 보고 '최다'",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5XSDhHZkVfT0FvRnhnNlpfdHJKcGlabVc0OHJnR2tQVXJKTlpYdXJlTHEtb0xqRWx4bUx3ZG5sa3g5YTNjdEdiZ1NpenVqcFVzbElpYkd0TGMwcnliMFN6cXBfT0t2SHFKeUdqYw?oc=5",
+   "ms": 1792549259000,
+   "source": "메디컬투데이",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "취업 알선을 약속하고 돈만 받아도 중간착취에 해당할까?",
+   "url": "https://www.labortoday.co.kr/news/articleView.html?idxno=237323",
+   "ms": 1792549216000,
+   "source": "매일노동뉴스",
+   "kind": "news",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "‘중대재해처벌법 5년차’ 반복되는 대형 사고…작년부터 11곳서 3건 이상 발생",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBDb0lwUk5zU0lFaXpkRmFiLXhTM1dlV1o3Q1BoZ3d3RWR0SmxxQWV3VkFmQVRHMmtYdjZ3TWxhWllRU1U4TEdTXzU5WkswaEphYmpXWW8yWkpaM2dqTVprMTRMTVBHeG9KZHV1dGt4MS1aZw?oc=5",
+   "ms": 1792549166000,
+   "source": "인더스트리뉴스",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "“노동자 연쇄 사망” … 중대재해 적색경보 · 참담한 음성군 안전대책",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBrcFFUV0ZBOG9vNVVEYlhMUHFsTEZRdnBmTU9WOFNtcjRhbFoxVURiSXc5X19sc1NoU19TdWl2WW0zMTNvcnp0MlR0LXphaEhsYXlLcjBWY2NwVTl1S01jZVY3VUtFd2I4UEE?oc=5",
+   "ms": 1792548848000,
+   "source": "음성타임즈",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "중대재해 반복 기업 11곳 중 8곳은 ‘건설사’",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9SVHZacVVPeUF0MTRHSW1BOGpVZWtFUU9HbjdyNTAtY2pmX1Vqd0x3M1RGY3B2eEhTQXU1ejJiUXp3WjVEVmVRckJwcHozMFNVNTUzV3BXbXFmZnFJVGk2ZFU3aFEyWjktTTBJbWZWcFNDUHhw?oc=5",
+   "ms": 1792548465000,
+   "source": "부산일보",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "통상임금 기준, 어떤 급여가 들어가고 무엇이 빠지나",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBJUEEwdnh3OW5Wc1F4MDJ4Z1Zyb0JfOGdjZWZXd0d1MkNLc2pPdVYwd05wcEdOcVVnYXozdjFlcTVucU5YM0FzY3lLRXhzSTdNWHFoY1pTY1hQUkIxYkM3ZFVTaUY5M0JqSUtzV2d1d1pwelE?oc=5",
+   "ms": 1792548360000,
+   "source": "스페셜타임스",
+   "kind": "news",
+   "topics": [
+    "ordinary-wage"
+   ],
+   "also": 0
+  },
+  {
+   "title": "포스코이앤씨·현대건설, 작년 이후 중대재해 사고 각 6건 ‘최다’ 오명",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9Kc1hXSzI5VVJYUDRWZzRlc0pyNVhkU0xZaEk5V3hJNC1ROWpyMDR1VUk3dFdRVThSZTZ2WGEzZ2FwbW51WkNiLWRwcUdRUXc2YXU1MlZlYUVkeXg1cVR4V3lHQmI4M3g5Vkg4eQ?oc=5",
+   "ms": 1792548314000,
+   "source": "ESG경제",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "임실군 민간기업 중대재해 예방 무료 안전컨설팅 나서",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5wNjc4Q2Fka3h2d29YQ2Uwei1CaXJYY0hreVR0YVBHemhLLVprNFhoMlEyaGVSR2NrcHFjOUZiSFh4WFZCMU5VY0FfbFFVYUJUdm5DRjBwVjR3aW90ekFleGQyVG9KVTEwYlNJ?oc=5",
+   "ms": 1792548300000,
+   "source": "전북도민일보",
+   "kind": "news",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "에어부산, 3.9억 수당 체불 논란…통합 앞두고 노사 갈등 '격화'",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA5QkstbW9RYmd5a01QaEdiSGdSMWVTZUdRRnJQNzJxRVoxdEFwT3VrLUh6UWlpTGp5SVlEX3RxZUVGblNxQlQ5WEgyYVJLWlpBemtPVWRsd2tRZHMyTFlFT3l6eS14TVFWbjNlLUs1VlrSAXRBVV95cUxOYXlZZ01OdEdHZXV1T2lBYXVNWDk2bGs0bGN1LVphY2paMzB0V0daRDFJcXRsdHdwemRrZUZ2RjZwOVB3V29ua1NpMDdsb1d2ZEdUaWNwNXIxTDhzbXhBR2lqTHpvQ0ItaTFOTUdsdW9UNHBLLQ?oc=5",
+   "ms": 1792548033000,
+   "source": "산경투데이",
+   "kind": "news",
+   "topics": [
+    "wage-arrears"
+   ],
+   "also": 1
+  },
+  {
+   "title": "유튜버 수입 절반은 최저임금 못 미쳐상위10%가 신고액 76% 차지 양극화",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9rdUV4MnhIdEFrNS1wRklKYWFBMHBaMDdEY1JZdkNpR0FaT2VDeHdYM3FmellYVnB3Q3dVcW1vSzhPdUpPT0tvMUktWHBjM0J6c2doZ3BMb3pCRGlGOVgtTFdxRHNDQkJzd1laTnlB?oc=5",
+   "ms": 1792546966000,
+   "source": "중소기업신문",
+   "kind": "news",
+   "topics": [
+    "min-wage"
+   ],
+   "also": 0
+  },
+  {
+   "title": "폴리텍대학, 청년 창업가 도전 돕는다!",
+   "url": "https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=20124",
+   "ms": 1792540800000,
+   "source": "고용노동부 보도자료",
+   "kind": "official",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "노동시간 단축의 지속가능성 담보를 위한 생산성 향상, 현장에서 답을 찾다",
+   "url": "https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=20123",
+   "ms": 1792540800000,
+   "source": "고용노동부 보도자료",
+   "kind": "official",
+   "topics": [
+    "hours"
+   ],
+   "also": 2
+  },
+  {
+   "title": "2026. 9월말 산업재해 현황(재해조사대상 사망사고 발생현황 부가통계 결과(잠정))",
+   "url": "https://www.moel.go.kr/policy/policydata/view.do?bbs_seq=20261000676",
+   "ms": 1792460376000,
+   "source": "고용노동부 정책자료",
+   "kind": "official",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "(참고) 「(약칭) 초광역특구법 관련 원포인트 사회적 대화」 제5차 실무협의체 개최",
+   "url": "https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=20119",
+   "ms": 1792454400000,
+   "source": "고용노동부 보도자료",
+   "kind": "official",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "(참고) 「초광역특구법」 노동특례, 사회적 대화를 통해 합리적 방안을 마련하겠습니다.",
+   "url": "https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=20118",
+   "ms": 1792454400000,
+   "source": "고용노동부 보도자료",
+   "kind": "official",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "2026년 3분기(누적) 산업재해 현황 부가통계",
+   "url": "https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=20117",
+   "ms": 1792454400000,
+   "source": "고용노동부 보도자료",
+   "kind": "official",
+   "topics": [
+    "safety"
+   ],
+   "also": 0
+  },
+  {
+   "title": "모든 일하는 사람의 노동권 보호망, 국민의 아이디어로 이름 짓는다",
+   "url": "https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=20116",
+   "ms": 1792454400000,
+   "source": "고용노동부 보도자료",
+   "kind": "official",
+   "topics": [],
+   "also": 3
+  },
+  {
+   "title": "한국고용정보원, ‘인공지능(AI) 윤리 준수기관’ 확인마크 획득 신뢰할 수 있는 인공지능(AI) 고용서비스 기반 다진다.",
+   "url": "https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=20112",
+   "ms": 1792368000000,
+   "source": "고용노동부 보도자료",
+   "kind": "official",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "건설근로자공제회, ‘건설 현장 휴게시설 개선지원 사업’ 접수 개시",
+   "url": "https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=20111",
+   "ms": 1792368000000,
+   "source": "고용노동부 보도자료",
+   "kind": "official",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "“화재·폭발, 예방이 가장 강한 안전조치” 겨울철 앞두고 화재·폭발 집중점검",
+   "url": "https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=20110",
+   "ms": 1792281600000,
+   "source": "고용노동부 보도자료",
+   "kind": "official",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "(참고) 노동부 장관, 부산 건설현장 붕괴사고 예방 불시점검",
+   "url": "https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=20109",
+   "ms": 1792108800000,
+   "source": "고용노동부 보도자료",
+   "kind": "official",
+   "topics": [],
+   "also": 0
+  },
+  {
+   "title": "고용노동부 정부위원회 현황 및 활동내역('26년 3분기)",
+   "url": "https://www.moel.go.kr/policy/policydata/view.do?bbs_seq=20261000526",
+   "ms": 1791970472000,
+   "source": "고용노동부 정책자료",
+   "kind": "official",
+   "topics": [],
+   "also": 0
+  }
+ ]
+}

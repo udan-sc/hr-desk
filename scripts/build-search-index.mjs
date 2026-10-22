@@ -45,6 +45,7 @@ const cut = (s, n = 64) => {
 const palette = [
   ...MODULES.map((m) => ({ g: '메뉴', t: m.name, d: cut(m.blurb), k: m.short, h: m.href })),
   { g: '메뉴', t: '규모별 문턱 지도', d: '5·10·30·50명 문턱을 넘을 때 새로 생기는 조문·의무·서류', k: '인원 규모 문턱 상시 근로자', h: '/thresholds' },
+  { g: '메뉴', t: '인사노무 소식', d: '고용노동부 발표·노동 전문지·언론 기사 제목을 하루 세 번 모음', k: '뉴스 소식 보도자료 이슈 오늘', h: '/news' },
   { g: '메뉴', t: '즐겨찾기 모아보기', d: '별표한 조문을 한곳에, 링크로 팀 공유', k: '즐겨찾기 별표 공유', h: '/favorites' },
   ...precedents.map((p) => ({
     g: '판례',
@@ -131,6 +132,10 @@ fs.writeFileSync(
       upcoming: Object.values(lawWatch.laws || {}).reduce((n, l) => n + (l.upcoming || []).length, 0),
       autoChanges: autoChanges.length,
     },
+    news: (() => {
+      const n = fs.existsSync(path.join(root, 'data/auto/news.json')) ? readJson('data/auto/news.json') : {};
+      return { updatedAt: n.updatedAt || null, runner: n.runner || null, sources: n.status || {}, items: (n.items || []).length, issues: (n.issues || []).map((i) => `${i.label} ${i.count}`) };
+    })(),
     precedents: {
       enabled: Boolean(precWatch.enabled),
       checkedAt: precWatch.checkedAt || null,
