@@ -16,3 +16,5 @@ public/auto-status.json
 
 # 작업 중 남은 임시 파일
 _tt_measure.html
+public/updates.json
+public/updates.xml

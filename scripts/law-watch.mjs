@@ -18,7 +18,7 @@ import { LAW_OFFICIAL } from '../lib/lawlinks.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const BASE = 'https://www.law.go.kr';
-const BASE_DATE = '2026-09-11'; /* lib/data.js의 BASE_DATE와 같은 날 — 사이트 조문 요약의 기준일 */
+const BASE_DATE = '2026-10-22'; /* lib/data.js의 BASE_DATE와 같은 날 — 사이트 조문 요약의 기준일 */
 const AUTO_DIR = path.join(root, 'data/auto');
 const WATCH_FILE = path.join(AUTO_DIR, 'law-watch.json');
 const BASELINE_FILE = path.join(AUTO_DIR, 'law-baseline.json');

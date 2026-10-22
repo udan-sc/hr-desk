@@ -24,11 +24,13 @@ export default function UpcomingChanges({ items }) {
   };
 
   return (
-    <section className="upcoming" aria-label="곧 시행되는 개정">
-      <div className="up-head">
-        <h2>곧 시행되는 개정</h2>
+    <section className="tpanel upcoming" aria-labelledby="up-h">
+      <div className="tpanel-hrow">
+        <h3 id="up-h" className="tpanel-h">
+          곧 시행되는 개정
+        </h3>
         <Link className="more" href="/changes">
-          연도별 전체 보기 →
+          전체 →
         </Link>
       </div>
       <div className="up-list">

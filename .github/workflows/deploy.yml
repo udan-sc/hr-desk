@@ -59,6 +59,15 @@ jobs:
         timeout-minutes: 10
         run: node scripts/news-watch.mjs
 
+      # 위 결과로 '이번 주 바뀐 것' 장부를 갱신한다. 지난 배포본의 장부(updates.json)를 받아 처음 발견한 날을 이어 쓰고,
+      # 빌드 때 RSS(updates.xml)로도 내보낸다. 장부를 받지 못하면 실패로 끝내 이번 회차 배포를 멈춘다 —
+      # 낡은 장부로 배포하면 발견한 날·RSS 게시 시각이 바뀐 채 굳기 때문(다음 회차가 다시 시도한다).
+      - name: 바뀐 것 장부 갱신
+        timeout-minutes: 5
+        env:
+          UPDATES_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+        run: node scripts/updates-feed.mjs
+
       # 계산기 검산 36건과 근거 조문 인용 연결을 먼저 확인한다. 틀리면 배포하지 않는다.
       - name: 데이터·산식 검사
         run: pnpm check

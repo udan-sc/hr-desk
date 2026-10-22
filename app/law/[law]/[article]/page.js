@@ -9,7 +9,8 @@ import TipDismiss from '../../../tip-dismiss';
 import ChangeNotice from '../../../change-notice';
 import Precedents from '../../../precedents';
 import LawWatchNotice from '../../../law-watch-notice';
-import { interpretationsFor, changesForProvision, precedentsFor } from '../../../../lib/platform';
+import QaLinks from '../../../qa-links';
+import { interpretationsFor, changesForProvision, precedentsFor, qaFor } from '../../../../lib/platform';
 import { SITE_URL } from '../../../../lib/site';
 import { lawGoKrDisplayUrl } from '../../../../lib/lawlinks';
 import {
@@ -155,6 +156,8 @@ export default async function ProvisionPage({ params }) {
               </>
             )}
           </dl>
+
+          <QaLinks items={qaFor(p.law, p.article)} law={p.law} article={p.article} />
 
           <Precedents items={precedentsFor(p.law, p.article)} law={p.law} article={p.article} />
 

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { asset } from '../lib/site';
+import { asset, BASE_PATH } from '../lib/site';
 
 /* 통합 검색 (Ctrl+K). 조문·계산기·절차·캘린더 의무·서식·분야를 한 창에서 찾아 이동한다.
    색인(public/palette-index.json)은 빌드 때 구워 두고, 처음 열 때 한 번만 내려받는다. */
@@ -83,6 +83,15 @@ export default function CommandPalette() {
 
   function go(it) {
     setOpen(false);
+    /* 같은 화면 안의 #으로 갈 때는 router.push가 hashchange를 내지 않아 그 화면이 알아채지 못한다(예: /qa에서 다른 질문 고르기) */
+    const [p, h] = it.h.split('#');
+    const here = window.location.pathname.replace(BASE_PATH, '').replace(/\/$/, '') || '/';
+    if (h && (p.replace(/\/$/, '') || '/') === here && !p.includes('?')) {
+      /* 이미 같은 #이면 바꿔도 hashchange가 나지 않으므로 직접 알린다 */
+      if (window.location.hash.slice(1) === h) window.dispatchEvent(new HashChangeEvent('hashchange'));
+      else window.location.hash = h;
+      return;
+    }
     router.push(it.h);
   }
 

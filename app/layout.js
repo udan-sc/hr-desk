@@ -2,9 +2,9 @@ import './globals.css';
 import Link from 'next/link';
 import { Noto_Sans_KR, Noto_Serif_KR } from 'next/font/google';
 import { stats, BASE_DATE } from '../lib/data';
-import { MODULES, SITE_NAME, SITE_TAGLINE } from '../lib/modules';
+import { NAV_GROUPS, SITE_NAME, SITE_TAGLINE } from '../lib/modules';
 import { SITE_URL } from '../lib/site';
-import NavLinks from './nav-links';
+import SiteNav from './site-nav';
 import CommandPalette from './command-palette';
 import { HeadcountProvider } from './headcount-context';
 import { watchStatus } from '../lib/platform';
@@ -66,6 +66,7 @@ export default function RootLayout({ children }) {
             빼면 하이드레이션이 조용히 깨져서 useEffect가 아예 돌지 않는다. */}
         <meta httpEquiv="Content-Security-Policy" content={CSP} />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <link rel="alternate" type="application/rss+xml" title={`${SITE_NAME} — 바뀐 것`} href={`${SITE_URL}/updates.xml`} />
       </head>
       <body>
         <HeadcountProvider>
@@ -79,9 +80,8 @@ export default function RootLayout({ children }) {
               </span>
             </Link>
             <nav className="site-nav" aria-label="주요 메뉴">
-              <NavLinks modules={MODULES} />
+              <SiteNav groups={NAV_GROUPS} />
               <CommandPalette />
-              <span className="meta">{BASE_DATE} 기준</span>
             </nav>
           </div>
         </header>
@@ -90,28 +90,39 @@ export default function RootLayout({ children }) {
 
         <footer className="site-foot">
           <div className="wrap">
-            <p>
-              {BASE_DATE} 시행 법령을 기준으로 한 참조용 자료입니다. 계산 결과와 절차 안내는 일반적인 경우를 전제로 하며,
-              개별 사안의 판단은 원문 조문과 행정해석·판례 확인이 필요합니다. 조문 원문은 각 항목의 국가법령정보센터
-              링크에서 볼 수 있습니다.
-            </p>
-            {watchStatus.checkedAt && (
-              <p className="watch-foot">
-                법령 원문 자동 확인: {watchStatus.checkedAt.replace(/-0?/g, '. ')}. · 매일 국가법령정보센터 기준으로 개정 여부를 확인합니다.
-              </p>
-            )}
-            <div className="fl">
-              {MODULES.map((m) => (
-                <Link key={m.slug} href={m.href}>
-                  {m.name}
-                </Link>
+            <div className="foot-groups">
+              {NAV_GROUPS.map((g) => (
+                <nav key={g.key} className="fg" aria-label={g.label}>
+                  <h2 className="fg-h">{g.label}</h2>
+                  {g.items.map((m) => (
+                    <Link key={m.slug} href={m.href}>
+                      {m.name}
+                    </Link>
+                  ))}
+                </nav>
               ))}
-              <a href="https://www.law.go.kr" target="_blank" rel="noopener noreferrer">
-                국가법령정보센터<span className="vh"> (새 창)</span> <span aria-hidden="true">↗</span>
-              </a>
-              <a href="https://www.moel.go.kr" target="_blank" rel="noopener noreferrer">
-                고용노동부<span className="vh"> (새 창)</span> <span aria-hidden="true">↗</span>
-              </a>
+              <nav className="fg" aria-label="공식 사이트">
+                <h2 className="fg-h">원문 확인</h2>
+                <a href="https://www.law.go.kr" target="_blank" rel="noopener noreferrer">
+                  국가법령정보센터<span className="vh"> (새 창)</span> <span aria-hidden="true">↗</span>
+                </a>
+                <a href="https://www.moel.go.kr" target="_blank" rel="noopener noreferrer">
+                  고용노동부<span className="vh"> (새 창)</span> <span aria-hidden="true">↗</span>
+                </a>
+                <a href={`${SITE_URL}/updates.xml`}>바뀐 것 RSS</a>
+              </nav>
+            </div>
+            <div className="foot-note">
+              <p>
+                {BASE_DATE} 시행 법령을 기준으로 한 참조용 자료입니다. 계산 결과와 절차 안내는 일반적인 경우를 전제로 하며,
+                개별 사안의 판단은 원문 조문과 행정해석·판례 확인이 필요합니다. 조문 원문은 각 항목의 국가법령정보센터
+                링크에서 볼 수 있습니다.
+              </p>
+              {watchStatus.checkedAt && (
+                <p className="watch-foot">
+                  법령 원문 자동 확인: {watchStatus.checkedAt.replace(/-0?/g, '. ')}. · 매일 국가법령정보센터 기준으로 개정 여부를 확인합니다.
+                </p>
+              )}
             </div>
           </div>
         </footer>

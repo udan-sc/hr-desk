@@ -32,7 +32,7 @@ export default function StatusBoard({ provisions, obligations, docs, changeDates
   return (
     <section className="board" aria-label="우리 회사 적용 현황" aria-busy={!ready || undefined}>
       <div className="bd-h">
-        {hc ? `상시 ${hc}명 기준 — 우리 회사에 적용되는 것` : '적용 현황 — 위에 인원을 넣으면 우리 회사 기준 숫자로 바뀝니다'}
+        {hc ? `상시 ${hc}명 기준 — 우리 회사에 적용되는 것` : '적용 현황 — 인원을 넣으면 우리 회사 기준 숫자로 바뀝니다'}
       </div>
       <div className="bd-grid">
         <Link className="bd" href="/law">

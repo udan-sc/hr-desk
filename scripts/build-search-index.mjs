@@ -7,6 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { CATEGORY_SLUG, CATEGORY_BLURB } from '../lib/categories.js';
 import { MODULES } from '../lib/modules.js';
+import { SITE_URL } from '../lib/site.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const readJson = (p) => JSON.parse(fs.readFileSync(path.join(root, p), 'utf8'));
@@ -19,6 +20,8 @@ const documents = readJson('data/platform/documents.json');
 const glossary = readJson('data/platform/glossary.json');
 const changes = readJson('data/platform/changes.json');
 const curatedPrec = readJson('data/platform/precedents.json');
+const qa = readJson('data/platform/qa.json');
+const wizards = readJson('data/platform/wizards.json');
 /* 매주 자동 추가된 새 판례(인증키가 있을 때)도 판결요지 파일·통합 검색에 함께 넣는다 */
 const autoPrec = fs.existsSync(path.join(root, 'data/auto/precedents-auto.json'))
   ? (readJson('data/auto/precedents-auto.json').items || []).filter((p) => !curatedPrec.some((q) => q.caseNo === p.caseNo))
@@ -42,11 +45,26 @@ const cut = (s, n = 64) => {
   return t.length > n ? t.slice(0, n).trimEnd() + '…' : t;
 };
 
+/* 메뉴 이름에 없는 말로도 찾아지게 */
+const MENU_WORDS = {
+  thresholds: '인원 규모 문턱 상시 근로자',
+  news: '뉴스 소식 보도자료 이슈 오늘',
+  favorites: '즐겨찾기 별표 공유',
+  updates: '업데이트 새소식 변경 RSS 구독 이번주',
+  qa: '질문 FAQ 자주 묻는',
+  check: '판정 판단 대상 여부 체크',
+};
+
 const palette = [
-  ...MODULES.map((m) => ({ g: '메뉴', t: m.name, d: cut(m.blurb), k: m.short, h: m.href })),
-  { g: '메뉴', t: '규모별 문턱 지도', d: '5·10·30·50명 문턱을 넘을 때 새로 생기는 조문·의무·서류', k: '인원 규모 문턱 상시 근로자', h: '/thresholds' },
-  { g: '메뉴', t: '인사노무 소식', d: '고용노동부 발표·노동 전문지·언론 기사 제목을 하루 세 번 모음', k: '뉴스 소식 보도자료 이슈 오늘', h: '/news' },
-  { g: '메뉴', t: '즐겨찾기 모아보기', d: '별표한 조문을 한곳에, 링크로 팀 공유', k: '즐겨찾기 별표 공유', h: '/favorites' },
+  ...MODULES.map((m) => ({ g: '메뉴', t: m.name, d: cut(m.blurb), k: `${m.short} ${MENU_WORDS[m.slug] || ''}`, h: m.href })),
+  ...wizards.map((w) => ({ g: '판정', t: w.title, d: cut(w.intro, 56), k: `판정 도우미 대상 여부 ${w.key}`, h: `/check/${w.key}` })),
+  ...qa.map((q) => ({
+    g: 'Q&A',
+    t: q.question,
+    d: cut(q.short, 56),
+    k: `질문 ${q.category} ${q.provisions.map((x) => `${x.law} ${x.article}`).join(' ')}`,
+    h: `/qa#${q.id}`,
+  })),
   ...precedents.map((p) => ({
     g: '판례',
     t: `${p.caseNo} — ${p.caseName}`.slice(0, 80),
@@ -117,6 +135,71 @@ fs.rmSync(precDir, { recursive: true, force: true });
 fs.mkdirSync(precDir, { recursive: true });
 for (const p of precedents) fs.writeFileSync(path.join(precDir, `${p.precSeq}.json`), JSON.stringify([p.summary || '', p.refs || '']));
 fs.rmSync(path.join(outDir, 'precedents-full.json'), { force: true });
+/* 이번 주 바뀐 것 — 다음 실행이 이어 쓸 장부(updates.json)와 RSS(updates.xml) */
+/* 장부 파일이 없으면(새로 받은 저장소 등) 빈 장부를 만들어 둔다 — lib/platform.js가 이 파일을 불러온다 */
+if (!fs.existsSync(path.join(root, 'data/auto/updates.json'))) {
+  fs.mkdirSync(path.join(root, 'data/auto'), { recursive: true });
+  fs.writeFileSync(path.join(root, 'data/auto/updates.json'), JSON.stringify({ updatedAt: null, today: null, ledger: 'none', items: [] }, null, 1));
+}
+const updates = readJson('data/auto/updates.json');
+fs.writeFileSync(path.join(outDir, 'updates.json'), JSON.stringify(updates));
+const TYPE_LABEL = { promulgated: '공포', effective: '시행', soon: '시행 임박', precedent: '새 판례', site: '사이트 소식' };
+/* XML 1.0이 허용하지 않는 제어 문자는 빼고 특수 문자는 이스케이프 */
+const xml = (v) =>
+  String(v ?? '')
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F￾￿]/g, '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+const kDate = (iso) => iso.split('-').map(Number).join('. ') + '.';
+/* 게시 시각은 장부에 처음 실린 실제 시각(firstSeenAt) — 구독 도구는 '마지막 확인 뒤 게시'만 알리므로 지어낸 시각을 쓰면 놓친다 */
+const rssDate = (x) => {
+  const d = new Date(x.firstSeenAt || `${x.firstSeen}T07:00:00+09:00`);
+  return (Number.isNaN(d.getTime()) ? new Date(`${x.firstSeen}T07:00:00+09:00`) : d).toUTCString();
+};
+/* 배포본은 주소 끝에 /가 붙는 형태(trailingSlash)라 맞춰 준다. URL 객체로 만들면 한글만 인코딩되고
+   이미 인코딩된 %XX(예: 병합 사건번호의 쉼표 %2C)는 그대로 남는다. 바깥 주소(국가법령정보센터)는 그대로 */
+const abs = (h) => {
+  if (/^https?:\/\//.test(h)) return new URL(h).href;
+  const [, p, rest] = h.match(/^([^?#]*)(.*)$/);
+  return new URL(`${SITE_URL}${p.endsWith('/') ? p : p + '/'}${rest}`).href;
+};
+const rssItems = updates.items.slice(0, 60).map((x) => {
+  const ds = x.efYds || (x.efYd ? [x.efYd] : []);
+  const when = (x.type === 'promulgated' || x.type === 'soon') && ds.length ? ` — ${ds.map(kDate).join(', ')} 시행` : '';
+  /* 시행 임박은 시행일을, 그 밖에는 사건 날짜를 적는다(시행 임박의 date는 '시행 7일 전'이라 게시일과 어긋날 수 있음) */
+  const desc = [x.summary, `${TYPE_LABEL[x.type]} · ${kDate(x.type === 'soon' && x.efYd ? x.efYd : x.date)}`].filter(Boolean).join('\n');
+  return [
+    '<item>',
+    `<title>${xml(`[${TYPE_LABEL[x.type]}] ${x.title}${when}`)}</title>`,
+    `<link>${xml(abs(x.href))}</link>`,
+    `<guid isPermaLink="false">hr-desk:${xml(x.id)}</guid>`,
+    `<pubDate>${rssDate(x)}</pubDate>`,
+    `<category>${xml(TYPE_LABEL[x.type])}</category>`,
+    `<description>${xml(desc)}</description>`,
+    '</item>',
+  ].join('');
+});
+fs.writeFileSync(
+  path.join(outDir, 'updates.xml'),
+  [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
+    '<channel>',
+    '<title>인사총무 데스크 — 바뀐 것</title>',
+    `<link>${xml(abs('/updates'))}</link>`,
+    `<atom:link href="${xml(SITE_URL + '/updates.xml')}" rel="self" type="application/rss+xml"/>`,
+    '<description>노동법 개정 공포·시행, 새 대법원 판례, 사이트 새 기능을 모아 알려 드립니다. 국가법령정보센터 원문 기준으로 매일 확인합니다.</description>',
+    '<language>ko</language>',
+    `<lastBuildDate>${new Date(updates.updatedAt || Date.now()).toUTCString()}</lastBuildDate>`,
+    '<ttl>360</ttl>',
+    ...rssItems,
+    '</channel>',
+    '</rss>',
+  ].join('\n')
+);
+
 /* 매주 자동 확인 상태 — 배포된 사이트에서 /auto-status.json으로 확인할 수 있다 */
 const precWatch = fs.existsSync(path.join(root, 'data/auto/precedents-auto.json')) ? readJson('data/auto/precedents-auto.json') : {};
 fs.writeFileSync(

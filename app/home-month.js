@@ -17,16 +17,16 @@ export default function HomeMonth({ byMonth }) {
   const skipped = all.length - items.length;
 
   return (
-    <section className="home-sec">
+    <section className="hsec" aria-labelledby="h-month">
       <div className="sec-head">
-        <h2>{month}월에 챙길 법정 의무</h2>
-        <span style={{ display: 'flex', gap: 12, alignItems: 'baseline' }}>
+        <h2 id="h-month">{month}월에 챙길 법정 의무</h2>
+        <span className="sec-tools">
           {skipped > 0 && <span className="note">우리 규모에 해당 없는 {skipped}건 제외</span>}
           <Link className="more" href="/calendar">연간 캘린더 전체 보기 →</Link>
         </span>
       </div>
       {items.length === 0 ? (
-        <p style={{ fontSize: 13.5, color: 'var(--ink2)' }}>
+        <p className="hsec-empty">
           {headcount ? '이번 달에 우리 규모가 챙길 정기 의무는 없습니다.' : '이번 달로 시기가 정해진 정기 의무는 없습니다.'} 수시 의무는 캘린더에서 확인하세요.
         </p>
       ) : (
