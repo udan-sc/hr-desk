@@ -3,6 +3,7 @@ import TimeBadge from './time-badge';
 import StickyToc from '../sticky-toc';
 import { changes, autoChanges, watchStatus, resolveCitations } from '../../lib/platform';
 import { BASE_DATE } from '../../lib/data';
+import PageSearch from '../page-search';
 
 export const metadata = {
   title: '달라지는 노동법',
@@ -45,6 +46,7 @@ export default function ChangesPage() {
             </p>
           )}
         </header>
+        <PageSearch item=".tl-item" group=".tl-year" placeholder="예: 육아휴직, 최저임금, 2027, 산업안전보건법" />
 
         <StickyToc
           items={years.map((y) => ({ id: `y-${y}`, label: `${y}년`, count: all.filter((c) => c.effectiveDate.startsWith(y)).length }))}

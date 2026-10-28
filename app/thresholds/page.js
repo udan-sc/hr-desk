@@ -4,6 +4,7 @@ import { obligations, documents, docAnchor } from '../../lib/platform';
 import { TIERS } from '../../lib/headcount';
 import HeadcountBar from '../headcount-bar';
 import TierStatus from './tier-status';
+import PageSearch from '../page-search';
 
 export const metadata = {
   title: '규모별 문턱 지도',
@@ -37,6 +38,7 @@ export default function ThresholdsPage() {
             구간별로 모았습니다. 채용 계획을 잡을 때 "몇 명이 되면 뭐가 늘어나지?"에 바로 답합니다.
           </p>
         </header>
+        <PageSearch item=".tier-cat .tag, .tier-list li" group=".tier-cat, .tier-block, .tier:not(.base)" placeholder="예: 취업규칙, 직장 내 괴롭힘, 안전관리자" />
 
         <HeadcountBar hint="인원을 넣으면 우리 회사가 지금 어느 구간에 있는지 표시됩니다." />
 

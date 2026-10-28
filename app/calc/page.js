@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { calculators } from '../../lib/platform';
 import { BASE_DATE } from '../../lib/data';
+import PageSearch from '../page-search';
 
 export const metadata = {
   title: '노무 계산기',
@@ -20,6 +21,7 @@ export default function CalcIndexPage() {
             지점)를 함께 보여줍니다. 입력값은 저장되지 않고 브라우저 안에서만 계산됩니다.
           </p>
         </header>
+        <PageSearch item=".topic-card" placeholder="예: 퇴직금, 연차, 수당" />
 
         <div className="topic-grid">
           {calculators.map((c) => (

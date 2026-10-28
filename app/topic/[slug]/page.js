@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ScopeBadge } from '../../scope-badges';
 import { categories, categoryBySlug, provisions, lawGoKrUrl, BASE_DATE } from '../../../lib/data';
+import PageSearch from '../../page-search';
 
 export function generateStaticParams() {
   return categories.map((c) => ({ slug: c.slug }));
@@ -44,6 +45,7 @@ export default async function TopicPage({ params }) {
             수가 일정 규모 이상일 때만 적용됩니다.
           </p>
         </header>
+        <PageSearch item=".prov" placeholder="이 분야 조문에서 찾기 — 예: 수당, 서면, 5명" />
 
         <h2 className="vh">이 분야의 조문 목록</h2>
         <div className="plist">

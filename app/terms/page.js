@@ -2,6 +2,7 @@ import Link from 'next/link';
 import StickyToc from '../sticky-toc';
 import { glossary, GLOSSARY_CATEGORIES, resolveCitations } from '../../lib/platform';
 import { BASE_DATE } from '../../lib/data';
+import PageSearch from '../page-search';
 
 export const metadata = {
   title: '용어 사전',
@@ -113,6 +114,7 @@ export default function TermsPage() {
             정확한 정의와 근거 조문은 각 항목 아래에서 펼쳐 볼 수 있습니다.
           </p>
         </header>
+        <PageSearch item=".gloss-item" group=".gloss-group" placeholder="예: 통상임금, 수습, 4대보험" />
 
         <StickyToc items={groups.map((g) => ({ id: g.c, label: g.c, count: g.items.length }))} />
 

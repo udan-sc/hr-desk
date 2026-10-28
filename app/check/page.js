@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { wizards } from '../../lib/platform';
+import PageSearch from '../page-search';
 
 export const metadata = {
   title: '판정 도우미',
@@ -24,6 +25,7 @@ export default function CheckPage() {
             메신저로 그대로 공유할 수 있습니다. 여러 사정을 종합해야 하는 사안은 가능성으로 안내하고 최종 판단 주체를 함께 적었습니다.
           </p>
         </header>
+        <PageSearch item=".wz-tile" placeholder="예: 퇴직금, 해고, 육아휴직" />
         <div className="wz-grid">
           {list.map((w) => (
             <Link key={w.key} className="wz-tile" href={`/check/${w.key}`}>

@@ -3,6 +3,7 @@ import { updates, changes, autoChanges } from '../../lib/platform';
 import { SITE_URL } from '../../lib/site';
 import CopyButton from '../copy-button';
 import UpdateItem, { kDate } from './update-item';
+import PageSearch from '../page-search';
 
 export const metadata = {
   title: '이번 주 바뀐 것',
@@ -52,6 +53,7 @@ export default function UpdatesPage() {
             개정 여부는 국가법령정보센터 원문으로 매일 확인합니다.
           </p>
         </header>
+        <PageSearch item=".upd, .soon-list li" group=".upd-week, .upd-sec" placeholder="예: 근로기준법, 판례, 시행" />
 
         <div className="upd-layout">
           <div className="upd-col">

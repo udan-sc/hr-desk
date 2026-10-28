@@ -1125,3 +1125,19 @@ mark{background:var(--accent-soft);color:inherit;padding:0 1px;border-radius:2px
   .hero-chips,.hsec:has(.qgroups),.hsec:has(.home-co){display:none !important}
 }
 .qa-prov{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:8px 0 0;font-size:13px;color:var(--ink2)} .qa-prov b{color:var(--accent-ink)} .hc-off{margin-top:4px} .hc-ref{margin:0 0 14px;padding-top:0;border-top:0}
+
+/* ── 화면 안 검색(app/page-search.js) ── */
+[data-qhide]{display:none !important}
+.psearch{max-width:640px;margin:0 0 18px}
+.psearch .searchbar input{padding-right:44px}
+.psearch-cnt{min-height:1.4em;margin:8px 2px 0;font-size:13px;color:var(--ink2);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.psearch-cnt:empty{display:none}
+.psearch-cnt b{color:var(--accent-ink)}
+.psearch-of{color:var(--ink3)}
+.psearch-clear{font-size:12px;color:var(--accent-ink);text-decoration:underline}
+::highlight(page-search){background-color:#ffe28a;color:inherit}
+@media (prefers-color-scheme: dark){ ::highlight(page-search){background-color:#6b5310;color:#fff7dc} }
+@media (max-width:640px){ .psearch .kbd{display:none} }
+@media print { .psearch{display:none !important} }
+/* 소식 화면: 검색 중에는 출처·주제 기준 개수 대신 검색 결과 개수만 */
+main:has(.psearch-cnt:not(:empty)) .cases-cnt{display:none}

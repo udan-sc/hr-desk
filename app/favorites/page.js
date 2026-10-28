@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import { browseProvisions } from '../../lib/data';
 import { shortId } from '../../lib/lawlinks';
 import FavoritesClient from './favorites-client';
+import PageSearch from '../page-search';
 
 export const metadata = {
   title: '즐겨찾기',
@@ -30,6 +31,7 @@ export default function FavoritesPage() {
           <h1>즐겨찾기</h1>
           <p>노무법전에서 ☆를 누른 조문이 여기 모입니다. 링크를 복사해 팀에 보내면 같은 목록을 그대로 볼 수 있습니다.</p>
         </header>
+        <PageSearch item=".prov" group=".fav-group" placeholder="즐겨찾기한 조문에서 찾기" />
         {/* 주소의 ?k= 를 읽는 컴포넌트는 정적 내보내기에서 Suspense로 감싸야 빌드가 통과한다 */}
         <Suspense fallback={<p className="fav-loading" aria-busy="true">불러오는 중…</p>}>
           <FavoritesClient items={items} />

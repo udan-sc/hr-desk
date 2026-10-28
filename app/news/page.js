@@ -1,5 +1,6 @@
 import { news } from '../../lib/platform';
 import NewsList from './news-list';
+import PageSearch from '../page-search';
 
 export const metadata = {
   title: '인사노무 소식',
@@ -35,6 +36,7 @@ export default function NewsPage() {
             여러 매체가 받아쓴 기사는 하나로 묶었습니다. 기사 내용은 각 원문에서 확인하세요.
           </p>
         </header>
+        <PageSearch item=".news-ul li" group=".news-day" placeholder="기사 제목에서 찾기 — 예: 임금체불, 최저임금, 괴롭힘" />
         <NewsList items={news.items || []} updatedAt={news.updatedAt} topicLabels={TOPIC_LABELS} />
       </div>
     </main>

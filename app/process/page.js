@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { processes } from '../../lib/platform';
 import { BASE_DATE } from '../../lib/data';
+import PageSearch from '../page-search';
 
 export const metadata = {
   title: '상황별 업무 절차',
@@ -20,6 +21,7 @@ export default function ProcessIndexPage() {
             기준이며, 각 단계의 조문을 눌러 원문 요약을 확인할 수 있습니다.
           </p>
         </header>
+        <PageSearch item=".topic-card" placeholder="예: 퇴사, 징계, 산재" />
 
         {processes.length === 0 ? (
           <div className="empty">

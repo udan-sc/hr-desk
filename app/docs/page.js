@@ -4,6 +4,7 @@ import { BASE_DATE } from '../../lib/data';
 import { ScopeBadge } from '../scope-badges';
 import HeadcountBar from '../headcount-bar';
 import ScopeFilter from '../scope-filter';
+import PageSearch from '../page-search';
 
 export const metadata = {
   title: '규정·서식',
@@ -35,6 +36,7 @@ export default function DocsPage() {
             보존기간, 빠뜨렸을 때의 제재를 적어 두었으니 점검표로 쓰세요.
           </p>
         </header>
+        <PageSearch item=".doc" placeholder="예: 근로계약서, 임금명세서, 보존기간" />
 
         <HeadcountBar hint="인원을 넣으면 우리 회사가 갖춰야 할 서류만 가려 볼 수 있습니다." />
         <ScopeFilter items={sorted.map((d) => ({ id: d.name, threshold: d.thresholdMin }))} label="서류" />

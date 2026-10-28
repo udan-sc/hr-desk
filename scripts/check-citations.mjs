@@ -25,6 +25,15 @@ for (const file of ['calculators', 'processes', 'calendar', 'documents', 'glossa
   walk(read(`data/platform/${file}.json`));
 }
 
+/* 조문의 적용 규모 정합성: 5명 미만에도 적용되면 시작 인원 1, 아니면 5 이상의 정해진 문턱 */
+const TIERS = [1, 5, 10, 20, 30, 50, 100, 300, 500];
+for (const p of read('data/provisions.json').flatMap((a) => a.provisions)) {
+  total++;
+  if (!TIERS.includes(p.threshold)) dead.push(`provisions: ${p.law} ${p.article} 적용 인원 ${p.threshold}이 정해진 문턱이 아님`);
+  else if (p.appliesUnder5 ? p.threshold !== 1 : p.threshold < 5)
+    dead.push(`provisions: ${p.law} ${p.article} 5명 미만 적용(${p.appliesUnder5})과 적용 인원(${p.threshold})이 어긋남`);
+}
+
 /* 실무 Q&A·판정 도우미의 판례·행정해석·용어·계산기 인용과 판정 흐름 연결 */
 const caseNos = new Set(read('data/platform/precedents.json').map((p) => p.caseNo));
 const interpKeys = new Set(

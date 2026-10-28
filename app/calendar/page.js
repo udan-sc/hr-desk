@@ -6,6 +6,7 @@ import YearStrip from './year-strip';
 import { ScopeBadge } from '../scope-badges';
 import HeadcountBar from '../headcount-bar';
 import ScopeFilter from '../scope-filter';
+import PageSearch from '../page-search';
 
 export const metadata = {
   title: '법정 의무 캘린더',
@@ -50,6 +51,7 @@ export default function CalendarPage() {
             매달 반복하는 것과 사건이 생길 때 하는 것은 따로 세워 두었습니다.
           </p>
         </header>
+        <PageSearch item=".ob, .cal-month li" group=".cal-month, .cal-sec" placeholder="예: 건강진단, 성희롱 예방교육, 신고" />
 
         <HeadcountBar hint="인원을 넣으면 우리 회사가 챙겨야 할 의무만 가려 볼 수 있습니다." />
         <ScopeFilter
@@ -68,7 +70,7 @@ export default function CalendarPage() {
         />
 
         {monthly.length > 0 && (
-          <section style={{ marginBottom: 26 }}>
+          <section className="cal-sec" style={{ marginBottom: 26 }}>
             <div className="sec-head">
               <h2>매달 반복</h2>
               <span className="note">달을 가리지 않고 매월 해야 하는 일</span>
@@ -116,7 +118,7 @@ export default function CalendarPage() {
         </div>
 
         {anytime.length > 0 && (
-          <section style={{ marginTop: 40 }}>
+          <section className="cal-sec" style={{ marginTop: 40 }}>
             <div className="sec-head">
               <h2>사건이 생기면 바로</h2>
               <span className="note">시기가 아니라 사유가 정해진 의무 {anytime.length}건</span>
@@ -136,7 +138,7 @@ export default function CalendarPage() {
           </section>
         )}
 
-        <section style={{ marginTop: 40 }}>
+        <section className="cal-sec" style={{ marginTop: 40 }}>
           <div className="sec-head">
             <h2>시기가 정해진 의무 상세</h2>
             <span className="note">달력에서 고른 항목의 자세한 내용</span>

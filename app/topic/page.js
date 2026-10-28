@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { categories, stats, BASE_DATE } from '../../lib/data';
+import PageSearch from '../page-search';
 
 export const metadata = {
   title: '분야별로 찾기',
@@ -20,6 +21,7 @@ export default function TopicIndexPage() {
             보세요.
           </p>
         </header>
+        <PageSearch item=".topic-card" placeholder="예: 임금, 해고, 모성보호" />
 
         <div className="topic-grid">
           {categories.map((c) => (
