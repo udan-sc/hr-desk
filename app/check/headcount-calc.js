@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import CopyButton from '../copy-button';
+import { useHeadcount } from '../headcount-context';
 import { SITE_URL } from '../../lib/site';
 
 /* 근로기준법 시행령 제7조의2(상시 사용하는 근로자 수의 산정 방법)를 그대로 옮긴 계산.
@@ -60,6 +61,7 @@ export default function HeadcountCalc({ mode = null }) {
   const [days, setDays] = useState('');
   const [persons, setPersons] = useState('');
   const [under, setUnder] = useState('');
+  const { headcount, setHeadcount, ready } = useHeadcount();
 
   /* 공유 주소(?p=general&d=22&n=110&u=3)로 들어오면 값을 채운다 */
   useEffect(() => {
@@ -98,6 +100,33 @@ export default function HeadcountCalc({ mode = null }) {
   const partialAvg = d > 0 && n >= 0 ? avgOf(n, d) : null;
   const r = res && !res.error ? res : null;
   const avgText = r ? avgOf(n, d) : '';
+  /* 사이트 전체의 '우리 회사 인원'으로 저장할 값. 저장값 하나로 5명·10명 문턱을 모두 판정하므로, 두 경계의 결론이
+     다 정해질 때만 저장한다(시행령 제7조의2 제2항은 기준마다 '그 기준에 못 미친 날 수'로 따로 판정한다).
+     - 10명 이상이면 5명 이상, 5명 미만이면 10명 미만 — 한쪽 결론으로 다른 쪽이 정해진다
+     - 나머지는 '그 결론과 맞는 날짜별 인원 분포가 있을 수 있는가'로 정한다. 예: 5명 이상인 날(h일)이 있고 10명 이상인 날이
+       과반(절반+1일)이 되려면 연인원이 최소 5h + 5(절반+1)명 — 그보다 적으면 10명 미만으로 확정 */
+  const otherApplies = (() => {
+    if (!r) return null;
+    const f = Math.floor(d / 2);
+    const h = d - u; /* 이번 기준 이상이었던 날 */
+    if (p.base === 5) {
+      if (!r.applies) return false;
+      if (d === 1) return n >= 10;
+      return n < 5 * h + 5 * (f + 1) ? false : null;
+    }
+    if (r.applies) return true;
+    const canApply = n >= 5 * h + 5 * (f + 1); /* 5명 이상인 날이 과반일 수 있는가 */
+    const canNot = h >= 1 || n <= 4 * (d - f) + 9 * f; /* 5명 이상인 날이 절반 이하일 수 있는가 */
+    return !canApply ? false : !canNot ? true : null;
+  })();
+  const canSave = !!r && mode !== 'annual' && otherApplies !== null;
+  const saveVal = !canSave
+    ? 0
+    : r.applies && otherApplies
+      ? Math.max(10, Math.floor(r.avg)) /* 10명 이상 */
+      : r.applies || otherApplies
+        ? Math.min(9, Math.max(5, Math.floor(r.avg))) /* 5~9명 */
+        : Math.max(1, Math.min(4, Math.floor(r.avg))); /* 5명 미만 */
   const share = () => `${SITE_URL}/check/headcount/${window.location.search}`;
 
   return (
@@ -232,7 +261,26 @@ export default function HeadcountCalc({ mode = null }) {
                 className="sm"
               />
               <CopyButton getText={share} label="결과 링크 복사" className="sm" />
+              {canSave && (
+                <button type="button" className="copybtn sm" onClick={() => setHeadcount(saveVal)} disabled={ready && headcount === saveVal}>
+                  <span aria-hidden="true" className="ci">{ready && headcount === saveVal ? '✓' : '↧'}</span>
+                  {ready && headcount === saveVal ? `우리 회사 인원: 상시 ${saveVal}명으로 저장됨` : `이 결과를 우리 회사 인원(상시 ${saveVal}명)으로 저장`}
+                </button>
+              )}
             </div>
+            {canSave && ready && headcount === saveVal && (
+              <p className="calc-note">
+                노무법전·캘린더·문턱 지도·계산기가 이 인원 기준으로 표시됩니다. 바꾸려면 노무법전·캘린더·문턱 지도 화면의 '우리 회사 상시
+                근로자 수' 칸에서 고치세요.
+              </p>
+            )}
+            {r && mode !== 'annual' && !canSave && (
+              <p className="calc-note">
+                {p.base === 10
+                  ? "날짜별 인원에 따라 5명 경계(해고 제한·가산수당 등) 판정이 달라질 수 있어, 이 결과만으로는 우리 회사 인원을 저장하지 않습니다. 목적을 '근로기준법 적용 여부(5명)'로 바꿔 계산해 보거나, 노무법전·캘린더 화면의 '우리 회사 상시 근로자 수' 칸에서 직접 고르세요."
+                  : "날짜별 인원에 따라 10명 경계(취업규칙 작성·신고, 제93조) 판정이 달라질 수 있어, 이 결과만으로는 우리 회사 인원을 저장하지 않습니다. 목적을 '취업규칙 작성·신고 의무(10명)'로 바꿔 계산해 보거나, 노무법전·캘린더 화면의 '우리 회사 상시 근로자 수' 칸에서 직접 고르세요."}
+              </p>
+            )}
           </>
         )}
         <p className="calc-note">

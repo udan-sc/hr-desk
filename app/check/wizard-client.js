@@ -146,13 +146,20 @@ export default function WizardClient({ w, onResult }) {
                 </dd>
               </>
             )}
-            {result.calc && (
+            {(result.calc || result.tools?.length > 0) && (
               <>
                 <dt>다음 단계</dt>
                 <dd>
-                  <Link className="tag tag-calc" href={result.calc.href}>
-                    {result.calc.label}로 계산하기 →
-                  </Link>
+                  {result.calc && (
+                    <Link className="tag tag-calc" href={result.calc.href}>
+                      {result.calc.label}로 계산하기 →
+                    </Link>
+                  )}
+                  {result.tools?.map((t) => (
+                    <Link key={t.href} className="tag tag-calc" href={t.href}>
+                      {t.label} →
+                    </Link>
+                  ))}
                 </dd>
               </>
             )}

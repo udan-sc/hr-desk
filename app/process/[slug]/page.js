@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { processes, processBySlug, resolveCitations } from '../../../lib/platform';
 import { BASE_DATE } from '../../../lib/data';
+import ToolChips from '../../tool-chips';
 
 export function generateStaticParams() {
   return processes.map((p) => ({ slug: p.slug }));
@@ -54,7 +55,7 @@ export default async function ProcessPage({ params }) {
 
         <ol className="steps">
           {p.steps.map((s, i) => (
-            <li key={i}>
+            <li key={i} id={`step-${i + 1}`}>
               <div className="st">{s.title}</div>
               <p className="sd">{s.detail}</p>
               <div className="sf">
@@ -65,6 +66,7 @@ export default async function ProcessPage({ params }) {
                 )}
                 <Citations citations={s.citations} />
               </div>
+              <ToolChips tools={s.tools} />
             </li>
           ))}
         </ol>

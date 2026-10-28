@@ -4,6 +4,7 @@ import { wizards, wizardByKey, precedents, calculatorByKey } from '../../../lib/
 import { findProvision } from '../../../lib/data';
 import WizardClient from '../wizard-client';
 import HeadcountWizard from '../headcount-wizard';
+import { resolveTools } from '../../tool-chips';
 
 export function generateStaticParams() {
   return wizards.map((w) => ({ key: w.key }));
@@ -35,6 +36,8 @@ const resolveResult = (r) => ({
     })
     .filter(Boolean),
   calc: r.calc && calculatorByKey(r.calc) ? { label: calculatorByKey(r.calc).name, href: `/calc/${r.calc}` } : null,
+  /* 판정 뒤에 할 일 — 절차·서식·Q&A로 잇는다 */
+  tools: resolveTools(r.tools).filter((t) => !r.calc || t.href !== `/calc/${r.calc}`),
 });
 
 export default async function WizardPage({ params }) {

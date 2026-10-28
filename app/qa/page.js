@@ -1,6 +1,7 @@
 import { qa, QA_CATEGORIES, precedents, glossaryById, calculatorByKey, interpretationsFor } from '../../lib/platform';
 import { findProvision } from '../../lib/data';
 import QaClient from './qa-client';
+import { resolveTools } from '../tool-chips';
 
 export const metadata = {
   title: '실무 Q&A',
@@ -44,6 +45,10 @@ function resolve(q) {
       })
       .filter(Boolean),
     calc: q.calc && calculatorByKey(q.calc) ? { label: calculatorByKey(q.calc).name, href: `/calc/${q.calc}` } : null,
+    /* 이 답을 받고 바로 할 일 — 절차·판정·서식 화면으로 */
+    tools: resolveTools(q.tools).filter((t) => !q.calc || t.href !== `/calc/${q.calc}`),
+    /* 상시 5명 미만 사업장에도 같은 답인가 — same(같음)·partial(일부 다름)·none(해당 없음) */
+    under5: q.under5 || null,
   };
 }
 

@@ -10,6 +10,7 @@ import HeadcountBar from './headcount-bar';
 import RecentProvisions from './recent-provisions';
 import UpdatesMini from './updates/updates-mini';
 import { asset } from '../lib/site';
+import CardScale from './card-scale';
 
 export const metadata = {
   alternates: { canonical: '/' },
@@ -139,6 +140,7 @@ export default function HomePage() {
                 <span className="sub">{c.sub}</span>
                 <span className="ref">
                   {c.law} {c.article}
+                  <CardScale threshold={c.threshold} note={c.thresholdNote} />
                 </span>
               </Link>
             ))}

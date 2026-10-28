@@ -25,7 +25,20 @@
   "terms": [
    "contractual-hours"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "onboarding"
+   ],
+   "docs": [
+    "근로계약서(정규직)",
+    "기간제·단시간 근로계약서"
+   ]
+  }
  },
  {
   "id": "qa-002",
@@ -49,7 +62,19 @@
    }
   ],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "onboarding"
+   ],
+   "docs": [
+    "근로계약서(정규직)"
+   ]
+  }
  },
  {
   "id": "qa-003",
@@ -75,7 +100,17 @@
   "terms": [
    "rules-of-employment"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "docs": [
+    "근로계약서(정규직)",
+    "기간제·단시간 근로계약서"
+   ]
+  }
  },
  {
   "id": "qa-004",
@@ -105,7 +140,22 @@
   "terms": [
    "nonregular-types"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "partial",
+   "note": "상시 4명 이하 사업장은 기간제법상 명시 범위가 줄어 근로시간·휴게 항목은 휴게만, 휴일·휴가 항목은 휴일만 적으면 되고 단시간근로자의 근로일·근로일별 근로시간(제6호)도 빠지지만, 근로기준법 제17조의 임금·소정근로시간·휴일 명시의무는 그대로이고 같은 법 시행령 별표 2에 따라 알바 계약서에는 근로일과 근로일별 근로시간을 적어 두는 것이 안전합니다."
+  },
+  "tools": {
+   "process": [
+    "onboarding"
+   ],
+   "docs": [
+    "기간제·단시간 근로계약서"
+   ],
+   "qa": [
+    "qa-067"
+   ]
+  }
  },
  {
   "id": "qa-005",
@@ -127,7 +177,19 @@
   "precedents": [],
   "interpretations": [],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "partial",
+   "note": "채용절차법은 상시 30명 이상 사업장에만 적용되므로 이 과태료는 없고, 근로계약 때 명시된 근로조건이 실제와 다르면 근로기준법 제19조 가운데 손해배상 청구와 즉시 해제만 적용됩니다(노동위원회 신청 절차와 귀향 여비 규정은 미적용)."
+  },
+  "tools": {
+   "process": [
+    "onboarding"
+   ],
+   "docs": [
+    "근로계약서(정규직)"
+   ]
+  }
  },
  {
   "id": "qa-006",
@@ -149,7 +211,20 @@
   "precedents": [],
   "interpretations": [],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "partial",
+   "note": "채용절차법 제4조의3은 상시 30명 이상 사업장에 적용되지만, 30명 미만이라도 직무와 무관한 용모·키·체중 등 신체조건이나 미혼 조건을 채용 조건으로 내걸거나 요구하는 것은 성별과 관계없이 남녀고용평등법 제7조제2항으로 금지되며, 500만원 이하 벌금 대상입니다."
+  },
+  "tools": {
+   "process": [
+    "onboarding"
+   ],
+   "qa": [
+    "qa-007",
+    "qa-059"
+   ]
+  }
  },
  {
   "id": "qa-007",
@@ -167,7 +242,19 @@
   "precedents": [],
   "interpretations": [],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "partial",
+   "note": "채용절차법은 상시 30명 이상 사업장에 적용되어 보관기간·반환·고지 의무는 없지만, 처리 목적을 달성한 지원서류는 개인정보 보호법 제21조에 따라 지체 없이 파기해야 합니다."
+  },
+  "tools": {
+   "process": [
+    "onboarding"
+   ],
+   "docs": [
+    "채용서류 반환 고지문"
+   ]
+  }
  },
  {
   "id": "qa-008",
@@ -191,7 +278,22 @@
   "terms": [
    "probation"
   ],
-  "calc": "minimum-wage"
+  "calc": "minimum-wage",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "onboarding"
+   ],
+   "docs": [
+    "근로계약서(정규직)"
+   ],
+   "calendar": [
+    "최저임금 인상분 반영·주지 게시"
+   ]
+  }
  },
  {
   "id": "qa-009",
@@ -211,7 +313,19 @@
   ],
   "interpretations": [],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "offboarding"
+   ],
+   "docs": [
+    "근로계약서(정규직)"
+   ]
+  }
  },
  {
   "id": "qa-010",
@@ -232,7 +346,17 @@
   ],
   "interpretations": [],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "check": [
+    "worker-status",
+    "severance-eligible"
+   ]
+  }
  },
  {
   "id": "qa-011",
@@ -271,7 +395,22 @@
   "terms": [
    "severance-pension"
   ],
-  "calc": "severance-pay"
+  "calc": "severance-pay",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "offboarding"
+   ],
+   "check": [
+    "severance-eligible"
+   ],
+   "calendar": [
+    "금품청산(퇴직자 임금·퇴직급여 14일 내 지급)"
+   ]
+  }
  },
  {
   "id": "qa-012",
@@ -313,7 +452,22 @@
    "severance-pension",
    "continuous-service"
   ],
-  "calc": "severance-pay"
+  "calc": "severance-pay",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "offboarding"
+   ],
+   "check": [
+    "severance-eligible"
+   ],
+   "qa": [
+    "qa-064"
+   ]
+  }
  },
  {
   "id": "qa-013",
@@ -340,7 +494,22 @@
   "terms": [
    "severance-pension"
   ],
-  "calc": "severance-pay"
+  "calc": "severance-pay",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "check": [
+    "severance-eligible"
+   ],
+   "docs": [
+    "퇴직연금 규약(또는 퇴직금 규정)"
+   ],
+   "qa": [
+    "qa-014"
+   ]
+  }
  },
  {
   "id": "qa-014",
@@ -375,7 +544,19 @@
   "terms": [
    "severance-pension"
   ],
-  "calc": "severance-pay"
+  "calc": "severance-pay",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "docs": [
+    "퇴직연금 규약(또는 퇴직금 규정)"
+   ],
+   "qa": [
+    "qa-013"
+   ]
+  }
  },
  {
   "id": "qa-015",
@@ -417,7 +598,19 @@
   "terms": [
    "average-wage"
   ],
-  "calc": "severance-pay"
+  "calc": "severance-pay",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "offboarding"
+   ],
+   "qa": [
+    "qa-016"
+   ]
+  }
  },
  {
   "id": "qa-016",
@@ -444,7 +637,17 @@
   "terms": [
    "ordinary-wage"
   ],
-  "calc": "overtime-pay"
+  "calc": "overtime-pay",
+  "under5": {
+   "status": "partial",
+   "note": "통상임금 판단 기준은 같고 해고예고수당 계산에도 그대로 쓰이지만, 연장·야간·휴일근로 가산수당(제56조)과 연차수당은 상시 5명 이상 사업장에만 해당합니다."
+  },
+  "tools": {
+   "qa": [
+    "qa-015",
+    "qa-017"
+   ]
+  }
  },
  {
   "id": "qa-017",
@@ -464,7 +667,20 @@
   "terms": [
    "minimum-wage-scope"
   ],
-  "calc": "minimum-wage"
+  "calc": "minimum-wage",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "qa": [
+    "qa-008",
+    "qa-016"
+   ],
+   "calendar": [
+    "최저임금 인상분 반영·주지 게시"
+   ]
+  }
  },
  {
   "id": "qa-018",
@@ -495,7 +711,20 @@
    }
   ],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "docs": [
+    "임금명세서"
+   ],
+   "qa": [
+    "qa-086",
+    "qa-009"
+   ]
+  }
  },
  {
   "id": "qa-019",
@@ -532,7 +761,16 @@
   "terms": [
    "average-wage"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "none",
+   "note": "상시 4명 이하 사업장에는 제46조가 적용되지 않아 휴업수당을 줄 의무가 없습니다."
+  },
+  "tools": {
+   "check": [
+    "headcount"
+   ]
+  }
  },
  {
   "id": "qa-020",
@@ -563,7 +801,20 @@
   "terms": [
    "inclusive-wage"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "docs": [
+    "임금명세서",
+    "임금대장"
+   ],
+   "calendar": [
+    "임금명세서 교부"
+   ]
+  }
  },
  {
   "id": "qa-021",
@@ -571,7 +822,7 @@
   "question": "입사 1년이 안 된 신입사원도 연차가 생기나요?",
   "short": "네, 1개월 개근마다 1일씩 최대 11일 생깁니다",
   "answer": "네, 근로기준법 제60조 제2항에 따라 계속근로 1년 미만인 근로자에게도 1개월 개근할 때마다 1일의 유급휴가를 주어야 하며, 1년 미만 기간에는 최대 11일입니다. 이 휴가는 최초 1년의 근로가 끝날 때까지 쓰지 않으면 소멸하고(같은 조 제7항, 2027. 6. 10.부터는 제8항), 사용촉진을 하지 않았다면 남은 일수는 연차수당으로 정산합니다. 1년간 80% 이상 출근하고 2년차에도 재직하면 제1항의 15일이 따로 생기므로 두 연차를 구분해 관리해야 합니다.",
-  "caveat": "상시 5명 미만 사업장(5명 이상인지는 전년도 기준으로 판단)과 4주 평균 주 15시간 미만 근로자에게는 연차가 적용되지 않으며, 2027. 6. 10.부터는 대통령령으로 정하는 범위에서 근로자가 청구하면 연차를 시간 단위로 나눠 쓸 수 있게 됩니다.",
+  "caveat": "상시 5명 미만 사업장(1년 미만자의 월 개근 연차는 전년도가 아니라 직전 1개월 기준으로 판단, 시행령 제7조의2)과 4주 평균 주 15시간 미만 근로자에게는 연차가 적용되지 않으며, 2027. 6. 10.부터는 대통령령으로 정하는 범위에서 근로자가 청구하면 연차를 시간 단위로 나눠 쓸 수 있게 됩니다.",
   "provisions": [
    {
     "law": "근로기준법",
@@ -591,7 +842,20 @@
    "annual-leave",
    "headcount"
   ],
-  "calc": "annual-leave"
+  "calc": "annual-leave",
+  "under5": {
+   "status": "none",
+   "note": "상시 5명 미만 사업장에는 연차가 적용되지 않습니다."
+  },
+  "tools": {
+   "check": [
+    "headcount"
+   ],
+   "docs": [
+    "연차휴가 관리대장",
+    "연차휴가 사용촉진 통보서(1차·2차)"
+   ]
+  }
  },
  {
   "id": "qa-022",
@@ -620,7 +884,19 @@
   "terms": [
    "annual-leave"
   ],
-  "calc": "annual-leave"
+  "calc": "annual-leave",
+  "under5": {
+   "status": "none",
+   "note": "상시 5명 미만 사업장에는 연차 자체가 적용되지 않습니다."
+  },
+  "tools": {
+   "process": [
+    "offboarding"
+   ],
+   "docs": [
+    "연차휴가 관리대장"
+   ]
+  }
  },
  {
   "id": "qa-023",
@@ -657,7 +933,23 @@
   "terms": [
    "leave-promotion"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "none",
+   "note": "상시 5명 미만 사업장은 연차휴가 자체가 적용되지 않습니다."
+  },
+  "tools": {
+   "calc": [
+    "annual-leave"
+   ],
+   "docs": [
+    "연차휴가 사용촉진 통보서(1차·2차)",
+    "연차휴가 관리대장"
+   ],
+   "calendar": [
+    "연차 사용촉진 1차·2차 서면 통보"
+   ]
+  }
  },
  {
   "id": "qa-024",
@@ -695,7 +987,22 @@
    "public-holidays",
    "worker-rep"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "none",
+   "note": "연차 대체(제62조)와 공휴일 유급휴일(제55조 제2항)은 상시 5명 이상 사업장에만 적용됩니다."
+  },
+  "tools": {
+   "check": [
+    "headcount"
+   ],
+   "docs": [
+    "근로자대표 서면합의서(탄력·선택근로, 보상휴가, 연차대체 등)"
+   ],
+   "qa": [
+    "qa-025"
+   ]
+  }
  },
  {
   "id": "qa-025",
@@ -722,7 +1029,19 @@
    "public-holidays",
    "headcount"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "partial",
+   "note": "공휴일 유급휴일(제55조 제2항)은 적용되지 않지만, 주 1회 유급 주휴일(같은 조 제1항)과 근로자의 날(노동절, 5월 1일)은 5명 미만 사업장에도 적용됩니다."
+  },
+  "tools": {
+   "check": [
+    "headcount"
+   ],
+   "qa": [
+    "qa-024"
+   ]
+  }
  },
  {
   "id": "qa-026",
@@ -754,7 +1073,20 @@
   "terms": [
    "rest-day-leave-break"
   ],
-  "calc": "overtime-pay"
+  "calc": "overtime-pay",
+  "under5": {
+   "status": "none",
+   "note": "상시 5명 미만 사업장은 제56조가 적용되지 않아 가산 없이 실제 일한 시간분 임금만 지급하면 됩니다."
+  },
+  "tools": {
+   "check": [
+    "headcount"
+   ],
+   "docs": [
+    "근로자대표 서면합의서(탄력·선택근로, 보상휴가, 연차대체 등)",
+    "출퇴근·근로시간 기록(근태대장)"
+   ]
+  }
  },
  {
   "id": "qa-027",
@@ -787,7 +1119,19 @@
    "weekly-holiday-pay",
    "contractual-hours"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "offboarding"
+   ],
+   "qa": [
+    "qa-064"
+   ]
+  }
  },
  {
   "id": "qa-028",
@@ -833,7 +1177,19 @@
   "terms": [
    "statutory-hours"
   ],
-  "calc": "overtime-pay"
+  "calc": "overtime-pay",
+  "under5": {
+   "status": "partial",
+   "note": "상시 5명 미만 사업장은 1일 8시간·1주 40시간 상한, 주 12시간 연장 한도, 제56조 가산수당이 적용되지 않지만, 18세 미만 연소자와 임신 중·산후 1년 미만 여성의 근로시간 제한은 5명 미만 사업장에도 적용됩니다(제69조·제71조·제74조 제5항)."
+  },
+  "tools": {
+   "check": [
+    "headcount"
+   ],
+   "docs": [
+    "출퇴근·근로시간 기록(근태대장)"
+   ]
+  }
  },
  {
   "id": "qa-029",
@@ -871,7 +1227,19 @@
   "terms": [
    "rest-day-leave-break"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "calc": [
+    "overtime-pay"
+   ],
+   "docs": [
+    "출퇴근·근로시간 기록(근태대장)"
+   ]
+  }
  },
  {
   "id": "qa-030",
@@ -910,7 +1278,16 @@
    }
   ],
   "terms": [],
-  "calc": "overtime-pay"
+  "calc": "overtime-pay",
+  "under5": {
+   "status": "partial",
+   "note": "상시 5명 미만 사업장은 제56조 가산이 적용되지 않아 실제 일한 시간분 임금만 주면 되고 연차휴가(제60조)도 적용되지 않습니다."
+  },
+  "tools": {
+   "docs": [
+    "출퇴근·근로시간 기록(근태대장)"
+   ]
+  }
  },
  {
   "id": "qa-031",
@@ -948,7 +1325,20 @@
    "dismissal-notice-term",
    "parental-leave"
   ],
-  "calc": "dismissal-notice"
+  "calc": "dismissal-notice",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "discipline"
+   ],
+   "check": [
+    "dismissal-notice",
+    "headcount"
+   ]
+  }
  },
  {
   "id": "qa-032",
@@ -984,7 +1374,22 @@
    }
   ],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "none",
+   "note": "상시 5명 미만 사업장에는 제27조가 적용되지 않아 구두 해고도 효력이 있지만, 30일 전 해고예고(제26조)는 규모와 관계없이 적용됩니다."
+  },
+  "tools": {
+   "process": [
+    "discipline"
+   ],
+   "check": [
+    "dismissal-notice"
+   ],
+   "docs": [
+    "해고 서면통지서"
+   ]
+  }
  },
  {
   "id": "qa-033",
@@ -1023,7 +1428,22 @@
    "probation",
    "dismissal-notice-term"
   ],
-  "calc": "dismissal-notice"
+  "calc": "dismissal-notice",
+  "under5": {
+   "status": "partial",
+   "note": "상시 5명 미만 사업장에는 정당한 이유와 서면통지 의무가 적용되지 않지만 해고예고는 규모와 관계없이 적용됩니다."
+  },
+  "tools": {
+   "process": [
+    "discipline"
+   ],
+   "check": [
+    "dismissal-notice"
+   ],
+   "docs": [
+    "해고 서면통지서"
+   ]
+  }
  },
  {
   "id": "qa-034",
@@ -1065,7 +1485,20 @@
    "resignation-vs-dismissal",
    "parental-leave"
   ],
-  "calc": "dismissal-notice"
+  "calc": "dismissal-notice",
+  "under5": {
+   "status": "partial",
+   "note": "상시 5명 미만 사업장에는 제23조제1항의 정당한 이유와 해고 서면통지(제27조)가 적용되지 않지만, 해고로 인정되면 30일 전 해고예고 또는 30일분 이상의 통상임금(해고예고수당) 지급(제26조)은 규모와 관계없이 필요합니다."
+  },
+  "tools": {
+   "process": [
+    "offboarding",
+    "discipline"
+   ],
+   "check": [
+    "dismissal-notice"
+   ]
+  }
  },
  {
   "id": "qa-035",
@@ -1096,7 +1529,19 @@
   "terms": [
    "average-wage"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "partial",
+   "note": "상시 5명 미만 사업장에는 제95조가 적용되지 않지만, 법령·단체협약에 근거가 없는 임의 공제는 임금 전액지급 원칙(제43조) 위반입니다."
+  },
+  "tools": {
+   "process": [
+    "discipline"
+   ],
+   "docs": [
+    "취업규칙"
+   ]
+  }
  },
  {
   "id": "qa-036",
@@ -1134,7 +1579,18 @@
    "maternity-leave",
    "parental-leave"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "discipline",
+    "workplace-injury",
+    "parental"
+   ]
+  }
  },
  {
   "id": "qa-037",
@@ -1165,7 +1621,22 @@
   "terms": [
    "rules-of-employment"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "none",
+   "note": "상시 5명 미만 사업장에는 제23조제1항과 노동위원회 부당징계 구제신청(제28조)이 적용되지 않습니다."
+  },
+  "tools": {
+   "process": [
+    "discipline"
+   ],
+   "docs": [
+    "취업규칙"
+   ],
+   "qa": [
+    "qa-035"
+   ]
+  }
  },
  {
   "id": "qa-038",
@@ -1202,7 +1673,19 @@
   "terms": [
    "worker-rep"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "none",
+   "note": "상시 5명 미만 사업장에는 제24조와 우선 재고용 의무(제25조)가 적용되지 않습니다."
+  },
+  "tools": {
+   "process": [
+    "discipline"
+   ],
+   "docs": [
+    "해고 서면통지서"
+   ]
+  }
  },
  {
   "id": "qa-039",
@@ -1230,7 +1713,19 @@
   ],
   "interpretations": [],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "docs": [
+    "취업규칙"
+   ],
+   "calendar": [
+    "취업규칙 작성·변경 신고"
+   ]
+  }
  },
  {
   "id": "qa-040",
@@ -1264,7 +1759,19 @@
    "continuous-service",
    "severance-pension"
   ],
-  "calc": "severance-pay"
+  "calc": "severance-pay",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "check": [
+    "severance-eligible"
+   ],
+   "docs": [
+    "기간제·단시간 근로계약서"
+   ]
+  }
  },
  {
   "id": "qa-041",
@@ -1295,7 +1802,16 @@
    "maternity-leave",
    "ordinary-wage"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "parental"
+   ]
+  }
  },
  {
   "id": "qa-042",
@@ -1313,7 +1829,16 @@
   "precedents": [],
   "interpretations": [],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "parental"
+   ]
+  }
  },
  {
   "id": "qa-043",
@@ -1357,7 +1882,16 @@
   "terms": [
    "statutory-hours"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "parental"
+   ]
+  }
  },
  {
   "id": "qa-044",
@@ -1401,7 +1935,23 @@
    }
   ],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "partial",
+   "note": "휴가 중 해고 금지는 상시 5명 미만 사업장에도 적용되지만, 2년을 넘겨 사용하면 기간의 정함이 없는 근로자로 보는 기간제법 제4조는 상시 5명 미만 사업장에는 적용되지 않습니다(국가·지방자치단체 기관은 인원과 관계없이 적용)."
+  },
+  "tools": {
+   "process": [
+    "parental"
+   ],
+   "check": [
+    "dismissal-notice"
+   ],
+   "qa": [
+    "qa-063",
+    "qa-061"
+   ]
+  }
  },
  {
   "id": "qa-045",
@@ -1431,7 +1981,19 @@
   "terms": [
    "parental-leave"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "parental"
+   ],
+   "check": [
+    "parental"
+   ]
+  }
  },
  {
   "id": "qa-046",
@@ -1457,7 +2019,16 @@
   "terms": [
    "parental-leave"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "parental"
+   ]
+  }
  },
  {
   "id": "qa-047",
@@ -1477,7 +2048,19 @@
   "terms": [
    "parental-leave"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "parental"
+   ],
+   "check": [
+    "parental"
+   ]
+  }
  },
  {
   "id": "qa-048",
@@ -1499,7 +2082,16 @@
   "precedents": [],
   "interpretations": [],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "parental"
+   ]
+  }
  },
  {
   "id": "qa-049",
@@ -1532,7 +2124,16 @@
   "terms": [
    "average-wage"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "none",
+   "note": "상시 5명 미만 사업장에는 생리휴가(제73조)가 적용되지 않습니다."
+  },
+  "tools": {
+   "check": [
+    "headcount"
+   ]
+  }
  },
  {
   "id": "qa-050",
@@ -1554,7 +2155,11 @@
   "precedents": [],
   "interpretations": [],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  }
  },
  {
   "id": "qa-051",
@@ -1585,7 +2190,19 @@
   "terms": [
    "harassment"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "none",
+   "note": "상시 5명 미만 사업장에는 근로기준법 제76조의2(직장 내 괴롭힘 금지)가 적용되지 않습니다."
+  },
+  "tools": {
+   "process": [
+    "harassment"
+   ],
+   "docs": [
+    "직장 내 괴롭힘 예방·대응 규정"
+   ]
+  }
  },
  {
   "id": "qa-052",
@@ -1618,7 +2235,22 @@
    "harassment",
    "headcount"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "partial",
+   "note": "근로기준법 제76조의2(괴롭힘 금지)와 제76조의3(발생 시 조치)은 상시 5명 이상 사업장에만 적용되지만, 사용자의 폭행 금지(근로기준법 제8조)와 성희롱 금지·조치 의무(남녀고용평등법 제12조~제14조)는 규모와 상관없이 적용됩니다."
+  },
+  "tools": {
+   "process": [
+    "harassment"
+   ],
+   "check": [
+    "headcount"
+   ],
+   "docs": [
+    "직장 내 괴롭힘 예방·대응 규정"
+   ]
+  }
  },
  {
   "id": "qa-053",
@@ -1644,7 +2276,22 @@
   "terms": [
    "harassment"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "none",
+   "note": "상시 5명 미만 사업장에는 근로기준법 제76조의3(괴롭힘 발생 시 조치)이 적용되지 않습니다."
+  },
+  "tools": {
+   "process": [
+    "harassment"
+   ],
+   "docs": [
+    "직장 내 괴롭힘 예방·대응 규정"
+   ],
+   "qa": [
+    "qa-054"
+   ]
+  }
  },
  {
   "id": "qa-054",
@@ -1674,7 +2321,19 @@
   "terms": [
    "harassment"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "partial",
+   "note": "괴롭힘 조항은 상시 5명 미만 사업장에 적용되지 않지만, 성희롱 사건은 같은 구조인 남녀고용평등법 제14조 제3항·제4항이 사업장 규모와 상관없이 적용됩니다."
+  },
+  "tools": {
+   "process": [
+    "harassment"
+   ],
+   "qa": [
+    "qa-053"
+   ]
+  }
  },
  {
   "id": "qa-055",
@@ -1695,7 +2354,19 @@
   ],
   "interpretations": [],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "harassment"
+   ],
+   "calendar": [
+    "직장 내 성희롱 예방교육"
+   ]
+  }
  },
  {
   "id": "qa-056",
@@ -1720,7 +2391,16 @@
   ],
   "interpretations": [],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "harassment"
+   ]
+  }
  },
  {
   "id": "qa-057",
@@ -1749,7 +2429,19 @@
    }
   ],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "partial",
+   "note": "상시 10명 미만 사업장은 법정 교육 내용을 직원이 알 수 있도록 교육자료나 홍보물을 게시·배포하는 방법으로 교육을 대신할 수 있지만(시행령 제3조 제4항), 면제가 아니라 방법만 완화된 것이므로 매년 실시와 서류 보관 의무는 그대로입니다."
+  },
+  "tools": {
+   "docs": [
+    "성희롱 예방교육 일지"
+   ],
+   "calendar": [
+    "직장 내 성희롱 예방교육"
+   ]
+  }
  },
  {
   "id": "qa-058",
@@ -1775,7 +2467,16 @@
   "precedents": [],
   "interpretations": [],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "harassment"
+   ]
+  }
  },
  {
   "id": "qa-059",
@@ -1799,7 +2500,17 @@
    }
   ],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "qa": [
+    "qa-006",
+    "qa-005"
+   ]
+  }
  },
  {
   "id": "qa-060",
@@ -1833,7 +2544,19 @@
   "terms": [
    "rules-of-employment"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "docs": [
+    "취업규칙"
+   ],
+   "qa": [
+    "qa-066"
+   ]
+  }
  },
  {
   "id": "qa-061",
@@ -1867,7 +2590,23 @@
    "permanent-conversion",
    "headcount"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "none",
+   "note": "상시 4명 이하 사업장에는 2년 제한과 무기계약 간주가 적용되지 않습니다(국가·지방자치단체 기관은 인원과 관계없이 적용, 기간제법 제3조)."
+  },
+  "tools": {
+   "check": [
+    "dismissal-notice"
+   ],
+   "docs": [
+    "기간제·단시간 근로계약서"
+   ],
+   "qa": [
+    "qa-062",
+    "qa-063"
+   ]
+  }
  },
  {
   "id": "qa-062",
@@ -1897,7 +2636,20 @@
    "permanent-conversion",
    "continuous-service"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "none",
+   "note": "상시 4명 이하 사업장에는 2년 제한 자체가 적용되지 않습니다(국가·지방자치단체 기관은 인원과 관계없이 적용)."
+  },
+  "tools": {
+   "check": [
+    "dismissal-notice"
+   ],
+   "qa": [
+    "qa-061",
+    "qa-063"
+   ]
+  }
  },
  {
   "id": "qa-063",
@@ -1928,7 +2680,22 @@
   "terms": [
    "unfair-dismissal"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "partial",
+   "note": "부당해고 법리의 근거인 근로기준법 제23조 제1항은 상시 5명 이상 사업장에만 적용되지만, 감독기관에 신고했다는 이유로 갱신하지 않으면 4명 이하 사업장에도 적용되는 기간제법 제16조 제4호의 불리한 처우로 다투어질 수 있습니다."
+  },
+  "tools": {
+   "process": [
+    "offboarding"
+   ],
+   "check": [
+    "dismissal-notice"
+   ],
+   "qa": [
+    "qa-061"
+   ]
+  }
  },
  {
   "id": "qa-064",
@@ -1965,7 +2732,19 @@
    "weekly-holiday-pay",
    "contractual-hours"
   ],
-  "calc": "severance-pay"
+  "calc": "severance-pay",
+  "under5": {
+   "status": "partial",
+   "note": "상시 4명 이하 사업장은 원래 연차가 적용되지 않으므로 주휴·퇴직금 제외만 실익이 있습니다."
+  },
+  "tools": {
+   "check": [
+    "severance-eligible"
+   ],
+   "qa": [
+    "qa-012"
+   ]
+  }
  },
  {
   "id": "qa-065",
@@ -1999,7 +2778,19 @@
   "terms": [
    "contractual-hours"
   ],
-  "calc": "overtime-pay"
+  "calc": "overtime-pay",
+  "under5": {
+   "status": "partial",
+   "note": "상시 4명 이하 사업장에는 기간제법 제6조(동의, 주 12시간 한도, 50% 가산)가 적용되지 않지만, 근로기준법 시행령 별표 2에 따라 초과근로의 내용과 정도를 근로계약서나 취업규칙 등에 적고 근로자와 합의해야 하는 것은 같습니다."
+  },
+  "tools": {
+   "docs": [
+    "기간제·단시간 근로계약서"
+   ],
+   "qa": [
+    "qa-004"
+   ]
+  }
  },
  {
   "id": "qa-066",
@@ -2036,7 +2827,16 @@
   "terms": [
    "nonregular-types"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "none",
+   "note": "상시 4명 이하 사업장에는 기간제법의 차별금지·차별시정 규정이 적용되지 않습니다(국가·지방자치단체 기관은 인원과 관계없이 적용, 기간제법 제3조)."
+  },
+  "tools": {
+   "qa": [
+    "qa-060"
+   ]
+  }
  },
  {
   "id": "qa-067",
@@ -2071,7 +2871,22 @@
    }
   ],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "partial",
+   "note": "상시 4명 이하 사업장에도 적용되지만 ②는 휴게, ④는 휴일에 관한 사항으로 범위가 줄어들고, ⑥ 근로일·근로일별 근로시간은 기간제법상 명시의무에서 빠집니다."
+  },
+  "tools": {
+   "process": [
+    "onboarding"
+   ],
+   "docs": [
+    "기간제·단시간 근로계약서"
+   ],
+   "qa": [
+    "qa-004"
+   ]
+  }
  },
  {
   "id": "qa-068",
@@ -2104,7 +2919,17 @@
   "terms": [
    "nonregular-types"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "qa": [
+    "qa-069",
+    "qa-070"
+   ]
+  }
  },
  {
   "id": "qa-069",
@@ -2137,7 +2962,19 @@
   "terms": [
    "nonregular-types"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "check": [
+    "worker-status"
+   ],
+   "qa": [
+    "qa-068"
+   ]
+  }
  },
  {
   "id": "qa-070",
@@ -2176,7 +3013,16 @@
    "harassment",
    "headcount"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "qa": [
+    "qa-068"
+   ]
+  }
  },
  {
   "id": "qa-071",
@@ -2204,7 +3050,22 @@
   "terms": [
    "headcount"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "partial",
+   "note": "상시 근로자 5명 미만 사업장에는 중대재해처벌법의 중대산업재해 규정(제2장)이 적용되지 않지만, 산업안전보건법상 안전조치 의무(제38조)와 그 처벌, 위험성평가(제36조)는 그대로 적용됩니다."
+  },
+  "tools": {
+   "check": [
+    "headcount"
+   ],
+   "docs": [
+    "위험성평가 실시 결과(기록)"
+   ],
+   "calendar": [
+    "위험성평가(정기)"
+   ]
+  }
  },
  {
   "id": "qa-072",
@@ -2226,7 +3087,19 @@
   "terms": [
    "headcount"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "partial",
+   "note": "공장 인원이 5명 미만이어도 본사 등과 합쳐 5명 이상이면 중대재해처벌법이 적용되고, 합쳐도 5명 미만이면 중대산업재해 규정이 적용되지 않습니다."
+  },
+  "tools": {
+   "check": [
+    "headcount"
+   ],
+   "qa": [
+    "qa-071"
+   ]
+  }
  },
  {
   "id": "qa-073",
@@ -2248,7 +3121,19 @@
   "precedents": [],
   "interpretations": [],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "partial",
+   "note": "중처법의 중대산업재해 규정은 상시 5명 미만 사업장에는 적용되지 않지만, 산안법의 중대재해 보고 의무는 규모와 관계없이 적용됩니다."
+  },
+  "tools": {
+   "process": [
+    "workplace-injury"
+   ],
+   "calendar": [
+    "산업재해 발생 보고(산업재해조사표)"
+   ]
+  }
  },
  {
   "id": "qa-074",
@@ -2277,7 +3162,19 @@
    }
   ],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "workplace-injury"
+   ],
+   "calendar": [
+    "산업재해 발생 보고(산업재해조사표)"
+   ]
+  }
  },
  {
   "id": "qa-075",
@@ -2306,7 +3203,19 @@
    }
   ],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "workplace-injury"
+   ],
+   "calendar": [
+    "산업재해 발생 보고(산업재해조사표)"
+   ]
+  }
  },
  {
   "id": "qa-076",
@@ -2330,7 +3239,19 @@
    }
   ],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "partial",
+   "note": "상시 5명 미만 사업장(별표1 제6호)은 정기·채용 시·작업내용 변경 시 교육이 제외되고, 근로자 교육 가운데 유해·위험작업 특별교육(제29조제3항)만 그대로 적용됩니다."
+  },
+  "tools": {
+   "docs": [
+    "안전보건교육 일지(정기·채용 시 교육)"
+   ],
+   "calendar": [
+    "근로자 정기 안전보건교육"
+   ]
+  }
  },
  {
   "id": "qa-077",
@@ -2356,7 +3277,19 @@
   "terms": [
    "worker-rep"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "docs": [
+    "위험성평가 실시 결과(기록)"
+   ],
+   "calendar": [
+    "위험성평가(정기)"
+   ]
+  }
  },
  {
   "id": "qa-078",
@@ -2385,7 +3318,16 @@
    }
   ],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "calendar": [
+    "일반건강진단"
+   ]
+  }
  },
  {
   "id": "qa-079",
@@ -2417,7 +3359,17 @@
   "terms": [
    "unfair-dismissal"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "workplace-injury",
+    "discipline"
+   ]
+  }
  },
  {
   "id": "qa-080",
@@ -2447,7 +3399,16 @@
   "terms": [
    "headcount"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "none",
+   "note": "시행령 별표1에 따라 상시 5명 미만 사업장에는 이 선임 규정(법 제2장제1절)이 적용되지 않습니다."
+  },
+  "tools": {
+   "check": [
+    "headcount"
+   ]
+  }
  },
  {
   "id": "qa-081",
@@ -2478,7 +3439,20 @@
   "terms": [
    "four-insurances"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "onboarding"
+   ],
+   "calendar": [
+    "고용보험 피보험자격 취득·상실 신고 및 이직확인서 발급",
+    "고용·산재보험 보수총액 신고"
+   ]
+  }
  },
  {
   "id": "qa-082",
@@ -2504,7 +3478,19 @@
   "terms": [
    "contractual-hours"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "onboarding"
+   ],
+   "calendar": [
+    "고용보험 피보험자격 취득·상실 신고 및 이직확인서 발급"
+   ]
+  }
  },
  {
   "id": "qa-083",
@@ -2537,7 +3523,20 @@
    }
   ],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "onboarding",
+    "offboarding"
+   ],
+   "calendar": [
+    "고용보험 피보험자격 취득·상실 신고 및 이직확인서 발급"
+   ]
+  }
  },
  {
   "id": "qa-084",
@@ -2570,7 +3569,19 @@
    }
   ],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "offboarding"
+   ],
+   "qa": [
+    "qa-085"
+   ]
+  }
  },
  {
   "id": "qa-085",
@@ -2605,7 +3616,22 @@
   "terms": [
    "resignation-vs-dismissal"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "offboarding"
+   ],
+   "qa": [
+    "qa-084"
+   ],
+   "calendar": [
+    "고용보험 피보험자격 취득·상실 신고 및 이직확인서 발급"
+   ]
+  }
  },
  {
   "id": "qa-086",
@@ -2633,7 +3659,19 @@
    }
   ],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "qa": [
+    "qa-018"
+   ],
+   "calendar": [
+    "고용·산재보험 보수총액 신고"
+   ]
+  }
  },
  {
   "id": "qa-087",
@@ -2663,7 +3701,19 @@
   "precedents": [],
   "interpretations": [],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "workplace-injury"
+   ],
+   "calendar": [
+    "산업재해 발생 보고(산업재해조사표)"
+   ]
+  }
  },
  {
   "id": "qa-088",
@@ -2684,13 +3734,22 @@
   ],
   "interpretations": [],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "workplace-injury"
+   ]
+  }
  },
  {
   "id": "qa-089",
   "category": "고용·산재보험",
   "question": "산재로 쉬는 직원에게 회사가 월급도 줘야 하나요?",
-  "short": "아니요, 공단이 평균임금 70%를 휴업급여로 줍니다.",
+  "short": "아니요, 공단이 평균임금 70%를 휴업급여로 줍니다(일하지 못한 기간이 3일 이내면 회사가 평균임금 60% 휴업보상).",
   "answer": "업무상 재해로 요양하느라 일하지 못한 기간에는 근로복지공단이 1일당 평균임금의 70%를 휴업급여로 지급합니다. 따라서 회사가 별도로 임금을 줄 의무는 없고, 그 기간도 근속기간에는 포함됩니다(산재보험법 제52조). 휴업급여 대상 기간에는 병원 치료뿐 아니라 집에서 요양하느라 일하지 못한 기간도 들어갑니다(대법원 88누2205). 다만 3일 이내의 요양으로 치유될 수 있는 부상·질병에는 산재보험 요양급여가 나오지 않고(산재보험법 제40조 제3항), 요양으로 취업하지 못한 기간이 3일 이내이면 휴업급여가 나오지 않습니다(제52조 단서). 이 경우에도 근로기준법상 재해보상 책임은 남으므로 회사가 요양보상과 평균임금 60%의 휴업보상을 부담합니다(근로기준법 제78조·제79조, 근로기준정책과-2464).",
   "caveat": "1일 휴업급여가 최저 보상기준 금액의 80% 이하인 저소득 근로자에게는 특례로 평균임금의 90%를 줍니다(최저 보상기준 80% 한도, 최저임금액 이상 보장). 61세 이후에는 연령에 따라 단계적으로 감액됩니다.",
   "provisions": [
@@ -2716,7 +3775,19 @@
   "terms": [
    "average-wage"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "workplace-injury"
+   ],
+   "qa": [
+    "qa-036"
+   ]
+  }
  },
  {
   "id": "qa-090",
@@ -2741,7 +3812,16 @@
   ],
   "interpretations": [],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "process": [
+    "workplace-injury"
+   ]
+  }
  },
  {
   "id": "qa-091",
@@ -2772,7 +3852,22 @@
    "rules-of-employment",
    "headcount"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "partial",
+   "note": "상시 4명 이하 사업장은 취업규칙에 관한 장 자체가 적용되지 않아, 임의로 만든 취업규칙에 미달하는 근로계약 부분을 무효로 하는 효력까지는 인정되기 어렵습니다."
+  },
+  "tools": {
+   "check": [
+    "headcount"
+   ],
+   "docs": [
+    "취업규칙"
+   ],
+   "calendar": [
+    "취업규칙 작성·변경 신고"
+   ]
+  }
  },
  {
   "id": "qa-092",
@@ -2800,7 +3895,22 @@
   "terms": [
    "rules-of-employment"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "none",
+   "note": "근로기준법 제94조는 상시 5명 이상 사업장에 적용됩니다."
+  },
+  "tools": {
+   "docs": [
+    "취업규칙"
+   ],
+   "qa": [
+    "qa-095"
+   ],
+   "calendar": [
+    "취업규칙 작성·변경 신고"
+   ]
+  }
  },
  {
   "id": "qa-093",
@@ -2824,7 +3934,19 @@
   "terms": [
    "rules-of-employment"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "none",
+   "note": "근로기준법 제94조는 상시 5명 이상 사업장에 적용됩니다."
+  },
+  "tools": {
+   "docs": [
+    "취업규칙"
+   ],
+   "qa": [
+    "qa-092"
+   ]
+  }
  },
  {
   "id": "qa-094",
@@ -2850,7 +3972,22 @@
   "terms": [
    "headcount"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "none",
+   "note": "상시 30명 미만 사업장은 노사협의회 설치 의무에서 제외됩니다."
+  },
+  "tools": {
+   "check": [
+    "headcount"
+   ],
+   "docs": [
+    "노사협의회 규정(+회의록)"
+   ],
+   "calendar": [
+    "노사협의회 정기회의 개최"
+   ]
+  }
  },
  {
   "id": "qa-095",
@@ -2887,7 +4024,20 @@
   "terms": [
    "rules-of-employment"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "none",
+   "note": "근로기준법 제94조는 상시 5명 이상, 노사협의회는 상시 30명 이상 사업장에 적용됩니다."
+  },
+  "tools": {
+   "docs": [
+    "노사협의회 규정(+회의록)",
+    "취업규칙"
+   ],
+   "qa": [
+    "qa-092"
+   ]
+  }
  },
  {
   "id": "qa-096",
@@ -2912,7 +4062,11 @@
   ],
   "interpretations": [],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  }
  },
  {
   "id": "qa-097",
@@ -2941,7 +4095,16 @@
   "terms": [
    "weekly-holiday-pay"
   ],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "qa": [
+    "qa-098"
+   ]
+  }
  },
  {
   "id": "qa-098",
@@ -2972,7 +4135,16 @@
    }
   ],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  },
+  "tools": {
+   "qa": [
+    "qa-097"
+   ]
+  }
  },
  {
   "id": "qa-099",
@@ -2997,7 +4169,11 @@
   ],
   "interpretations": [],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  }
  },
  {
   "id": "qa-100",
@@ -3030,6 +4206,10 @@
    }
   ],
   "terms": [],
-  "calc": ""
+  "calc": "",
+  "under5": {
+   "status": "same",
+   "note": ""
+  }
  }
 ]

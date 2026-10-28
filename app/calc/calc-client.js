@@ -3,6 +3,13 @@
 import { useEffect, useState } from 'react';
 import { annualLeave, severancePay, overtimePay, dismissalNotice, minimumWage, MIN_WAGE_2026 } from '../../lib/calc';
 import CopyButton from '../copy-button';
+import { useHeadcount } from '../headcount-context';
+
+/* 화면 위 인원 설정이 1~4명이면 그 값을 돌려준다(아니면 0) — 5명 미만 안내를 계산기에 붙일 때 쓴다 */
+function useSmallHeadcount() {
+  const { headcount, ready } = useHeadcount();
+  return ready && headcount > 0 && headcount < 5 ? headcount : 0;
+}
 
 const won = (n) => (typeof n === 'number' ? Math.round(n).toLocaleString('ko-KR') : n);
 const todayStr = () => {
@@ -139,6 +146,7 @@ function AnnualLeave({ basis }) {
   const [monthlyPerfect, setMP] = useState(true);
   const [firstYearPerfectMonths, setPM] = useState(11);
   const [lowMonths, setLM] = useState(0);
+  const small = useSmallHeadcount();
   useEffect(() => setBase(todayStr()), []);
   useQueryHydrate((get) => {
     if (get.date('hire')) setHire(get.date('hire'));
@@ -186,6 +194,12 @@ function AnnualLeave({ basis }) {
 
       <div className="panel calc-out" aria-live="polite">
         <h2>결과</h2>
+        {small > 0 && (
+          <p className="verdict warn" style={{ fontSize: 13 }}>
+            인원 설정 상시 {small}명: 법정 연차 의무가 없습니다(근로기준법 제60조는 상시 5명 이상 적용). 근로계약서·취업규칙으로 연차를
+            주기로 정한 경우에만 참고하세요.
+          </p>
+        )}
         {!r ? (
           <p style={{ color: 'var(--ink3)', fontSize: 13.5 }}>입사일을 입력하면 바로 계산됩니다.</p>
         ) : r.error ? (
@@ -225,6 +239,7 @@ function Severance({ basis }) {
   const [annualLeavePay, setALP] = useState(0);
   const [dailyOrdinary, setDO] = useState(0);
   const [under15h, setU15] = useState(false);
+  const small = useSmallHeadcount();
 
   useQueryHydrate((get) => {
     if (get.date('hire')) setHire(get.date('hire'));
@@ -280,6 +295,14 @@ function Severance({ basis }) {
             <Row k="산정기간 임금총액 (상여·연차수당 3/12 가산)" v={`${won(r.W)}원`} />
             <Row k="1일 평균임금" v={`${won(r.avgDaily)}원`} />
             <Row k="적용 임금" v={`${won(r.appliedDaily)}원${r.usedOrdinary ? ' (통상임금 적용)' : ''}`} />
+            {/* 상시 4명 이하 사업장의 2012년 이전 근속분 — 판정 도우미 '퇴직금을 줘야 하나요?'의 같은 결과 문장 */}
+            {small > 0 && hireDate < '2013-01-01' && (
+              <p className="verdict warn" style={{ fontSize: 13 }}>
+                인원 설정 상시 {small}명: 이 계산은 전체 기간을 100%로 계산했습니다. 상시 4명 이하였던 기간이라면 2010. 11. 30.까지의
+                기간은 빼고 2010. 12. 1.~2012. 12. 31. 근속분은 50%, 그 뒤 근속분은 100%로 따로 계산해 더하세요(5명 이상이던 기간은
+                100%).
+              </p>
+            )}
             <p className="calc-note">
               평균임금이 통상임금보다 적으면 통상임금으로 계산해야 하므로, 결근·무급휴직이 있었다면 1일 통상임금을
               함께 입력해 비교하세요. 산정기간 3개월 안에 출산전후휴가·육아휴직·산재 요양 기간이 끼어 있으면 그
@@ -303,6 +326,14 @@ function Overtime({ basis }) {
   const [holidayHours, setHH] = useState(0);
   const [holidayOverHours, setHO] = useState(0);
   const [under5, setU5] = useState(false);
+  /* 화면 위 인원 설정을 기본값으로 쓴다 — 공유 주소에 u5가 있으면 그 값을 따른다 */
+  const { headcount, ready } = useHeadcount();
+  const [fromSetting, setFrom] = useState(false);
+  useEffect(() => {
+    if (!ready || headcount <= 0 || new URLSearchParams(window.location.search).has('u5')) return;
+    setU5(headcount < 5);
+    setFrom(true);
+  }, [ready, headcount]);
 
   useQueryHydrate((get) => {
     if (get.num('mo') !== null) setMO(get.num('mo'));
@@ -337,7 +368,15 @@ function Overtime({ basis }) {
         <Num label="야간근로시간 (22시~06시)" hint="연장·휴일과 겹치는 시간도 그대로 — 야간 가산 50%만 별도로 얹힘" value={nightHours} onChange={setNH} step={0.5} />
         <Num label="휴일근로시간 (8시간 이내)" value={holidayHours} onChange={setHH} step={0.5} />
         <Num label="휴일근로시간 (8시간 초과분)" value={holidayOverHours} onChange={setHO} step={0.5} />
-        <Check label="상시 5인 미만 사업장" hint="제56조 미적용, 가산 없음" value={under5} onChange={setU5} />
+        <Check
+          label="상시 5인 미만 사업장"
+          hint={fromSetting ? `제56조 미적용, 가산 없음 · 인원 설정(상시 ${headcount}명)에서 가져옴` : '제56조 미적용, 가산 없음'}
+          value={under5}
+          onChange={(v) => {
+            setU5(v);
+            setFrom(false);
+          }}
+        />
       </form>
 
       <div className="panel calc-out" aria-live="polite">

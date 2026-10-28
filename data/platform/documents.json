@@ -26,7 +26,16 @@
    }
   ],
   "thresholdMin": 30,
-  "thresholdFull": 30
+  "thresholdFull": 30,
+  "tools": {
+   "process": [
+    "onboarding"
+   ],
+   "qa": [
+    "qa-007",
+    "qa-006"
+   ]
+  }
  },
  {
   "name": "근로계약서(정규직)",
@@ -62,7 +71,20 @@
    }
   ],
   "thresholdMin": 1,
-  "thresholdFull": 1
+  "thresholdFull": 1,
+  "tools": {
+   "process": [
+    "onboarding"
+   ],
+   "qa": [
+    "qa-001",
+    "qa-002",
+    "qa-003"
+   ],
+   "calendar": [
+    "근로자명부·임금대장 등 서류 작성·3년 보존"
+   ]
+  }
  },
  {
   "name": "기간제·단시간 근로계약서",
@@ -113,7 +135,17 @@
    }
   ],
   "thresholdMin": 1,
-  "thresholdFull": 1
+  "thresholdFull": 1,
+  "tools": {
+   "process": [
+    "onboarding"
+   ],
+   "qa": [
+    "qa-067",
+    "qa-004",
+    "qa-061"
+   ]
+  }
  },
  {
   "name": "취업규칙",
@@ -158,7 +190,20 @@
    }
   ],
   "thresholdMin": 10,
-  "thresholdFull": 10
+  "thresholdFull": 10,
+  "tools": {
+   "check": [
+    "headcount"
+   ],
+   "qa": [
+    "qa-091",
+    "qa-092",
+    "qa-093"
+   ],
+   "calendar": [
+    "취업규칙 작성·변경 신고"
+   ]
+  }
  },
  {
   "name": "근로자명부",
@@ -192,7 +237,16 @@
    }
   ],
   "thresholdMin": 1,
-  "thresholdFull": 1
+  "thresholdFull": 1,
+  "tools": {
+   "process": [
+    "onboarding",
+    "offboarding"
+   ],
+   "calendar": [
+    "근로자명부·임금대장 등 서류 작성·3년 보존"
+   ]
+  }
  },
  {
   "name": "임금대장",
@@ -225,7 +279,17 @@
    }
   ],
   "thresholdMin": 1,
-  "thresholdFull": 1
+  "thresholdFull": 1,
+  "tools": {
+   "process": [
+    "onboarding"
+   ],
+   "calendar": [
+    "임금명세서 교부",
+    "근로자명부·임금대장 등 서류 작성·3년 보존",
+    "고용·산재보험 보수총액 신고"
+   ]
+  }
  },
  {
   "name": "임금명세서",
@@ -258,7 +322,19 @@
    }
   ],
   "thresholdMin": 1,
-  "thresholdFull": 1
+  "thresholdFull": 1,
+  "tools": {
+   "process": [
+    "onboarding",
+    "offboarding"
+   ],
+   "qa": [
+    "qa-020"
+   ],
+   "calendar": [
+    "임금명세서 교부"
+   ]
+  }
  },
  {
   "name": "출퇴근·근로시간 기록(근태대장)",
@@ -307,7 +383,17 @@
    }
   ],
   "thresholdMin": 1,
-  "thresholdFull": 5
+  "thresholdFull": 5,
+  "tools": {
+   "calc": [
+    "overtime-pay"
+   ],
+   "qa": [
+    "qa-028",
+    "qa-029",
+    "qa-030"
+   ]
+  }
  },
  {
   "name": "연차휴가 관리대장",
@@ -338,7 +424,22 @@
    }
   ],
   "thresholdMin": 5,
-  "thresholdFull": 5
+  "thresholdFull": 5,
+  "tools": {
+   "check": [
+    "headcount"
+   ],
+   "calc": [
+    "annual-leave"
+   ],
+   "qa": [
+    "qa-021",
+    "qa-022"
+   ],
+   "calendar": [
+    "연차 사용촉진 1차·2차 서면 통보"
+   ]
+  }
  },
  {
   "name": "연차휴가 사용촉진 통보서(1차·2차)",
@@ -370,7 +471,18 @@
    }
   ],
   "thresholdMin": 5,
-  "thresholdFull": 5
+  "thresholdFull": 5,
+  "tools": {
+   "calc": [
+    "annual-leave"
+   ],
+   "qa": [
+    "qa-023"
+   ],
+   "calendar": [
+    "연차 사용촉진 1차·2차 서면 통보"
+   ]
+  }
  },
  {
   "name": "근로자대표 서면합의서(탄력·선택근로, 보상휴가, 연차대체 등)",
@@ -429,7 +541,19 @@
    }
   ],
   "thresholdMin": 5,
-  "thresholdFull": 5
+  "thresholdFull": 5,
+  "tools": {
+   "check": [
+    "headcount"
+   ],
+   "calc": [
+    "overtime-pay"
+   ],
+   "qa": [
+    "qa-024",
+    "qa-026"
+   ]
+  }
  },
  {
   "name": "해고 서면통지서",
@@ -479,7 +603,23 @@
    }
   ],
   "thresholdMin": 1,
-  "thresholdFull": 5
+  "thresholdFull": 5,
+  "tools": {
+   "process": [
+    "discipline"
+   ],
+   "check": [
+    "dismissal-notice"
+   ],
+   "calc": [
+    "dismissal-notice"
+   ],
+   "qa": [
+    "qa-032",
+    "qa-033",
+    "qa-031"
+   ]
+  }
  },
  {
   "name": "노사협의회 규정(+회의록)",
@@ -519,7 +659,19 @@
    }
   ],
   "thresholdMin": 30,
-  "thresholdFull": 30
+  "thresholdFull": 30,
+  "tools": {
+   "check": [
+    "headcount"
+   ],
+   "qa": [
+    "qa-094",
+    "qa-095"
+   ],
+   "calendar": [
+    "노사협의회 정기회의 개최"
+   ]
+  }
  },
  {
   "name": "직장 내 괴롭힘 예방·대응 규정",
@@ -565,7 +717,17 @@
    }
   ],
   "thresholdMin": 5,
-  "thresholdFull": 10
+  "thresholdFull": 10,
+  "tools": {
+   "process": [
+    "harassment"
+   ],
+   "qa": [
+    "qa-053",
+    "qa-052",
+    "qa-054"
+   ]
+  }
  },
  {
   "name": "성희롱 예방교육 일지",
@@ -597,7 +759,18 @@
    }
   ],
   "thresholdMin": 1,
-  "thresholdFull": 10
+  "thresholdFull": 10,
+  "tools": {
+   "process": [
+    "harassment"
+   ],
+   "qa": [
+    "qa-057"
+   ],
+   "calendar": [
+    "직장 내 성희롱 예방교육"
+   ]
+  }
  },
  {
   "name": "직장 내 장애인 인식개선 교육 일지",
@@ -621,7 +794,12 @@
    }
   ],
   "thresholdMin": 1,
-  "thresholdFull": 50
+  "thresholdFull": 50,
+  "tools": {
+   "calendar": [
+    "직장 내 장애인 인식개선 교육"
+   ]
+  }
  },
  {
   "name": "안전보건교육 일지(정기·채용 시 교육)",
@@ -649,7 +827,18 @@
    }
   ],
   "thresholdMin": 5,
-  "thresholdFull": 5
+  "thresholdFull": 5,
+  "tools": {
+   "process": [
+    "onboarding"
+   ],
+   "qa": [
+    "qa-076"
+   ],
+   "calendar": [
+    "근로자 정기 안전보건교육"
+   ]
+  }
  },
  {
   "name": "안전보건관리규정",
@@ -686,7 +875,18 @@
    }
   ],
   "thresholdMin": 100,
-  "thresholdFull": 100
+  "thresholdFull": 100,
+  "tools": {
+   "check": [
+    "headcount"
+   ],
+   "qa": [
+    "qa-071"
+   ],
+   "calendar": [
+    "위험성평가(정기)"
+   ]
+  }
  },
  {
   "name": "위험성평가 실시 결과(기록)",
@@ -723,7 +923,19 @@
    }
   ],
   "thresholdMin": 1,
-  "thresholdFull": 1
+  "thresholdFull": 1,
+  "tools": {
+   "process": [
+    "workplace-injury"
+   ],
+   "qa": [
+    "qa-077",
+    "qa-071"
+   ],
+   "calendar": [
+    "위험성평가(정기)"
+   ]
+  }
  },
  {
   "name": "퇴직연금 규약(또는 퇴직금 규정)",
@@ -774,6 +986,23 @@
    }
   ],
   "thresholdMin": 1,
-  "thresholdFull": 1
+  "thresholdFull": 1,
+  "tools": {
+   "check": [
+    "severance-eligible"
+   ],
+   "calc": [
+    "severance-pay"
+   ],
+   "qa": [
+    "qa-014",
+    "qa-013",
+    "qa-011"
+   ],
+   "calendar": [
+    "DC형 퇴직연금 부담금 납입",
+    "퇴직연금 가입자 교육"
+   ]
+  }
  }
 ]

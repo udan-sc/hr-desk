@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import CopyButton from '../copy-button';
+import { useHeadcount } from '../headcount-context';
 import { SITE_URL } from '../../lib/site';
 
 const QUERY_MAX = 100;
@@ -21,6 +22,23 @@ function syncUrl({ q, c, prov }) {
   window.history.replaceState(null, '', `${window.location.pathname}${qs ? `?${qs}` : ''}`);
 }
 
+/* 상시 5명 미만 사업장에도 같은 답인가. 인원을 1~4명으로 넣어 두었으면 '우리 회사라면'으로 바꿔 강조한다 */
+const U5_LABEL = { same: '5명 미만도 같음', partial: '5명 미만은 일부 다름', none: '5명 미만은 해당 없음' };
+function Under5({ u }) {
+  const { headcount, ready } = useHeadcount();
+  if (!u || !U5_LABEL[u.status]) return null;
+  const small = ready && headcount > 0 && headcount < 5;
+  if (u.status === 'same' && !small) return null;
+  return (
+    <p className={`qa-u5 u5-${u.status}${small ? ' mine' : ''}`}>
+      <b>{small ? `우리 회사(상시 ${headcount}명)라면` : U5_LABEL[u.status]}</b>
+      {small && u.status === 'same' ? u.note || '같은 답입니다 — 5명 미만 사업장에도 이 답이 그대로 해당합니다.' : u.note}
+    </p>
+  );
+}
+
+const U5_COPY = { same: '5명 미만 사업장도 같음', partial: '5명 미만 사업장은 일부 다름', none: '5명 미만 사업장은 해당 없음' };
+
 function Item({ x, open }) {
   return (
     <details className="qa" id={x.id} open={open || undefined}>
@@ -33,6 +51,7 @@ function Item({ x, open }) {
       </summary>
       <div className="qa-body">
         <p className="qa-ans">{x.answer}</p>
+        <Under5 u={x.under5} />
         {x.caveat && (
           <p className="qa-cav">
             <b>주의</b>
@@ -85,6 +104,26 @@ function Item({ x, open }) {
               </dd>
             </>
           )}
+          {x.tools.length > 0 && (
+            <>
+              <dt>바로 하기</dt>
+              <dd>
+                {x.tools.map((t) =>
+                  /* 같은 화면의 다른 질문은 #만 바꾸는 보통 링크로 — 그래야 hashchange가 나서 그 질문이 펼쳐진다
+                     (next/link는 해시만 다른 이동에서 hashchange를 내지 않음) */
+                  t.href.startsWith('/qa#') ? (
+                    <a key={t.href} className="tag tag-calc" href={t.href.slice(3)}>
+                      {t.label} →
+                    </a>
+                  ) : (
+                    <Link key={t.href} className="tag tag-calc" href={t.href}>
+                      {t.label} →
+                    </Link>
+                  )
+                )}
+              </dd>
+            </>
+          )}
           {(x.terms.length > 0 || x.calc) && (
             <>
               <dt>함께 보기</dt>
@@ -106,7 +145,7 @@ function Item({ x, open }) {
         <div className="qa-foot">
           <CopyButton text={`${SITE_URL}/qa/#${x.id}`} label="이 질문 링크 복사" className="sm" />
           <CopyButton
-            text={[`Q. ${x.question}`, `A. ${x.short}`, x.answer, x.caveat ? `※ ${x.caveat}` : '', x.provisions.length ? `근거: ${x.provisions.map((p) => p.label).join(', ')}` : '']
+            text={[`Q. ${x.question}`, `A. ${x.short}`, x.answer, x.caveat ? `※ ${x.caveat}` : '', x.under5 && x.under5.status !== 'same' && x.under5.note ? `※ ${U5_COPY[x.under5.status]}: ${x.under5.note}` : '', x.provisions.length ? `근거: ${x.provisions.map((p) => p.label).join(', ')}` : '']
               .filter(Boolean)
               .join('\n')}
             label="답변 복사"

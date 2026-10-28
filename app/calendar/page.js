@@ -7,6 +7,7 @@ import { ScopeBadge } from '../scope-badges';
 import HeadcountBar from '../headcount-bar';
 import ScopeFilter from '../scope-filter';
 import PageSearch from '../page-search';
+import ToolChips from '../tool-chips';
 
 export const metadata = {
   title: '법정 의무 캘린더',
@@ -132,6 +133,7 @@ export default function CalendarPage() {
                   </div>
                   <p className="od">{o.detail}</p>
                   <Marks o={o} />
+                  <ToolChips tools={o.tools} />
                 </article>
               ))}
             </div>
@@ -152,6 +154,7 @@ export default function CalendarPage() {
                 </div>
                 <p className="od">{o.detail}</p>
                 <Marks o={o} />
+                <ToolChips tools={o.tools} />
               </article>
             ))}
           </div>

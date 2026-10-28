@@ -5,6 +5,7 @@ import { ScopeBadge } from '../scope-badges';
 import HeadcountBar from '../headcount-bar';
 import ScopeFilter from '../scope-filter';
 import PageSearch from '../page-search';
+import ToolChips from '../tool-chips';
 
 export const metadata = {
   title: '규정·서식',
@@ -92,6 +93,7 @@ export default function DocsPage() {
                 )}
               </dl>
               {d.tip && <p className="tip">{d.tip}</p>}
+              <ToolChips tools={d.tools} />
             </article>
           );
         })}

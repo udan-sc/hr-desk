@@ -10,6 +10,7 @@ import ChangeNotice from '../../../change-notice';
 import Precedents from '../../../precedents';
 import LawWatchNotice from '../../../law-watch-notice';
 import QaLinks from '../../../qa-links';
+import HrCheck from '../../../hr-check';
 import { interpretationsFor, changesForProvision, precedentsFor, qaFor } from '../../../../lib/platform';
 import { SITE_URL } from '../../../../lib/site';
 import { lawGoKrDisplayUrl } from '../../../../lib/lawlinks';
@@ -65,6 +66,9 @@ export default async function ProvisionPage({ params }) {
   const related = relatedProvisions(p);
   const interpretations = interpretationsFor(p.law, p.article);
   const relatedChanges = changesForProvision(p.law, p.article);
+  const blocks = splitProvisionText(p.text);
+  const clauses = blocks.filter((b) => b.kind === 'clause');
+  const notes = blocks.filter((b) => b.kind === 'note');
 
   /* 근거 복사 — 메일·보고서에 그대로 붙일 수 있는 인용문 */
   const citationText = [
@@ -116,12 +120,26 @@ export default async function ProvisionPage({ params }) {
           <RecentTracker law={p.law} article={p.article} title={p.title} />
           <TipDismiss />
 
+          <HrCheck law={p.law} article={p.article} />
+
+          {/* 조문 요약과 편집자 해설을 눈으로 구분한다 — 정확한 문구는 국가법령정보센터 원문 */}
           <div className="text">
-            {splitProvisionText(p.text).map((b, i) => (
-              <p key={i} className={b.kind}>
+            {clauses.length > 0 && <p className="text-cap">조문 내용 <span>원문 요약 · 정확한 문구는 아래 국가법령정보센터 원문</span></p>}
+            {clauses.map((b, i) => (
+              <p key={i} className="clause">
                 <TermLinks text={b.text} />
               </p>
             ))}
+            {notes.length > 0 && (
+              <div className="notes">
+                <p className="text-cap">실무 해설 <span>편집자 정리 · 원문이 아님</span></p>
+                {notes.map((b, i) => (
+                  <p key={i} className="note">
+                    <TermLinks text={b.text.replace(/^(※|▷|▶)\s*(실무 ?포인트\s*[:：]?|실무\s*[:：])?\s*/, '')} />
+                  </p>
+                ))}
+              </div>
+            )}
           </div>
 
           <dl className="kv">

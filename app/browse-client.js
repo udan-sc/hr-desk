@@ -6,6 +6,7 @@ import { useHeadcount } from './headcount-context';
 import HeadcountBar from './headcount-bar';
 import { applies, thresholdLabel } from '../lib/headcount';
 import { asset } from '../lib/site';
+import CardScale from './card-scale';
 
 const CHIP_WORDS = ['연차', '주휴수당', '퇴직금', '해고', '최저임금', '야근', '육아휴직', '괴롭힘', '실업급여', '계약직', '알바', '산재', '노란봉투법'];
 const FAV_KEY = 'nomu-favs';
@@ -402,7 +403,10 @@ export default function BrowseClient({ provisions, categories, laws, cards, base
                     <small>{c.u}</small>
                   </span>
                   <span className="sub">{c.sub}</span>
-                  <span className="ref">{c.law} {c.article}</span>
+                  <span className="ref">
+                    {c.law} {c.article}
+                    <CardScale threshold={c.threshold} note={c.thresholdNote} />
+                  </span>
                 </Link>
               ))}
             </div>

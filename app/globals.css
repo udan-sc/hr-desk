@@ -1141,3 +1141,65 @@ mark{background:var(--accent-soft);color:inherit;padding:0 1px;border-radius:2px
 @media print { .psearch{display:none !important} }
 /* 소식 화면: 검색 중에는 출처·주제 기준 개수 대신 검색 결과 개수만 */
 main:has(.psearch-cnt:not(:empty)) .cases-cnt{display:none}
+
+/* 조문 상세 — 인사담당자 체크: 이 조문 때문에 회사가 할 일 */
+.hrcheck{margin:22px 0 0;padding:18px 22px 16px;background:var(--good-soft);border:1px solid var(--border);border-left:3px solid var(--good);border-radius:12px}
+.hrcheck h2{font-family:var(--serif);font-size:16.5px;font-weight:700;margin:0 0 12px;color:var(--ink)}
+.hrcheck dl{display:grid;grid-template-columns:88px minmax(0,1fr);gap:10px 14px;margin:0;font-size:13.8px}
+.hrcheck dt{color:var(--good);font-weight:700;padding-top:1px}
+.hrcheck dd{margin:0}
+.hrcheck ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:5px}
+.hrcheck li{line-height:1.6}
+.hrcheck li a{color:var(--ink);font-weight:500;text-decoration:none;border-bottom:1px solid var(--border2)}
+.hrcheck li a:hover{color:var(--accent-ink);border-color:var(--accent)}
+.hrc-note{color:var(--ink2);font-size:12.8px}
+.hrc-tools{display:flex;flex-wrap:wrap;gap:6px}
+.hrc-foot{margin:12px 0 0;font-size:12px;color:var(--ink3)}
+@media (max-width:560px){ .hrcheck{padding:16px 16px 14px} .hrcheck dl{grid-template-columns:1fr;gap:4px} .hrcheck dd{margin-bottom:8px} }
+
+/* 조문 내용(원문 요약)과 실무 해설(편집자 정리)을 나눠 보인다 */
+.detail .text p.text-cap{text-indent:0;padding:0;margin:0 0 12px;font-size:12.5px;font-weight:700;color:var(--ink2);letter-spacing:.02em;line-height:1.5}
+.detail .text p.text-cap span{font-weight:400;color:var(--ink3);margin-left:6px}
+.detail .text .notes{margin-top:22px;padding-top:18px;border-top:1px dashed var(--border2)}
+.detail .text .notes .text-cap + p.note{margin-top:0}
+
+/* '바로 하기' 칩 — 절차·캘린더·서식 카드에서 다음 화면으로 */
+.toolchips{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:10px}
+.toolchips .tc-l{font-size:12px;font-weight:700;color:var(--ink3);margin-right:2px}
+@media print{ .toolchips,.hrc-tools,.hrc-tools-l,.hrc-only-tools{display:none !important} .hrcheck{background:none;border-left-width:1px} }
+
+/* Q&A — 5명 미만 사업장에도 같은 답인가 */
+.qa-u5{margin:10px 0 0;font-size:13px;line-height:1.7;color:var(--ink);background:var(--surface2);border-left:3px solid var(--border2);border-radius:0 8px 8px 0;padding:8px 12px;max-width:72ch}
+.qa-u5 b{font-size:12px;margin-right:8px;color:var(--ink2)}
+.qa-u5.u5-none b,.qa-u5.u5-partial b{color:var(--warn)}
+.qa-u5.mine{background:var(--accent-soft);border-left-color:var(--accent)}
+.qa-u5.mine b{color:var(--accent-ink)}
+.qa-u5.mine.u5-same{background:var(--good-soft);border-left-color:var(--good)}
+.qa-u5.mine.u5-same b{color:var(--good)}
+
+/* 기준 카드의 적용 규모 */
+.card .ref{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.card-scale{font-size:11px;font-weight:700;color:var(--good);background:var(--good-soft);border-radius:5px;padding:0 6px;line-height:1.7}
+.card-scale.s5{color:var(--warn);background:var(--warn-soft)}
+.card-scale.off{color:var(--accent-ink);background:var(--accent-soft)}
+
+/* 문턱 지도 — 1~4명 최소 체크리스트 */
+.small-check{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;scroll-margin-top:90px}
+.sc-col{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+.sc-col h3{margin:0 0 10px;font-size:14px;font-weight:700}
+.sc-must h3{color:var(--good)} .sc-not h3{color:var(--warn)}
+.sc-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.sc-list li{display:grid;grid-template-columns:16px minmax(0,1fr);gap:2px 8px;font-size:13.5px;line-height:1.55}
+.sc-mk{font-weight:900;color:var(--ink3)} .sc-must .sc-mk{color:var(--good)} .sc-not .sc-mk{color:var(--warn)}
+.sc-refs{grid-column:2;display:flex;flex-wrap:wrap;gap:4px}
+.sc-refs .tag{font-size:11px;padding:0 6px}
+.sc-note{margin:12px 0 0;font-size:12.5px;line-height:1.65;color:var(--ink2);background:var(--warn-soft);border-radius:8px;padding:8px 11px}
+.sc-foot{margin:12px 0 0;font-size:12.5px;line-height:1.65;color:var(--ink3)}
+.sc-foot a{color:var(--accent-ink)}
+.cond-mk{font-size:11.5px;color:var(--warn);font-weight:500}
+.tag.cond{border-style:dashed}
+@media (max-width:780px){ .small-check{grid-template-columns:1fr} }
+
+/* 조문 화면 실무 질문 — 5명 미만이면 답이 달라지는 질문 */
+.qal-u5{color:var(--warn);font-weight:700}
+.tier-when.clamp2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;flex:1 1 100%}

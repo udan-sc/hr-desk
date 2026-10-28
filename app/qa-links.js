@@ -1,5 +1,8 @@
 import Link from 'next/link';
 
+/* 5명 미만 사업장이면 답이 달라지는 질문만 표시한다 */
+const U5 = { none: '5명 미만은 해당 없음', partial: '5명 미만은 일부 다름' };
+
 /* 조문 상세의 '이 조문으로 답하는 실무 질문' — 실무 Q&A 중 이 조문을 근거로 든 질문 */
 export default function QaLinks({ items, law, article }) {
   if (!items?.length) return null;
@@ -12,7 +15,10 @@ export default function QaLinks({ items, law, article }) {
           <li key={q.id}>
             <Link href={`/qa#${q.id}`}>
               <span className="qal-q">Q. {q.question}</span>
-              <span className="qal-a">{q.short}</span>
+              <span className="qal-a">
+                {q.short}
+                {U5[q.under5?.status] && <span className="qal-u5"> · {U5[q.under5.status]}</span>}
+              </span>
             </Link>
           </li>
         ))}
