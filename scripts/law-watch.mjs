@@ -77,7 +77,15 @@ function splitArticles(text) {
   });
   return out;
 }
-const norm = (s) => s.replace(/\s+/g, '').replace(/[<>\[\]]/g, '');
+/* 비교용 정규화 — 국가법령정보센터는 같은 조문도 판(版)에 따라 가운뎃점(ㆍ↔·)·따옴표 글자나 띄어쓰기만 바꿔 싣는 일이 있어
+   (2026. 10. 27. 산업안전보건법 개정판에서 실제로 내용 그대로인 조문 14개가 '바뀜'으로 잡힘) 이런 표기 차이는 무시한다 */
+const norm = (s) =>
+  s
+    .replace(/\s+/g, '')
+    .replace(/[<>\[\]]/g, '')
+    .replace(/[ㆍ・·•‧∙]/g, '·')
+    .replace(/[“”″]/g, '"')
+    .replace(/[‘’′]/g, "'");
 
 /* 조문 원문 속 <개정 2020. 3. 31.> · [본조신설 …] · [전문개정 …] 표시에서 가장 최근 날짜 */
 function latestAmend(articleText) {
