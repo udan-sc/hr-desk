@@ -28,14 +28,18 @@ function Marks({ o }) {
   return (
     <div className="of">
       <ScopeBadge threshold={o.thresholdMin} full={o.thresholdFull} />
-      <span className="badge pen">대상: {o.target} · {o.threshold}</span>
+      <span className="badge note">대상: {o.target} · {o.threshold}</span>
       {o.penalty && <span className="badge pen">미이행 시 {o.penalty}</span>}
-      <span className="spacer" />
-      {cites.map((x) => (
-        <Link key={`${x.law}${x.article}`} className="tag" href={x.href}>
-          {x.law} {x.article}
-        </Link>
-      ))}
+      {/* 근거 조문은 한 덩어리로 오른쪽에 모은다 — 낱개로 두면 줄이 넘칠 때 오른쪽 위·왼쪽 아래로 흩어진다 */}
+      {cites.length > 0 && (
+        <span className="of-cites">
+          {cites.map((x) => (
+            <Link key={`${x.law}${x.article}`} className="tag" href={x.href}>
+              {x.law} {x.article}
+            </Link>
+          ))}
+        </span>
+      )}
     </div>
   );
 }
@@ -81,7 +85,8 @@ export default function CalendarPage() {
                 <a key={o.id} className="month-item" data-threshold={o.thresholdMin} href={`#${o.id}`}>
                   <span className="mt">{o.title}</span>
                   <span className="md">{o.timing} · {o.threshold}</span>
-                  <span className="mw">{o.penalty ? `미이행 시 ${o.penalty}` : o.cadence}</span>
+                  {/* 벌칙 문구는 호박색(.pen), 반복 주기만 있으면 회색 */}
+                  <span className={o.penalty ? 'mw pen' : 'mw'}>{o.penalty ? `미이행 시 ${o.penalty}` : o.cadence}</span>
                 </a>
               ))}
             </div>

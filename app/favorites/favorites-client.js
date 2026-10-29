@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import CopyButton from '../copy-button';
 import { ScopeBadge } from '../scope-badges';
+import Icon from '../nav-icons';
 
 const FAV_KEY = 'nomu-favs';
 
@@ -86,7 +87,7 @@ export default function FavoritesClient({ items }) {
       <p className="fav-sub">
         {shared ? (
           <>
-            <b>공유받은 조문 {list.length}개</b> — 동료가 보낸 목록입니다. 내 즐겨찾기에 담아 두면 노무법전에서도 별표로 표시됩니다.
+            <b>공유받은 조문 {list.length}개</b> — 동료가 보낸 목록입니다. 내 즐겨찾기에 담아 두면 노무법전에서도 책갈피가 채워져 표시됩니다.
           </>
         ) : (
           <>
@@ -100,7 +101,7 @@ export default function FavoritesClient({ items }) {
           <CopyButton getText={shareUrl} label="이 목록 공유 링크 복사" copiedLabel="링크 복사됨" />
           {shared && missing > 0 && (
             <button type="button" className="copybtn" onClick={addAll}>
-              <span className="ci" aria-hidden="true">★</span> 내 즐겨찾기에 {missing}개 추가
+              <Icon name="favorites" size={14} stroke={2} className="ci" /> 내 즐겨찾기에 {missing}개 추가
             </button>
           )}
           {shared && (
@@ -121,7 +122,7 @@ export default function FavoritesClient({ items }) {
               </>
             ) : (
               <>
-                <Link href="/law">노무법전</Link>에서 조문 오른쪽의 ☆를 누르면 여기에 모입니다.
+                <Link href="/law">노무법전</Link>에서 조문 오른쪽의 책갈피 단추를 누르면 여기에 모입니다.
               </>
             )}
           </p>
@@ -150,7 +151,7 @@ export default function FavoritesClient({ items }) {
                       aria-label={`${p.law} ${p.article} 즐겨찾기`}
                       onClick={() => toggle(p.key)}
                     >
-                      {favSet.has(p.key) ? '★' : '☆'}
+                      <Icon name="favorites" size={18} />
                     </button>
                   </div>
                   <div className="foot">

@@ -53,7 +53,7 @@ export default function UpdatesPage() {
             개정 여부는 국가법령정보센터 원문으로 매일 확인합니다.
           </p>
         </header>
-        <PageSearch item=".upd, .soon-list li" group=".upd-week, .upd-sec" placeholder="예: 근로기준법, 판례, 시행" />
+        <PageSearch item=".upd, .soon-list li" group=".upd-week, .upd-sec, .upd-side .tpanel" placeholder="예: 근로기준법, 판례, 시행" />
 
         <div className="upd-layout">
           <div className="upd-col">

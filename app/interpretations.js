@@ -1,5 +1,6 @@
 import { LAW_GO_KR_INTERPRETATION_SEARCH } from '../lib/platform';
 import CopyButton from './copy-button';
+import CardHead from './card-head';
 
 /* 회시 하나를 메일·보고서에 붙일 인용문으로 만든다 */
 function interpCitation(it, law, article) {
@@ -20,8 +21,8 @@ export default function Interpretations({ items, law, article }) {
   const searchUrl = LAW_GO_KR_INTERPRETATION_SEARCH(`${law} ${article}`);
 
   return (
-    <section className="interp">
-      <h2>행정해석</h2>
+    <section className="interp" aria-labelledby="interp-h">
+      <CardHead icon="docs" id="interp-h" title="행정해석" count={items?.length || 0} />
       <p className="lead">
         조문만으로 판단이 서지 않을 때 정부가 낸 질의회시입니다. 회시번호와 원문 주소를 함께 실었으니 그대로 인용할
         수 있습니다. 회시번호가 실재하고 내용까지 맞는 것만 실었습니다.
@@ -59,7 +60,7 @@ export default function Interpretations({ items, law, article }) {
         <p className="interp-none">
           이 조문에 대해 확인된 질의회시가 아직 없습니다. 회시번호와 내용이 모두 확인된 것만 싣기 때문입니다.{' '}
           <a href={searchUrl} target="_blank" rel="noopener noreferrer">
-            국가법령정보센터에서 직접 찾아보기<span className="vh"> (새 창)</span> ↗
+            국가법령정보센터에서 직접 찾아보기<span className="vh"> (새 창)</span> <span aria-hidden="true">↗</span>
           </a>
         </p>
       )}

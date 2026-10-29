@@ -1,5 +1,6 @@
 import { lawGoKrUrl, BASE_DATE } from '../lib/data';
 import { watchFor, lawVersionUrl, watchStatus } from '../lib/platform';
+import Icon from './nav-icons';
 
 const fmt = (iso) => {
   const [y, m, d] = iso.split('-');
@@ -17,7 +18,9 @@ export default function LawWatchNotice({ provision, curatedDates = [] }) {
   return (
     <aside className="watch-notice" aria-label="원문 변경 알림">
       <div className="wn-h">
-        <span className="wn-mark" aria-hidden="true">!</span>
+        <span className="wn-mark" aria-hidden="true">
+          <Icon name="warn" size={15} stroke={2} />
+        </span>
         국가법령정보센터 자동 확인 ({fmt(watchStatus.checkedAt)})
       </div>
       {w.changedSinceBase && (
@@ -25,7 +28,7 @@ export default function LawWatchNotice({ provision, curatedDates = [] }) {
           <b>기준일({BASE_DATE}) 이후 이 조문 원문이 바뀌었습니다.</b>
           {w.latestAmend ? ` 최근 개정 표시 ${fmt(w.latestAmend)}` : ''} 아래 요약은 개정 전 기준일 수 있으니 현행 원문을 확인하세요.{' '}
           <a href={lawGoKrUrl(provision)} target="_blank" rel="noopener noreferrer">
-            현행 원문 보기<span className="vh"> (새 창)</span> ↗
+            현행 원문 보기<span className="vh"> (새 창)</span> <span aria-hidden="true">↗</span>
           </a>
         </p>
       )}
@@ -33,7 +36,7 @@ export default function LawWatchNotice({ provision, curatedDates = [] }) {
         <p key={`${u.efYd}-${u.lawNo}`} className="wn-row">
           <b>{fmt(u.efYd)} 시행 예정 개정</b>으로 이 조문이 바뀝니다 (법률 제{u.lawNo}호, {fmt(u.ancYd)} 공포).{' '}
           <a href={lawVersionUrl(u.lsiSeq, u.efYd)} target="_blank" rel="noopener noreferrer">
-            개정 후 원문 보기<span className="vh"> (새 창)</span> ↗
+            개정 후 원문 보기<span className="vh"> (새 창)</span> <span aria-hidden="true">↗</span>
           </a>
         </p>
       ))}

@@ -3,18 +3,19 @@
 import { useHeadcount } from './headcount-context';
 import { PRESETS, nextTier } from '../lib/headcount';
 
-/* 사업장 규모 입력. 한 번 정하면 노무법전·캘린더·규정서식이 같은 값을 쓴다. */
-export default function HeadcountBar({ hint }) {
+/* 사업장 규모 입력. 한 번 정하면 노무법전·캘린더·규정서식이 같은 값을 쓴다.
+   id는 입력칸 id — 상단 막대의 인원 창(headcount-pill.js)이 같은 화면에 함께 뜰 때 겹치지 않게 바꿔 넘긴다. */
+export default function HeadcountBar({ hint, id = 'headcount' }) {
   const { headcount, setHeadcount, ready } = useHeadcount();
   const next = nextTier(headcount);
 
   return (
     <section className="hc-bar" aria-label="사업장 규모 설정">
       <div className="hc-main">
-        <label htmlFor="headcount">우리 회사 상시 근로자 수</label>
+        <label htmlFor={id}>우리 회사 상시 근로자 수</label>
         <div className="hc-input">
           <input
-            id="headcount"
+            id={id}
             type="number"
             inputMode="numeric"
             min="0"

@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import CardHead from './card-head';
+import Icon from './nav-icons';
 
 /* 5명 미만 사업장이면 답이 달라지는 질문만 표시한다 */
 const U5 = { none: '5명 미만은 해당 없음', partial: '5명 미만은 일부 다름' };
@@ -9,16 +11,25 @@ export default function QaLinks({ items, law, article }) {
   const shown = items.slice(0, 6);
   return (
     <section className="interp qa-links" aria-labelledby="qal-h">
-      <h2 id="qal-h">이 조문으로 답하는 실무 질문</h2>
+      <CardHead icon="qa" id="qal-h" title="이 조문으로 답하는 실무 질문" count={items.length} />
       <ul className="qal">
         {shown.map((q) => (
           <li key={q.id}>
             <Link href={`/qa#${q.id}`}>
-              <span className="qal-q">Q. {q.question}</span>
-              <span className="qal-a">
-                {q.short}
-                {U5[q.under5?.status] && <span className="qal-u5"> · {U5[q.under5.status]}</span>}
+              <span className="qal-mk" aria-hidden="true">Q</span>
+              <span className="qal-tx">
+                <span className="qal-q">{q.question}</span>
+                <span className="qal-a">
+                  {q.short}
+                  {U5[q.under5?.status] && (
+                    <>
+                      {' '}
+                      <span className="qal-u5">{U5[q.under5.status]}</span>
+                    </>
+                  )}
+                </span>
               </span>
+              <Icon name="chevron" size={16} stroke={2} className="qal-go" />
             </Link>
           </li>
         ))}

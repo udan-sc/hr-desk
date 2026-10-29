@@ -105,7 +105,7 @@ export default function ChangesPage() {
                                 {' · '}
                                 <a href={c.sourceUrl} target="_blank" rel="noopener noreferrer">
                                   {c.auto ? '개정 후 원문' : '출처'}
-                                  <span className="vh"> (새 창)</span> ↗
+                                  <span className="vh"> (새 창)</span> <span aria-hidden="true">↗</span>
                                 </a>
                               </>
                             )}
@@ -113,7 +113,7 @@ export default function ChangesPage() {
                               <>
                                 {' · '}
                                 <a href={c.reasonUrl} target="_blank" rel="noopener noreferrer">
-                                  개정이유 전문<span className="vh"> (새 창)</span> ↗
+                                  개정이유 전문<span className="vh"> (새 창)</span> <span aria-hidden="true">↗</span>
                                 </a>
                               </>
                             )}

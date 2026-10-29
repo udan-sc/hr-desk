@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useHeadcount } from './headcount-context';
 import { applies, TIERS } from '../lib/headcount';
 
-/* 홈 상단 현황판 — 인원수 기준으로 적용 조문·의무·서류를 숫자로 보여준다.
+/* 홈 '우리 회사 기준' 카드의 현황 숫자 — 인원수 기준으로 적용 조문·의무·서류를 숫자로 보여준다.
    서버에서는 인원 0(미설정)으로 전체 건수를 그려 두고, 저장된 인원이 읽히면 숫자만 바뀐다 —
    마운트 뒤에 통째로 끼어들면 아래 내용이 밀려 화면이 튄다. */
 export default function StatusBoard({ provisions, obligations, docs, changeDates }) {
@@ -34,32 +34,31 @@ export default function StatusBoard({ provisions, obligations, docs, changeDates
       <div className="bd-h">
         {hc ? `상시 ${hc}명 기준 — 우리 회사에 적용되는 것` : '적용 현황 — 인원을 넣으면 우리 회사 기준 숫자로 바뀝니다'}
       </div>
+      {/* 시안 C: 이름이 위, 큰 숫자가 아래(읽어 줄 때도 '적용 조문 187/187' 순서) */}
       <div className="bd-grid">
         <Link className="bd" href="/law">
-          <span className="bd-n">{provOn}<small>/{provisions.length}</small></span>
           <span className="bd-l">적용 조문</span>
+          <span className="bd-n">{provOn}<small>/{provisions.length}</small></span>
         </Link>
         <Link className="bd" href="/calendar">
-          <span className="bd-n">{obOn}<small>/{obligations.length}</small></span>
           <span className="bd-l">챙길 법정 의무</span>
+          <span className="bd-n">{obOn}<small>/{obligations.length}</small></span>
         </Link>
         <Link className="bd" href="/docs">
-          <span className="bd-n">{docOn}<small>/{mustDocs.length}</small></span>
           <span className="bd-l">갖출 법정 서류</span>
+          <span className="bd-n">{docOn}<small>/{mustDocs.length}</small></span>
         </Link>
         <Link className="bd" href="/changes">
-          <span className="bd-n">{upcoming === null ? '–' : upcoming}<small>건</small></span>
           <span className="bd-l">시행 예정 개정</span>
+          <span className="bd-n">{upcoming === null ? '–' : upcoming}<small>건</small></span>
         </Link>
       </div>
-      <p className="bd-note">
-        {hc > 0 && nt && nextNew > 0 ? (
-          <>
-            {nt - hc}명 더 늘어 상시 {nt}명이 되면 새로 적용되는 조문·의무·서류 <b>{nextNew}개</b> ·{' '}
-          </>
-        ) : null}
-        <Link href="/thresholds">규모별 문턱 지도 →</Link>
-      </p>
+      {/* 규모별 문턱 지도 링크는 홈 카드 머리 줄에 있다 */}
+      {hc > 0 && nt && nextNew > 0 ? (
+        <p className="bd-note">
+          {nt - hc}명 더 늘어 상시 {nt}명이 되면 새로 적용되는 조문·의무·서류 <b>{nextNew}개</b>
+        </p>
+      ) : null}
     </section>
   );
 }

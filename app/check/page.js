@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { wizards } from '../../lib/platform';
 import PageSearch from '../page-search';
+import Icon from '../nav-icons';
 
 export const metadata = {
   title: '판정 도우미',
@@ -10,7 +11,8 @@ export const metadata = {
 
 /* 목록 순서 — 실무에서 먼저 따지는 순 */
 const ORDER = ['worker-status', 'headcount', 'severance-eligible', 'dismissal-notice', 'parental'];
-const MARK = { 'worker-status': '人', headcount: '數', 'severance-eligible': '退', 'dismissal-notice': '告', parental: '育' };
+/* 카드 머리 아이콘 — 시안 C의 선 아이콘(사이드 메뉴·홈 '바로 판정'과 같은 벌). 호박색 뜻이 있는 warn은 쓰지 않는다 */
+const MARK = { 'worker-status': 'user', headcount: 'users', 'severance-eligible': 'clock', 'dismissal-notice': 'calendar', parental: 'family' };
 
 export default function CheckPage() {
   const list = [...wizards].sort((a, b) => ORDER.indexOf(a.key) - ORDER.indexOf(b.key));
@@ -30,7 +32,7 @@ export default function CheckPage() {
           {list.map((w) => (
             <Link key={w.key} className="wz-tile" href={`/check/${w.key}`}>
               <span className="gi-mk" aria-hidden="true">
-                {MARK[w.key] || '定'}
+                <Icon name={MARK[w.key] || 'check'} size={18} />
               </span>
               <span className="wz-tt">{w.title}</span>
               <span className="wz-ti">{w.intro}</span>

@@ -7,6 +7,7 @@ import HeadcountBar from './headcount-bar';
 import { applies, thresholdLabel } from '../lib/headcount';
 import { asset } from '../lib/site';
 import CardScale from './card-scale';
+import Icon from './nav-icons';
 
 const CHIP_WORDS = ['연차', '주휴수당', '퇴직금', '해고', '최저임금', '야근', '육아휴직', '괴롭힘', '실업급여', '계약직', '알바', '산재', '노란봉투법'];
 const FAV_KEY = 'nomu-favs';
@@ -346,7 +347,8 @@ export default function BrowseClient({ provisions, categories, laws, cards, base
               })}
               {laws.length > LAWS_SHOWN && !law && (
                 <button type="button" className="more-laws" aria-expanded={showAllLaws} onClick={() => setShowAllLaws((v) => !v)}>
-                  {showAllLaws ? '접기 ▲' : `법령 ${laws.length - LAWS_SHOWN}개 더 보기 ▼`}
+                  <span>{showAllLaws ? '접기' : `법령 ${laws.length - LAWS_SHOWN}개 더 보기`}</span>
+                  <Icon name="chevron" size={14} stroke={2} className="ml-chev" />
                 </button>
               )}
             </div>
@@ -378,7 +380,9 @@ export default function BrowseClient({ provisions, categories, laws, cards, base
             <div className="side-h">즐겨찾기</div>
             <div className="nav">
               <button type="button" className={onlyFav ? 'on' : ''} aria-pressed={onlyFav} onClick={() => setOnlyFav((v) => !v)}>
-                <span><span className="star" aria-hidden="true">★</span> 즐겨찾기만 보기</span>
+                <span>
+                  <Icon name="favorites" size={14} stroke={2} className="star" /> 즐겨찾기만 보기
+                </span>
                 <span className="n">{favs.size}</span>
               </button>
               <Link className="more-laws" href="/favorites">
@@ -472,7 +476,8 @@ export default function BrowseClient({ provisions, categories, laws, cards, base
                         aria-pressed={isFav}
                         aria-label={`${p.law} ${p.article} 즐겨찾기`}
                       >
-                        {isFav ? '★' : '☆'}
+                        {/* 조문 화면 FavToggle과 같은 책갈피 아이콘(담으면 채움 — CSS .prov .fav.on svg) */}
+                        <Icon name="favorites" size={18} />
                       </button>
                     </div>
 

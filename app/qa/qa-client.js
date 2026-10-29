@@ -92,7 +92,7 @@ function Item({ x, open }) {
                     <a key={it.label} className="tag" href={it.url} target="_blank" rel="noopener noreferrer">
                       {it.label}
                       {it.date && ` (${it.date})`}
-                      <span className="vh"> (새 창)</span> ↗
+                      <span className="vh"> (새 창)</span> <span aria-hidden="true">↗</span>
                     </a>
                   ) : (
                     <Link key={it.label} className="tag" href={it.url || '#'}>

@@ -152,28 +152,34 @@ export default function CasesClient({ items, categories }) {
               </button>
             ))}
         </div>
+        {/* 법원 · 기간 · 정렬을 묶음째 감싸 줄이 바뀌어도 이름표와 칩이 떨어지지 않게 한다 */}
         <div className="cf-row">
-          <span className="cf-l">법원</span>
-          {LEVELS.map((l) => (
-            <button key={l.key} type="button" className={`chip${level === l.key ? ' on' : ''}`} aria-pressed={level === l.key} onClick={() => setLevel(l.key)}>
-              {l.label}
+          <span className="cf-grp">
+            <span className="cf-l">법원</span>
+            {LEVELS.map((l) => (
+              <button key={l.key} type="button" className={`chip${level === l.key ? ' on' : ''}`} aria-pressed={level === l.key} onClick={() => setLevel(l.key)}>
+                {l.label}
+              </button>
+            ))}
+          </span>
+          <span className="cf-grp cf-gap">
+            <span className="cf-l">기간</span>
+            {PERIODS.map((p) => (
+              <button key={p.key} type="button" className={`chip${period === p.key ? ' on' : ''}`} aria-pressed={period === p.key} onClick={() => setPeriod(p.key)}>
+                {p.label}
+              </button>
+            ))}
+            <button type="button" className={`chip${enOnly ? ' on' : ''}`} aria-pressed={enOnly} onClick={() => setEnOnly((v) => !v)}>
+              전원합의체만
             </button>
-          ))}
-          <span className="cf-l cf-gap">기간</span>
-          {PERIODS.map((p) => (
-            <button key={p.key} type="button" className={`chip${period === p.key ? ' on' : ''}`} aria-pressed={period === p.key} onClick={() => setPeriod(p.key)}>
-              {p.label}
-            </button>
-          ))}
-          <button type="button" className={`chip${enOnly ? ' on' : ''}`} aria-pressed={enOnly} onClick={() => setEnOnly((v) => !v)}>
-            전원합의체만
-          </button>
-          <span className="spacer" />
-          <label htmlFor="case-sort" className="cf-l">정렬</label>
-          <select id="case-sort" value={sort} onChange={(e) => setSort(e.target.value)}>
-            <option value="new">최신순</option>
-            <option value="old">오래된순</option>
-          </select>
+          </span>
+          <span className="cf-grp cf-sort">
+            <label htmlFor="case-sort" className="cf-l">정렬</label>
+            <select id="case-sort" value={sort} onChange={(e) => setSort(e.target.value)}>
+              <option value="new">최신순</option>
+              <option value="old">오래된순</option>
+            </select>
+          </span>
         </div>
       </div>
 
@@ -187,7 +193,7 @@ export default function CasesClient({ items, categories }) {
           <p>
             다른 말로 찾아보거나,{' '}
             <a href={`https://www.law.go.kr/LSW/precSc.do?menuId=7&query=${encodeURIComponent(q.trim())}`} target="_blank" rel="noopener noreferrer">
-              국가법령정보센터 전체 판례에서 &ldquo;{q.trim()}&rdquo; 찾기<span className="vh"> (새 창)</span> ↗
+              국가법령정보센터 전체 판례에서 &ldquo;{q.trim()}&rdquo; 찾기<span className="vh"> (새 창)</span> <span aria-hidden="true">↗</span>
             </a>
           </p>
         </div>
@@ -258,7 +264,7 @@ export default function CasesClient({ items, categories }) {
       <p className="cases-more">
         여기 없는 판례는{' '}
         <a href="https://www.law.go.kr/LSW/precSc.do?menuId=7" target="_blank" rel="noopener noreferrer">
-          국가법령정보센터 판례 검색<span className="vh"> (새 창)</span> ↗
+          국가법령정보센터 판례 검색<span className="vh"> (새 창)</span> <span aria-hidden="true">↗</span>
         </a>
         에서 찾을 수 있습니다.
       </p>

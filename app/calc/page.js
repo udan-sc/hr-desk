@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { calculators } from '../../lib/platform';
 import { BASE_DATE } from '../../lib/data';
 import PageSearch from '../page-search';
+import Icon from '../nav-icons';
 
 export const metadata = {
   title: '노무 계산기',
@@ -26,6 +27,10 @@ export default function CalcIndexPage() {
         <div className="topic-grid">
           {calculators.map((c) => (
             <Link key={c.key} className="topic-card" href={`/calc/${c.key}`}>
+              {/* 판정 도우미 목록과 같은 머리 아이콘 칸 */}
+              <span className="gi-mk" aria-hidden="true">
+                <Icon name="calc" size={18} />
+              </span>
               <span className="tc-name">{c.name}</span>
               <span className="tc-blurb">{c.purpose.split('.')[0]}.</span>
               <span className="tc-n">계산하기 →</span>

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import CopyButton from './copy-button';
+import CardHead from './card-head';
 import { LAW_GO_KR_PRECEDENT_SEARCH, precedentDate } from '../lib/platform';
 
 /* 조문 상세의 '관련 판례'. 법원·선고일·판시사항·판결요지는 국가법령정보센터 원문 그대로이고,
@@ -13,12 +14,15 @@ export default function Precedents({ items: all, law, article }) {
   const rest = (all || []).length - items.length;
 
   return (
-    <section className="interp prec">
-      <h2>관련 판례</h2>
-      <p className="lead">
-        이 조문의 해석이 다퉈진 주요 판례입니다. 법원·선고일·판시사항·판결요지는 국가법령정보센터 원문을 글자 그대로
-        옮겼고, 굵은 한 줄 요지만 이해를 돕는 요약입니다.
-      </p>
+    <section className="interp prec" aria-labelledby="prec-h">
+      <CardHead icon="cases" id="prec-h" title="관련 판례" count={(all || []).length} />
+      {/* 안내는 판례가 있을 때만 — 0건이면 아래 '아직 없습니다' 한 줄과 어긋나고 빈 카드만 커진다 */}
+      {items.length > 0 && (
+        <p className="lead">
+          이 조문의 해석이 다퉈진 주요 판례입니다. 법원·선고일·판시사항·판결요지는 국가법령정보센터 원문을 글자 그대로
+          옮겼고, 굵은 한 줄 요지만 이해를 돕는 요약입니다.
+        </p>
+      )}
 
       {items?.length > 0 ? (
         <div className="interp-list">
@@ -63,7 +67,7 @@ export default function Precedents({ items: all, law, article }) {
         <p className="interp-none">
           이 조문에 연결된 수록 판례가 아직 없습니다.{' '}
           <a href={searchUrl} target="_blank" rel="noopener noreferrer">
-            국가법령정보센터에서 판례 찾아보기<span className="vh"> (새 창)</span> ↗
+            국가법령정보센터에서 판례 찾아보기<span className="vh"> (새 창)</span> <span aria-hidden="true">↗</span>
           </a>
         </p>
       )}

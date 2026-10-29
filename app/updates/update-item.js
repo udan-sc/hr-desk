@@ -32,7 +32,7 @@ export default function UpdateItem({ x, today, compact = false }) {
         {x.href.startsWith('http') ? (
           <a className="upd-title" href={x.href} target="_blank" rel="noopener noreferrer">
             {x.title}
-            <span className="vh"> (국가법령정보센터, 새 창)</span> ↗
+            <span className="vh"> (국가법령정보센터, 새 창)</span> <span aria-hidden="true">↗</span>
           </a>
         ) : (
           <Link className="upd-title" href={x.href}>

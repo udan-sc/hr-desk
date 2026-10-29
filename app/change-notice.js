@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import TimeBadge from './changes/time-badge';
+import Icon from './nav-icons';
 
 const fmt = (iso) => {
   const [y, m, d] = iso.split('-');
@@ -13,15 +14,20 @@ export default function ChangeNotice({ items }) {
   return (
     <aside className="chg-notice" aria-label="관련 개정">
       <div className="cn-h">
-        <span className="cn-mark" aria-hidden="true">改</span>
-        이 조문과 관련된 개정 {items.length}건
+        <span className="cn-mark" aria-hidden="true">
+          <Icon name="changes" size={15} stroke={1.9} />
+        </span>
+        <span>
+          이 조문과 관련된 개정 <span className="mono">{items.length}</span>건
+        </span>
       </div>
       {items.map((c) => (
         <Link key={c.id} className="cn-item" href={`/changes#${c.id}`}>
-          <span className="cn-date">{fmt(c.effectiveDate)}</span>
+          <time className="cn-date" dateTime={c.effectiveDate}>{fmt(c.effectiveDate)}</time>
           <TimeBadge date={c.effectiveDate} />
           <span className="cn-t">{c.title}</span>
           <span className="cn-law">{c.law}</span>
+          <Icon name="chevron" size={14} stroke={2} className="cn-go" />
         </Link>
       ))}
     </aside>

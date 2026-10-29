@@ -43,7 +43,7 @@ export default async function CalcPage({ params }) {
 
         <CalcClient calcKey={c.key} basis={basis} />
 
-        <section className="watchouts" style={{ marginTop: 26, maxWidth: 900 }}>
+        <section className="watchouts">
           <h2>이 계산기가 답하지 못하는 것</h2>
           <ul>
             <li>{c.caveat}</li>

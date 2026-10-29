@@ -73,7 +73,7 @@ export default function DocsPage() {
                 <dd>{d.retention}</dd>
                 {d.penalty && (
                   <>
-                    <dt>미비 시</dt>
+                    <dt className="pen">미비 시</dt>
                     <dd>{d.penalty}</dd>
                   </>
                 )}

@@ -270,15 +270,14 @@ export default function HeadcountCalc({ mode = null }) {
             </div>
             {canSave && ready && headcount === saveVal && (
               <p className="calc-note">
-                노무법전·캘린더·문턱 지도·계산기가 이 인원 기준으로 표시됩니다. 바꾸려면 노무법전·캘린더·문턱 지도 화면의 '우리 회사 상시
-                근로자 수' 칸에서 고치세요.
+                {`노무법전·캘린더·문턱 지도·계산기가 이 인원 기준으로 표시됩니다. 바꾸려면 화면 맨 위 '상시 ${saveVal}명' 단추(또는 노무법전·캘린더·문턱 지도 화면의 '우리 회사 상시 근로자 수' 칸)에서 고치세요.`}
               </p>
             )}
             {r && mode !== 'annual' && !canSave && (
               <p className="calc-note">
                 {p.base === 10
-                  ? "날짜별 인원에 따라 5명 경계(해고 제한·가산수당 등) 판정이 달라질 수 있어, 이 결과만으로는 우리 회사 인원을 저장하지 않습니다. 목적을 '근로기준법 적용 여부(5명)'로 바꿔 계산해 보거나, 노무법전·캘린더 화면의 '우리 회사 상시 근로자 수' 칸에서 직접 고르세요."
-                  : "날짜별 인원에 따라 10명 경계(취업규칙 작성·신고, 제93조) 판정이 달라질 수 있어, 이 결과만으로는 우리 회사 인원을 저장하지 않습니다. 목적을 '취업규칙 작성·신고 의무(10명)'로 바꿔 계산해 보거나, 노무법전·캘린더 화면의 '우리 회사 상시 근로자 수' 칸에서 직접 고르세요."}
+                  ? "날짜별 인원에 따라 5명 경계(해고 제한·가산수당 등) 판정이 달라질 수 있어, 이 결과만으로는 우리 회사 인원을 저장하지 않습니다. 목적을 '근로기준법 적용 여부(5명)'로 바꿔 계산해 보거나, 화면 맨 위 인원 단추(또는 노무법전·캘린더 화면의 '우리 회사 상시 근로자 수' 칸)에서 직접 고르세요."
+                  : "날짜별 인원에 따라 10명 경계(취업규칙 작성·신고, 제93조) 판정이 달라질 수 있어, 이 결과만으로는 우리 회사 인원을 저장하지 않습니다. 목적을 '취업규칙 작성·신고 의무(10명)'로 바꿔 계산해 보거나, 화면 맨 위 인원 단추(또는 노무법전·캘린더 화면의 '우리 회사 상시 근로자 수' 칸)에서 직접 고르세요."}
               </p>
             )}
           </>
@@ -290,10 +289,10 @@ export default function HeadcountCalc({ mode = null }) {
         </p>
         <div className="calc-cite">
           <a className="tag" href="https://www.law.go.kr/법령/근로기준법시행령/제7조의2" target="_blank" rel="noopener noreferrer">
-            근로기준법 시행령 제7조의2<span className="vh"> (국가법령정보센터, 새 창)</span> ↗
+            근로기준법 시행령 제7조의2<span className="vh"> (국가법령정보센터, 새 창)</span> <span aria-hidden="true">↗</span>
           </a>
           <a className="tag" href="https://www.law.go.kr/법령/근로기준법/제11조" target="_blank" rel="noopener noreferrer">
-            근로기준법 제11조(적용 범위)<span className="vh"> (국가법령정보센터, 새 창)</span> ↗
+            근로기준법 제11조(적용 범위)<span className="vh"> (국가법령정보센터, 새 창)</span> <span aria-hidden="true">↗</span>
           </a>
           <Link className="tag" href="/thresholds">
             규모별 문턱 지도

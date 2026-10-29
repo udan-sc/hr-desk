@@ -47,6 +47,19 @@ export default function StickyToc({ items }) {
     };
   }, [items]);
 
+  /* 휴대폰에서는 목차가 한 줄 가로 스크롤이다 — 현재 묶음이 바뀌면 그 링크가 보이도록 목차만 가로로 민다.
+     scrollIntoView는 페이지까지 세로로 움직일 수 있어 쓰지 않는다. 오른쪽 흐린 끝(32px)은 비켜 둔다 */
+  useEffect(() => {
+    const nav = navRef.current;
+    const on = nav?.querySelector('.on');
+    if (!nav || !on || nav.scrollWidth <= nav.clientWidth) return;
+    const left = on.offsetLeft;
+    const right = left + on.offsetWidth;
+    const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+    if (left < nav.scrollLeft) nav.scrollTo({ left: Math.max(0, left - 16), behavior });
+    else if (right > nav.scrollLeft + nav.clientWidth - 32) nav.scrollTo({ left: right - nav.clientWidth + 40, behavior });
+  }, [active]);
+
   return (
     <nav className="stoc" aria-label="목차" ref={navRef}>
       {items.map((it) => (
